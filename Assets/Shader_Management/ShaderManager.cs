@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System;
 using UnityEditor;
 using static ShaderStylePreset;
 
@@ -11,6 +10,7 @@ public class ShaderManager : MonoBehaviour
     [SerializeField] private ShaderStylePreset currentStyle;
     [SerializeField] private bool preserveOriginalColors = true;
 
+    [SerializeField] private List<GameObject> selectedObjects = new List<GameObject>();
     private Dictionary<Renderer, List<MaterialTracker>> materialTrackers = new Dictionary<Renderer, List<MaterialTracker>>();
     private Dictionary<Renderer, Material[]> currentMaterials = new Dictionary<Renderer, Material[]>();
 
@@ -21,19 +21,48 @@ public class ShaderManager : MonoBehaviour
 
     private void InitializeMaterialTracking()
     {
-        Renderer[] renderers = GetComponentsInChildren<Renderer>(true);
-        foreach (Renderer renderer in renderers)
+        if (selectedObjects.Count == 0)
         {
-            List<MaterialTracker> trackers = new List<MaterialTracker>();
-            foreach (Material material in renderer.sharedMaterials)
+            Renderer[] renderers = GetComponentsInChildren<Renderer>(true);
+            foreach (Renderer renderer in renderers)
             {
-                MaterialTracker tracker = MaterialTracker.CreateFromMaterial(material);
-                trackers.Add(tracker);
-                Debug.Log($"Tracking material: {material.name} for {renderer.name}");
-                Debug.Log($"IsShared: {tracker.IsShared}, HasSpecialTexture: {tracker.HasSpecialTexture}");
+                TrackRenderer(renderer);
             }
-            materialTrackers[renderer] = trackers;
         }
+        else
+        {
+            foreach (var obj in selectedObjects)
+            {
+                Renderer[] renderers = obj.GetComponentsInChildren<Renderer>(true);
+                foreach (Renderer renderer in renderers)
+                {
+                    TrackRenderer(renderer);
+                }
+            }
+        }
+    }
+
+    private void TrackRenderer(Renderer renderer)
+    {
+        List<MaterialTracker> trackers = new List<MaterialTracker>();
+        foreach (Material material in renderer.sharedMaterials)
+        {
+            MaterialTracker tracker = MaterialTracker.CreateFromMaterial(material);
+            trackers.Add(tracker);
+            Debug.Log($"Tracking material: {material.name} for {renderer.name}");
+            Debug.Log($"IsShared: {tracker.IsShared}, HasSpecialTexture: {tracker.HasSpecialTexture}");
+        }
+        materialTrackers[renderer] = trackers;
+    }
+
+    public void SelectObjects(params GameObject[] objects)
+    {
+        selectedObjects.Clear();
+        foreach (var obj in objects)
+        {
+            selectedObjects.Add(obj);
+        }
+        InitializeMaterialTracking();
     }
 
     public void ApplyStyle(ShaderStylePreset preset)
@@ -102,25 +131,6 @@ public class ShaderManager : MonoBehaviour
         else
         {
             Debug.LogWarning("No materials were reset - either no materials were tracked or all materials were already in original state");
-        }
-    }
-
-    public void SelectObjects(params GameObject[] objects)
-    {
-        materialTrackers.Clear();
-        foreach (var obj in objects)
-        {
-            Renderer[] renderers = obj.GetComponentsInChildren<Renderer>(true);
-            foreach (Renderer renderer in renderers)
-            {
-                List<MaterialTracker> trackers = new List<MaterialTracker>();
-                foreach (Material material in renderer.sharedMaterials)
-                {
-                    MaterialTracker tracker = MaterialTracker.CreateFromMaterial(material);
-                    trackers.Add(tracker);
-                }
-                materialTrackers[renderer] = trackers;
-            }
         }
     }
 
