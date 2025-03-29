@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc123e6a8dba482ba4a79154b72af7f, type: 3}
+  m_Name: NewShaderStyle 1
+  m_EditorClassIdentifier: 
+  StyleName: Comic
+  TargetShader: {fileID: 36, guid: 0000000000000000f000000000000000, type: 0}
+  PreviewMaterial: {fileID: 2100000, guid: 64f1b1200d9d6ea4ea578a2f9e3610e7, type: 2}
+  Properties:
+  - PropertyName: xyz
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    VectorValue: {x: 0, y: 0, z: 0, w: 0}
+    FloatValue: 0
+    TextureValue: {fileID: 2800000, guid: 77974a808bd353d4dbf5e6f89e27eb49, type: 3}
+    IsTexture: 0
+    IsColor: 0
+    IsVector: 0
+    IsFloat: 0

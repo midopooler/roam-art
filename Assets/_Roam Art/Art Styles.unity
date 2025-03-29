@@ -46480,6 +46480,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01d7c9285ac5442f1a7ce414b45348e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stylePresets:
+  - {fileID: 11400000, guid: ff198dcd500c743cc9340917ea212b67, type: 2}
+  - {fileID: 11400000, guid: ead4849e805cb484192feeaf39893abd, type: 2}
+  - {fileID: 11400000, guid: 8098a88ae60ef4300ae20c748d52bae6, type: 2}
+  currentStyle: {fileID: 11400000, guid: ead4849e805cb484192feeaf39893abd, type: 2}
+  preserveOriginalColors: 1
 --- !u!33 &1909006124
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -81477,7 +81483,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 12e685259ec7647be90bbf9acb80997b, type: 2}
+  - {fileID: 2100000, guid: 298a8660e41374ccd826e5b94a682b80, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
