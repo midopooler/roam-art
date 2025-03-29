@@ -11,10 +11,19 @@ public class ShaderStylePreset : ScriptableObject
     [System.Serializable]
     public class ShaderProperty
     {
+       [ShaderProperty("The main color of the material", "Changes the overall color of the object", "Color")]
         public string PropertyName;
+        
+        [ShaderProperty("Color value", "Changes the color of the material", "Color", "RGB values determine the color")]
         public Color ColorValue;
+        
+        [ShaderProperty("Vector value", "Controls directional properties", "Vector", "XYZW values control different aspects")]
         public Vector4 VectorValue;
+        
+        [ShaderProperty("Float value", "Controls intensity or scale", "Float", "0-1 range controls intensity")]
         public float FloatValue;
+        
+        [ShaderProperty("Texture value", "Applies textures to the material", "Texture", "Selects the texture to use")]
         public Texture TextureValue;
         public bool IsTexture;
         public bool IsColor;

@@ -46013,6 +46013,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844611687}
   m_Mesh: {fileID: -5324784848554017315, guid: 0e3ae467308114e4288b2bd0c8e962f1, type: 3}
+--- !u!1 &1850374939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850374941}
+  - component: {fileID: 1850374940}
+  m_Layer: 0
+  m_Name: ShaderManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1850374940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850374939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d7c9285ac5442f1a7ce414b45348e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stylePresets: []
+  currentStyle: {fileID: 0}
+  preserveOriginalColors: 1
+--- !u!4 &1850374941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850374939}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.807477, y: 1.7230935, z: -2.0267844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1853154061
 GameObject:
   m_ObjectHideFlags: 0
@@ -46484,6 +46531,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ff198dcd500c743cc9340917ea212b67, type: 2}
   - {fileID: 11400000, guid: ead4849e805cb484192feeaf39893abd, type: 2}
   - {fileID: 11400000, guid: 8098a88ae60ef4300ae20c748d52bae6, type: 2}
+  - {fileID: 11400000, guid: cee2953d58c9849fd9d65eaf5c25e05b, type: 2}
   currentStyle: {fileID: 11400000, guid: ead4849e805cb484192feeaf39893abd, type: 2}
   preserveOriginalColors: 1
 --- !u!33 &1909006124
@@ -74972,6 +75020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1292187616782679043}
   - component: {fileID: 5120286141626492537}
+  - component: {fileID: 5120286141626492538}
   m_Layer: 0
   m_Name: Human_BasicMotionsDummy_F
   m_TagString: Untagged
@@ -83401,6 +83450,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5120286141626492538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919964344306443961}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d7c9285ac5442f1a7ce414b45348e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stylePresets:
+  - {fileID: 11400000, guid: ff198dcd500c743cc9340917ea212b67, type: 2}
+  - {fileID: 11400000, guid: ead4849e805cb484192feeaf39893abd, type: 2}
+  - {fileID: 11400000, guid: 8098a88ae60ef4300ae20c748d52bae6, type: 2}
+  - {fileID: 11400000, guid: cee2953d58c9849fd9d65eaf5c25e05b, type: 2}
+  currentStyle: {fileID: 11400000, guid: ff198dcd500c743cc9340917ea212b67, type: 2}
+  preserveOriginalColors: 1
 --- !u!1 &5143962905285798481
 GameObject:
   m_ObjectHideFlags: 0
@@ -88243,3 +88311,4 @@ SceneRoots:
   - {fileID: 934705413}
   - {fileID: 532881136}
   - {fileID: 1905968871}
+  - {fileID: 1850374941}

@@ -59,4 +59,9 @@ public class ShaderPropertyDrawer : PropertyDrawer
 
         return shaderNames.Distinct().ToArray();
     }
+
+    public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+    {
+        return base.GetPropertyHeight(property, label) + 20;
+    }
 }

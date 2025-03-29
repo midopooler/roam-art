@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using UnityEditor;
+using static ShaderStylePreset;
 
 [ExecuteInEditMode]
 public class ShaderManager : MonoBehaviour
@@ -9,7 +11,7 @@ public class ShaderManager : MonoBehaviour
     [SerializeField] private ShaderStylePreset currentStyle;
     [SerializeField] private bool preserveOriginalColors = true;
 
-    private Dictionary<Renderer, Material[]> originalMaterials = new Dictionary<Renderer, Material[]>();
+    private Dictionary<Renderer, List<MaterialTracker>> materialTrackers = new Dictionary<Renderer, List<MaterialTracker>>();
     private Dictionary<Renderer, Material[]> currentMaterials = new Dictionary<Renderer, Material[]>();
 
     private void Awake()
@@ -22,9 +24,15 @@ public class ShaderManager : MonoBehaviour
         Renderer[] renderers = GetComponentsInChildren<Renderer>(true);
         foreach (Renderer renderer in renderers)
         {
-            originalMaterials[renderer] = renderer.sharedMaterials;
-            currentMaterials[renderer] = renderer.sharedMaterials;
-            Debug.Log($"Tracking materials for {renderer.name}");
+            List<MaterialTracker> trackers = new List<MaterialTracker>();
+            foreach (Material material in renderer.sharedMaterials)
+            {
+                MaterialTracker tracker = MaterialTracker.CreateFromMaterial(material);
+                trackers.Add(tracker);
+                Debug.Log($"Tracking material: {material.name} for {renderer.name}");
+                Debug.Log($"IsShared: {tracker.IsShared}, HasSpecialTexture: {tracker.HasSpecialTexture}");
+            }
+            materialTrackers[renderer] = trackers;
         }
     }
 
@@ -38,14 +46,19 @@ public class ShaderManager : MonoBehaviour
         
         foreach (Renderer renderer in renderers)
         {
-            Material[] materials = renderer.sharedMaterials;
-            for (int i = 0; i < materials.Length; i++)
+            if (!materialTrackers.TryGetValue(renderer, out List<MaterialTracker> trackers))
+                continue;
+
+            for (int i = 0; i < trackers.Count; i++)
             {
-                if (materials[i] != null && materials[i].shader == preset.TargetShader)
+                MaterialTracker tracker = trackers[i];
+                if (tracker.OriginalMaterial != null && 
+                    tracker.OriginalMaterial.shader == preset.TargetShader && 
+                    !tracker.HasSpecialTexture)
                 {
-                    preset.ApplyToMaterial(materials[i]);
+                    preset.ApplyToMaterial(tracker.OriginalMaterial);
                     materialsModified++;
-                    Debug.Log($"Applied style to material: {materials[i].name} on {renderer.name}");
+                    Debug.Log($"Applied style to material: {tracker.OriginalMaterial.name} on {renderer.name}");
                 }
             }
         }
@@ -67,11 +80,18 @@ public class ShaderManager : MonoBehaviour
         
         foreach (Renderer renderer in renderers)
         {
-            if (originalMaterials.TryGetValue(renderer, out Material[] originalMats))
+            if (materialTrackers.TryGetValue(renderer, out List<MaterialTracker> trackers))
             {
-                renderer.sharedMaterials = originalMats;
-                materialsReset++;
-                Debug.Log($"Reset materials for {renderer.name}");
+                for (int i = 0; i < trackers.Count; i++)
+                {
+                    MaterialTracker tracker = trackers[i];
+                    if (tracker.OriginalMaterial != null)
+                    {
+                        renderer.materials[i] = tracker.OriginalMaterial;
+                        materialsReset++;
+                        Debug.Log($"Reset material for {renderer.name}");
+                    }
+                }
             }
         }
 
@@ -82,6 +102,94 @@ public class ShaderManager : MonoBehaviour
         else
         {
             Debug.LogWarning("No materials were reset - either no materials were tracked or all materials were already in original state");
+        }
+    }
+
+    public void SelectObjects(params GameObject[] objects)
+    {
+        materialTrackers.Clear();
+        foreach (var obj in objects)
+        {
+            Renderer[] renderers = obj.GetComponentsInChildren<Renderer>(true);
+            foreach (Renderer renderer in renderers)
+            {
+                List<MaterialTracker> trackers = new List<MaterialTracker>();
+                foreach (Material material in renderer.sharedMaterials)
+                {
+                    MaterialTracker tracker = MaterialTracker.CreateFromMaterial(material);
+                    trackers.Add(tracker);
+                }
+                materialTrackers[renderer] = trackers;
+            }
+        }
+    }
+
+    public void ShowPropertyChanges(ShaderStylePreset preset)
+    {
+        if (preset == null) return;
+
+        Debug.Log($"Property changes for style: {preset.StyleName}");
+        foreach (var prop in preset.Properties)
+        {
+            Debug.Log($"Property: {prop.PropertyName}");
+            Debug.Log($"  Type: {GetPropertyType(prop)}");
+            Debug.Log($"  Current Value: {GetCurrentValue(prop)}");
+            Debug.Log($"  New Value: {GetNewValue(prop)}");
+        }
+    }
+
+    private string GetPropertyType(ShaderProperty prop)
+    {
+        if (prop.IsColor) return "Color";
+        if (prop.IsVector) return "Vector";
+        if (prop.IsFloat) return "Float";
+        if (prop.IsTexture) return "Texture";
+        return "Unknown";
+    }
+
+    private string GetCurrentValue(ShaderProperty prop)
+    {
+        Renderer[] renderers = GetComponentsInChildren<Renderer>(true);
+        foreach (Renderer renderer in renderers)
+        {
+            if (materialTrackers.TryGetValue(renderer, out List<MaterialTracker> trackers))
+            {
+                foreach (var tracker in trackers)
+                {
+                    if (tracker.OriginalMaterial != null)
+                    {
+                        switch (GetPropertyType(prop))
+                        {
+                            case "Color":
+                                return tracker.OriginalMaterial.GetColor(prop.PropertyName).ToString();
+                            case "Vector":
+                                return tracker.OriginalMaterial.GetVector(prop.PropertyName).ToString();
+                            case "Float":
+                                return tracker.OriginalMaterial.GetFloat(prop.PropertyName).ToString();
+                            case "Texture":
+                                return tracker.OriginalMaterial.GetTexture(prop.PropertyName)?.name ?? "None";
+                        }
+                    }
+                }
+            }
+        }
+        return "Not found";
+    }
+
+    private string GetNewValue(ShaderProperty prop)
+    {
+        switch (GetPropertyType(prop))
+        {
+            case "Color":
+                return prop.ColorValue.ToString();
+            case "Vector":
+                return prop.VectorValue.ToString();
+            case "Float":
+                return prop.FloatValue.ToString();
+            case "Texture":
+                return prop.TextureValue?.name ?? "None";
+            default:
+                return "Unknown";
         }
     }
 }

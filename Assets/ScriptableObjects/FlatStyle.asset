@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dc123e6a8dba482ba4a79154b72af7f, type: 3}
+  m_Name: FlatStyle
+  m_EditorClassIdentifier: 
+  StyleName: Water
+  TargetShader: {fileID: -6465566751694194690, guid: 787caba0ffa136046b52ca7cc896fb59, type: 3}
+  PreviewMaterial: {fileID: 2100000, guid: eabd602690ee44bcc8552d206c2dac3e, type: 2}
+  Properties:
+  - PropertyName: _BaseColor
+    ColorValue: {r: 0.5206479, g: 0.9433962, b: 0.88339573, a: 0}
+    VectorValue: {x: 0, y: 0, z: 0, w: 0}
+    FloatValue: 0
+    TextureValue: {fileID: 0}
+    IsTexture: 0
+    IsColor: 1
+    IsVector: 0
+    IsFloat: 0
+  - PropertyName: _OutlineWidth
+    ColorValue: {r: 0, g: 0, b: 0, a: 0}
+    VectorValue: {x: 0, y: 0, z: 0, w: 0}
+    FloatValue: 1.1
+    TextureValue: {fileID: 0}
+    IsTexture: 0
+    IsColor: 0
+    IsVector: 0
+    IsFloat: 1

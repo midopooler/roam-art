@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NewShaderStyle 1
   m_EditorClassIdentifier: 
   StyleName: Comic
-  TargetShader: {fileID: 36, guid: 0000000000000000f000000000000000, type: 0}
+  TargetShader: {fileID: -6465566751694194690, guid: 44645333006018f4e956743e3ee99f61, type: 3}
   PreviewMaterial: {fileID: 2100000, guid: 64f1b1200d9d6ea4ea578a2f9e3610e7, type: 2}
   Properties:
   - PropertyName: xyz
