@@ -46477,15 +46477,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1905968869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01d7c9285ac5442f1a7ce414b45348e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bcd7ab86ccc5f74c90573a403655af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stylePresets:
-  - {fileID: 11400000, guid: ff198dcd500c743cc9340917ea212b67, type: 2}
-  - {fileID: 11400000, guid: ead4849e805cb484192feeaf39893abd, type: 2}
-  - {fileID: 11400000, guid: 8098a88ae60ef4300ae20c748d52bae6, type: 2}
-  currentStyle: {fileID: 11400000, guid: ead4849e805cb484192feeaf39893abd, type: 2}
-  preserveOriginalColors: 1
 --- !u!33 &1909006124
 MeshFilter:
   m_ObjectHideFlags: 0
