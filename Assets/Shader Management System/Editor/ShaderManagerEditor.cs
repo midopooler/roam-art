@@ -18,8 +18,44 @@ public class ShaderManagerEditor : Editor
     // Field for choosing a preset asset to apply.
     private ShaderPreset selectedPreset;
 
-    // We'll store a control ID to track our shader picker.
+    // Control ID for shader picker (if needed).
     private const int ShaderPickerControlID = 123456789;
+
+    // --- Project-based Preserve Flag Helpers ---
+    // These methods store/retrieve the preserve flags from the ShaderManager component.
+    private bool GetProjectPreserveFlag(ShaderManager manager, Shader shader, string propName)
+    {
+        foreach (var entry in manager.preserveFlags)
+        {
+            if (entry.shaderName == shader.name && entry.propertyName == propName)
+                return entry.preserve;
+        }
+        return false;
+    }
+
+    private void SetProjectPreserveFlag(ShaderManager manager, Shader shader, string propName, bool value)
+    {
+        bool found = false;
+        foreach (var entry in manager.preserveFlags)
+        {
+            if (entry.shaderName == shader.name && entry.propertyName == propName)
+            {
+                entry.preserve = value;
+                found = true;
+                break;
+            }
+        }
+        if (!found)
+        {
+            PreserveFlagData newEntry = new PreserveFlagData();
+            newEntry.shaderName = shader.name;
+            newEntry.propertyName = propName;
+            newEntry.preserve = value;
+            manager.preserveFlags.Add(newEntry);
+        }
+        EditorUtility.SetDirty(manager);
+    }
+    // --- End Preserve Flag Helpers ---
 
     private void OnEnable()
     {
@@ -62,7 +98,8 @@ public class ShaderManagerEditor : Editor
             if (rend == null) continue;
             foreach (Material mat in rend.sharedMaterials)
             {
-                if (mat == null || mat.shader == null) continue;
+                if (mat == null || mat.shader == null)
+                    continue;
 
                 if (!materialsByShader.ContainsKey(mat.shader))
                     materialsByShader[mat.shader] = new List<Material>();
@@ -72,13 +109,11 @@ public class ShaderManagerEditor : Editor
             }
         }
 
-        // Build list of shaders
+        // Build list of shaders and toolbar names
         foreach (var kvp in materialsByShader)
         {
             shaderList.Add(kvp.Key);
         }
-
-        // Build array for toolbar names
         shaderNames = new string[shaderList.Count];
         for (int i = 0; i < shaderList.Count; i++)
         {
@@ -100,13 +135,14 @@ public class ShaderManagerEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        // Button to refresh
+        ShaderManager manager = (ShaderManager)target;
+        
+        // Refresh button
         if (GUILayout.Button("Refresh Shader List"))
         {
             UpdateShaderList();
         }
 
-        // If no shaders, show message
         if (shaderList.Count == 0)
         {
             EditorGUILayout.HelpBox("No shaders found in child objects.", MessageType.Info);
@@ -118,7 +154,6 @@ public class ShaderManagerEditor : Editor
         Shader currentShader = shaderList[selectedTab];
         MaterialEditor currentMatEditor = materialEditors[currentShader];
 
-        // Show current shader name
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Current Shader: " + currentShader.name, EditorStyles.boldLabel);
 
@@ -126,6 +161,7 @@ public class ShaderManagerEditor : Editor
         EditorGUILayout.Space();
         if (GUILayout.Button("Change Shader", GUILayout.Height(25)))
         {
+            // Using a custom ShaderSelectionWindow to pick a new shader (assumed implemented elsewhere)
             ShaderSelectionWindow.Show(currentShader, (selectedShader) =>
             {
                 if (selectedShader != null && selectedShader != currentShader)
@@ -137,47 +173,32 @@ public class ShaderManagerEditor : Editor
 
                         mat.shader = selectedShader;
                         mat.CopyPropertiesFromMaterial(temp);
-
                         EditorUtility.SetDirty(mat);
                     }
-
                     UpdateShaderList();
                 }
             });
         }
 
-
-        // If user picked a new shader from the Object Picker, handle it:
+        // Also handle Object Picker events if needed
         if (Event.current.commandName == "ObjectSelectorUpdated" &&
             EditorGUIUtility.GetObjectPickerControlID() == ShaderPickerControlID)
         {
             Shader newShader = EditorGUIUtility.GetObjectPickerObject() as Shader;
             if (newShader != null && newShader != currentShader)
             {
-                // Apply the new shader to all relevant materials,
-                // copying any matching properties.
                 foreach (Material m in materialsByShader[currentShader])
                 {
-                    // We'll do a two-step process:
-                    // 1) Create a temporary Material with the new shader
-                    // 2) Copy properties from the old material to the temp
-                    // 3) Assign new shader to the old material
-                    // 4) Copy from temp back into the old material
                     Material temp = new Material(newShader);
                     temp.CopyPropertiesFromMaterial(m);
-
                     m.shader = newShader;
                     m.CopyPropertiesFromMaterial(temp);
-
                     EditorUtility.SetDirty(m);
                 }
-
-                // We need to refresh the dictionary & editor references 
-                // so that the new shader is recognized in the tab list
                 UpdateShaderList();
             }
         }
-
+        
         // ---- Preset Options ----
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Preset Options", EditorStyles.boldLabel);
@@ -201,22 +222,110 @@ public class ShaderManagerEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
 
+        // ---- Custom Shader Property List with Preserve Toggles ----
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Shader Properties (Bulk Changes Skip Preserved)", EditorStyles.boldLabel);
+
+        int propCount = ShaderUtil.GetPropertyCount(currentShader);
+        for (int i = 0; i < propCount; i++)
+        {
+            // Skip hidden properties.
+            if (ShaderUtil.IsShaderPropertyHidden(currentShader, i))
+                continue;
+            
+            string propName = ShaderUtil.GetPropertyName(currentShader, i);
+            ShaderUtil.ShaderPropertyType propType = ShaderUtil.GetPropertyType(currentShader, i);
+            
+            EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.LabelField(propName, GUILayout.MaxWidth(150));
+            
+            // Use the first material as a sample.
+            Material sample = materialsByShader[currentShader][0];
+            bool preserve = GetProjectPreserveFlag(manager, currentShader, propName);
+            
+            // Draw the property field; disable if preserved.
+            EditorGUI.BeginDisabledGroup(preserve);
+            switch (propType)
+            {
+                case ShaderUtil.ShaderPropertyType.Color:
+                {
+                    Color currentColor = sample.GetColor(propName);
+                    Color newColor = EditorGUILayout.ColorField(currentColor);
+                    if (!preserve && newColor != currentColor)
+                    {
+                        foreach (Material mat in materialsByShader[currentShader])
+                        {
+                            mat.SetColor(propName, newColor);
+                            EditorUtility.SetDirty(mat);
+                        }
+                    }
+                    break;
+                }
+                case ShaderUtil.ShaderPropertyType.Float:
+                case ShaderUtil.ShaderPropertyType.Range:
+                {
+                    float currentFloat = sample.GetFloat(propName);
+                    float newFloat = EditorGUILayout.FloatField(currentFloat);
+                    if (!preserve && newFloat != currentFloat)
+                    {
+                        foreach (Material mat in materialsByShader[currentShader])
+                        {
+                            mat.SetFloat(propName, newFloat);
+                            EditorUtility.SetDirty(mat);
+                        }
+                    }
+                    break;
+                }
+                case ShaderUtil.ShaderPropertyType.Vector:
+                {
+                    Vector4 currentVector = sample.GetVector(propName);
+                    Vector4 newVector = EditorGUILayout.Vector4Field("", currentVector);
+                    if (!preserve && newVector != currentVector)
+                    {
+                        foreach (Material mat in materialsByShader[currentShader])
+                        {
+                            mat.SetVector(propName, newVector);
+                            EditorUtility.SetDirty(mat);
+                        }
+                    }
+                    break;
+                }
+                case ShaderUtil.ShaderPropertyType.TexEnv:
+                {
+                    Texture currentTex = sample.GetTexture(propName);
+                    Texture newTex = EditorGUILayout.ObjectField(currentTex, typeof(Texture), false) as Texture;
+                    if (!preserve && newTex != currentTex)
+                    {
+                        foreach (Material mat in materialsByShader[currentShader])
+                        {
+                            mat.SetTexture(propName, newTex);
+                            EditorUtility.SetDirty(mat);
+                        }
+                    }
+                    break;
+                }
+            }
+            EditorGUI.EndDisabledGroup();
+
+            // Draw the "Preserve" toggle.
+            bool newPreserve = EditorGUILayout.ToggleLeft("Preserve", preserve, GUILayout.Width(100));
+            if (newPreserve != preserve)
+                SetProjectPreserveFlag(manager, currentShader, propName, newPreserve);
+            EditorGUILayout.EndHorizontal();
+        }
+        
+        // ---- Draw Built-in Material Inspector ----
+        EditorGUILayout.Space();
         if (currentMatEditor == null)
         {
             EditorGUILayout.HelpBox("No MaterialEditor found for this shader.", MessageType.Warning);
         }
         else
         {
-            // Force update of serialized object to ensure properties are drawn
             currentMatEditor.serializedObject.Update();
-
-            // Draw the standard Material Inspector UI
             currentMatEditor.OnInspectorGUI();
-
-            // Apply any changes made
             currentMatEditor.serializedObject.ApplyModifiedProperties();
-
-            // Mark materials as dirty so Unity saves changes
+            
             if (GUI.changed)
             {
                 foreach (Material m in materialsByShader[currentShader])
@@ -229,7 +338,6 @@ public class ShaderManagerEditor : Editor
 
     private void SavePreset(Shader currentShader)
     {
-        // Use the first material as the representative sample.
         if (!materialsByShader.ContainsKey(currentShader) || materialsByShader[currentShader].Count == 0)
         {
             Debug.LogWarning("No materials found for shader " + currentShader.name);
@@ -245,7 +353,6 @@ public class ShaderManagerEditor : Editor
         int propertyCount = ShaderUtil.GetPropertyCount(currentShader);
         for (int i = 0; i < propertyCount; i++)
         {
-            // Only consider properties that are visible in the Material Inspector.
             if (ShaderUtil.IsShaderPropertyHidden(currentShader, i))
                 continue;
 
@@ -255,7 +362,6 @@ public class ShaderManagerEditor : Editor
             ShaderPropertyEntry entry = new ShaderPropertyEntry();
             entry.propertyName = propName;
 
-            // Map property types; treat Range as Float.
             switch (propType)
             {
                 case ShaderUtil.ShaderPropertyType.Float:
@@ -281,8 +387,8 @@ public class ShaderManagerEditor : Editor
             preset.propertyEntries.Add(entry);
         }
 
-        // Prompt the user for a save location.
-        string path = EditorUtility.SaveFilePanelInProject("Save Shader Preset", preset.presetName, "asset", "Please enter a file name to save the preset to");
+        // Prompt for a save location.
+        string path = EditorUtility.SaveFilePanelInProject("Save Shader Preset", preset.presetName, "asset", "Enter file name to save the preset to");
         if (!string.IsNullOrEmpty(path))
         {
             AssetDatabase.CreateAsset(preset, path);
@@ -294,13 +400,28 @@ public class ShaderManagerEditor : Editor
 
     private void ApplyPreset(ShaderPreset preset, Shader currentShader)
     {
-        // If there are no materials for the current shader, exit.
+        // If the preset's shader differs, automatically change materials.
+        if (preset.shader != currentShader)
+        {
+            List<Material> mats = materialsByShader[currentShader];
+            foreach (Material mat in mats)
+            {
+                Material temp = new Material(preset.shader);
+                temp.CopyPropertiesFromMaterial(mat);
+                mat.shader = preset.shader;
+                mat.CopyPropertiesFromMaterial(temp);
+                EditorUtility.SetDirty(mat);
+            }
+            UpdateShaderList();
+            currentShader = preset.shader;
+        }
+
         if (!materialsByShader.ContainsKey(currentShader))
         {
             Debug.LogWarning("No materials found for shader " + currentShader.name);
             return;
         }
-
+        	
         // If the preset's shader is different from the current shader, change all materials to the preset shader.
         if (preset.shader != currentShader)
         {
@@ -323,7 +444,6 @@ public class ShaderManagerEditor : Editor
             // Set currentShader to the new shader.
             currentShader = preset.shader;
         }
-
         // Now, for each material that uses the current (preset) shader, apply the saved property values.
         if (!materialsByShader.ContainsKey(currentShader))
         {
@@ -331,10 +451,13 @@ public class ShaderManagerEditor : Editor
             return;
         }
 
+        // Apply preset values to each material, skipping preserved properties.
         foreach (Material mat in materialsByShader[currentShader])
         {
             foreach (ShaderPropertyEntry entry in preset.propertyEntries)
             {
+                if (GetProjectPreserveFlag((ShaderManager)target, currentShader, entry.propertyName))
+                    continue;
                 if (!mat.HasProperty(entry.propertyName))
                     continue;
 
@@ -358,6 +481,4 @@ public class ShaderManagerEditor : Editor
         }
         Debug.Log("Preset applied to all materials using shader " + currentShader.name);
     }
-
-
 }

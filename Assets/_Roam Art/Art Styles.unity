@@ -28596,8 +28596,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966834918}
-  - component: {fileID: 966834922}
-  - component: {fileID: 966834923}
   m_Layer: 0
   m_Name: Basic Material
   m_TagString: Untagged
@@ -28639,30 +28637,6 @@ Transform:
   - {fileID: 522386537}
   m_Father: {fileID: 201891837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &966834922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966834917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05520a9dace1b487d83ec1e79b297aad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &966834923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966834917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012c54bc359e8419b84ea49558374583, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &971870712
 GameObject:
   m_ObjectHideFlags: 0
@@ -46480,6 +46454,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bcd7ab86ccc5f74c90573a403655af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preserveFlags:
+  - shaderName: MK/Toon/URP/Standard/Physically Based
+    propertyName: _AlbedoColor
+    preserve: 1
+  - shaderName: MK/Toon/URP/Standard/Physically Based
+    propertyName: _AlbedoMap
+    preserve: 1
 --- !u!33 &1909006124
 MeshFilter:
   m_ObjectHideFlags: 0

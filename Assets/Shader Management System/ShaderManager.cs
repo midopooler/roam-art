@@ -1,9 +1,17 @@
-// ShaderManager.cs
+using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+[System.Serializable]
+public class PreserveFlagData
+{
+    public string shaderName;
+    public string propertyName;
+    public bool preserve;
+}
+
 public class ShaderManager : MonoBehaviour
 {
-    // This MonoBehaviour acts as a marker for our Shader Management.
-    // Simply attach this to a parent GameObject in your scene.
+    // This list stores preserve flags for each shader property.
+    // It is serialized and becomes part of your scene or prefab.
+    public List<PreserveFlagData> preserveFlags = new List<PreserveFlagData>();
 }
