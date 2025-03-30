@@ -413,6 +413,206 @@
             "description": "Controls the maximum value for Fresnel effect.",
             "defaultValue": "1.5",
             "usageNotes": "Determines the highest intensity of the Fresnel effect."
+        },
+        {
+            "canonicalName": "OcclusionStrength",
+            "aliases": [
+                "_OcclusionStrength"
+            ],
+            "propertyType": "Float",
+            "description": "Controls the strength of ambient occlusion.",
+            "defaultValue": "1.0",
+            "usageNotes": "Determines how strong the ambient occlusion effect is. 0 means no occlusion, 1 means full occlusion."
+        },
+        {
+            "canonicalName": "OcclusionMap",
+            "aliases": [
+                "_OcclusionMap"
+            ],
+            "propertyType": "2D",
+            "description": "Ambient occlusion texture map.",
+            "defaultValue": "white",
+            "usageNotes": "Texture that defines variations in ambient occlusion across the surface."
+        },
+        {
+            "canonicalName": "OcclusionChannel",
+            "aliases": [
+                "_OcclusionChannel"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls which channel of the occlusion map to use.",
+            "defaultValue": "0",
+            "usageNotes": "Determines which texture channel (R, G, B, A) to use for occlusion."
+        },
+        {
+            "canonicalName": "OutlineTextureType",
+            "aliases": [
+                "_OutlineTextureType"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls the type of outline texture to use.",
+            "defaultValue": "0",
+            "usageNotes": "Determines whether to use vertex shader or pixel shader for outline texture."
+        },
+        {
+            "canonicalName": "OutlineTextureLOD",
+            "aliases": [
+                "_OutlineTextureLOD"
+            ],
+            "propertyType": "Float",
+            "description": "Controls the LOD level of outline texture.",
+            "defaultValue": "5",
+            "usageNotes": "Determines the level of detail for the outline texture."
+        },
+        {
+            "canonicalName": "OutlinePixelSizeType",
+            "aliases": [
+                "_OutlinePixelSizeType"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls the type of outline pixel size.",
+            "defaultValue": "0",
+            "usageNotes": "Determines how outline width is calculated (Constant, Minimum, Min Max)."
+        },
+        {
+            "canonicalName": "OutlineMinWidth",
+            "aliases": [
+                "_OutlineMinWidth"
+            ],
+            "propertyType": "Float",
+            "description": "Controls the minimum width of outline in pixels.",
+            "defaultValue": "1",
+            "usageNotes": "Determines the minimum thickness of the outline in pixels."
+        },
+        {
+            "canonicalName": "OutlineMaxWidth",
+            "aliases": [
+                "_OutlineMaxWidth"
+            ],
+            "propertyType": "Float",
+            "description": "Controls the maximum width of outline in pixels.",
+            "defaultValue": "1",
+            "usageNotes": "Determines the maximum thickness of the outline in pixels."
+        },
+        {
+            "canonicalName": "NormalsSource",
+            "aliases": [
+                "_NormalsSource"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls the source of outline normals.",
+            "defaultValue": "0",
+            "usageNotes": "Determines where to get the normals for outline effect (Normal, Vertex Colors, Tangents, UV1, UV2, UV3, UV4)."
+        },
+        {
+            "canonicalName": "NormalsUVType",
+            "aliases": [
+                "_NormalsUVType"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls the type of UV data for normals.",
+            "defaultValue": "0",
+            "usageNotes": "Determines how UV data is stored (Full XYZ, Compressed XY, Compressed ZW)."
+        },
+        {
+            "canonicalName": "IndirectIntensity",
+            "aliases": [
+                "_IndirectIntensity"
+            ],
+            "propertyType": "Float",
+            "description": "Controls the intensity of indirect lighting.",
+            "defaultValue": "1",
+            "usageNotes": "Determines how strong the indirect lighting effect is. 0 means no indirect lighting, 1 means full intensity."
+        },
+        {
+            "canonicalName": "SingleIndirectColor",
+            "aliases": [
+                "_SingleIndirectColor"
+            ],
+            "propertyType": "Boolean",
+            "description": "Controls whether to use a single color for indirect lighting.",
+            "defaultValue": "0",
+            "usageNotes": "When enabled, uses a single color for all indirect lighting."
+        },
+        {
+            "canonicalName": "ReflectionsEnabled",
+            "aliases": [
+                "_UseReflections"
+            ],
+            "propertyType": "Boolean",
+            "description": "Controls whether to enable environment reflections.",
+            "defaultValue": "0",
+            "usageNotes": "When enabled, the material will show environment reflections."
+        },
+        {
+            "canonicalName": "FresnelReflections",
+            "aliases": [
+                "_UseFresnelReflections"
+            ],
+            "propertyType": "Boolean",
+            "description": "Controls whether to enable Fresnel-based reflections.",
+            "defaultValue": "1",
+            "usageNotes": "When enabled, reflections are stronger at grazing angles."
+        },
+        {
+            "canonicalName": "ReflectionMapType",
+            "aliases": [
+                "_ReflectionMapType"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls the type of reflection map to use.",
+            "defaultValue": "0",
+            "usageNotes": "Determines what channel of the reflection map to use (Disabled, Albedo Alpha, Custom R, Custom G, Custom B, Custom A)."
+        },
+        {
+            "canonicalName": "ReflectionTex",
+            "aliases": [
+                "_ReflectionTex"
+            ],
+            "propertyType": "2D",
+            "description": "Reflection texture map.",
+            "defaultValue": "white",
+            "usageNotes": "Texture that defines variations in reflection across the surface."
+        },
+        {
+            "canonicalName": "MatCapType",
+            "aliases": [
+                "_MatCapType"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls the type of matcap blending.",
+            "defaultValue": "0",
+            "usageNotes": "Determines how matcap effect is blended (Additive, Replace)."
+        },
+        {
+            "canonicalName": "MatCapMaskChannel",
+            "aliases": [
+                "_MatCapMaskChannel"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls which channel of the matcap mask to use.",
+            "defaultValue": "0",
+            "usageNotes": "Determines which texture channel (R, G, B, A) to use for matcap mask."
+        },
+        {
+            "canonicalName": "EmissionChannel",
+            "aliases": [
+                "_EmissionChannel"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls which channel of the emission map to use.",
+            "defaultValue": "4",
+            "usageNotes": "Determines which texture channel (R, G, B, A, RGB) to use for emission."
+        },
+        {
+            "canonicalName": "SpecularMapType",
+            "aliases": [
+                "_SpecularMapType"
+            ],
+            "propertyType": "Enum",
+            "description": "Controls the type of specular map to use.",
+            "defaultValue": "0",
+            "usageNotes": ""
         }
     ]
 }
