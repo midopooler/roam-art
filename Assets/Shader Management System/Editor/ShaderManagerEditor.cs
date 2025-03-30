@@ -113,6 +113,7 @@ public class ShaderManagerEditor : Editor
     {
         var referenceData = ShaderPropertyReferenceLoader.LoadReferenceData();
         ShaderPropertyMetadata mapping = null;
+        // Find the mapping entry where the source property is either the canonical name or one of the aliases.
         foreach (var meta in referenceData.properties)
         {
             if (meta.canonicalName == sourcePropName || (meta.aliases != null && meta.aliases.Contains(sourcePropName)))
@@ -121,22 +122,29 @@ public class ShaderManagerEditor : Editor
                 break;
             }
         }
+        
         if (mapping != null)
         {
-            // Prefer the canonical name if available.
-            if (ShaderHasProperty(targetShader, mapping.canonicalName))
-                return mapping.canonicalName;
+            // Build a combined list that includes the canonical name and then all aliases.
+            List<string> allNames = new List<string>();
+            allNames.Add(mapping.canonicalName);
             if (mapping.aliases != null)
             {
                 foreach (var alias in mapping.aliases)
                 {
-                    if (ShaderHasProperty(targetShader, alias))
-                        return alias;
+                    if (!allNames.Contains(alias))
+                        allNames.Add(alias);
                 }
+            }
+            // Iterate over the combined list and return the first name that exists on the target shader.
+            foreach (var name in allNames)
+            {
+                if (ShaderHasProperty(targetShader, name))
+                    return name;
             }
             return null;
         }
-        // Fallback: if target has same property name.
+        // Fallback: if no mapping is found, return sourcePropName if it exists on target.
         return ShaderHasProperty(targetShader, sourcePropName) ? sourcePropName : null;
     }
     
