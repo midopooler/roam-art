@@ -8,9 +8,9 @@
                 "_Color"
             ],
             "propertyType": "Color",
-            "description": "Controls the base color of the material.",
+            "description": "The base color of the material",
             "defaultValue": "(1,1,1,1)",
-            "usageNotes": "Represents the main color of the material. Alpha channel controls transparency."
+            "usageNotes": "This is the primary color of the material. In Toony Colors Pro, it's the main color that interacts with lighting. In FlatKit, it's the base color that can be modified by cel shading modes. For MK Toon, it's the main albedo color that interacts with the physically based workflow.\n\nVisual Characteristics:\n- At full opacity (alpha=1), the color appears solid and opaque\n- At lower opacity values, the color becomes translucent\n- When used with cel shading (FlatKit/Toony Colors), the color can be modified by the cel shading gradient\n- In MK Toon's metallic workflow, this color interacts with the metallic value to create a metallic appearance"
         },
         {
             "canonicalName": "BaseMap",
@@ -20,9 +20,9 @@
                 "_MainTex"
             ],
             "propertyType": "2D",
-            "description": "Base color texture map.",
+            "description": "The base texture map",
             "defaultValue": "white",
-            "usageNotes": "Texture that defines the color variations across the surface."
+            "usageNotes": "This is the main texture that provides the surface detail for the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this texture can be used with the albedo channel for base color\n- In FlatKit, it can be used with cel shading to create stylized effects\n- In MK Toon, it interacts with the metallic and smoothness maps to create PBR effects\n- When using alpha clipping, the alpha channel of this texture determines the transparent areas"
         },
         {
             "canonicalName": "Metallic",
@@ -31,9 +31,9 @@
                 "_MetallicMap"
             ],
             "propertyType": "Float",
-            "description": "Controls the metalness of the material.",
+            "description": "Controls the metallic appearance of the material",
             "defaultValue": "0.0",
-            "usageNotes": "0 means non-metal, 1 means full metal."
+            "usageNotes": "This value determines how metallic the material appears.\n\nVisual Characteristics:\n- At 0: The material appears non-metallic with typical diffuse reflection\n- At 1: The material appears highly metallic with strong specular highlights\n- In MK Toon's workflow, this value interacts with the smoothness value to create different metallic finishes\n- In Toony Colors Pro, this can be used to create stylized metallic effects when combined with cel shading"
         },
         {
             "canonicalName": "Smoothness",
@@ -42,9 +42,9 @@
                 "_Glossiness"
             ],
             "propertyType": "Float",
-            "description": "Controls the smoothness of the material.",
+            "description": "Controls the surface smoothness",
             "defaultValue": "1.0",
-            "usageNotes": "1 means full smooth, 0 means rough."
+            "usageNotes": "This value determines how smooth or rough the material appears.\n\nVisual Characteristics:\n- At 0: The material appears very rough with diffuse lighting\n- At 1: The material appears very smooth with strong specular highlights\n- In MK Toon's workflow, this interacts with metallic to create different material finishes\n- In Toony Colors Pro, this can be used to control the size and intensity of specular highlights"
         },
         {
             "canonicalName": "Roughness",
@@ -53,9 +53,9 @@
                 "_RoughnessMap"
             ],
             "propertyType": "Float",
-            "description": "Controls the roughness of the material.",
+            "description": "Controls the surface roughness",
             "defaultValue": "0.5",
-            "usageNotes": "1 means very rough, 0 means very smooth."
+            "usageNotes": "This value is an alternative to smoothness, with higher values indicating rougher surfaces.\n\nVisual Characteristics:\n- At 0: The material appears very smooth with strong specular highlights\n- At 1: The material appears very rough with diffuse lighting\n- In MK Toon's roughness workflow, this provides a more intuitive control over surface roughness\n- In Toony Colors Pro, this can be used to create stylized roughness effects"
         },
         {
             "canonicalName": "SpecularColor",
@@ -65,9 +65,9 @@
                 "_SpecularColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the color of specular highlights.",
+            "description": "The color of specular highlights",
             "defaultValue": "(0.75,0.75,0.75,1)",
-            "usageNotes": "Defines the color of the material's highlights."
+            "usageNotes": "This color determines the appearance of specular highlights on the material.\n\nVisual Characteristics:\n- In MK Toon's specular workflow, this color appears in the highlight areas\n- In Toony Colors Pro, this can be used to create stylized specular effects\n- The alpha value controls the intensity of the specular highlight\n- When combined with smoothness, it creates different highlight sizes and intensities"
         },
         {
             "canonicalName": "SpecularMap",
@@ -76,9 +76,9 @@
                 "_SpecGlossMap"
             ],
             "propertyType": "2D",
-            "description": "Specular highlight texture map.",
+            "description": "The specular map",
             "defaultValue": "white",
-            "usageNotes": "Texture that defines the specular intensity across the surface."
+            "usageNotes": "This texture controls the distribution of specular highlights across the surface.\n\nVisual Characteristics:\n- White areas in the texture correspond to full specular intensity\n- Black areas correspond to no specular reflection\n- In MK Toon, this can be used to create detailed specular patterns\n- In Toony Colors Pro, this can be used to create stylized specular effects"
         },
         {
             "canonicalName": "NormalMap",
@@ -87,9 +87,9 @@
                 "_BumpMap"
             ],
             "propertyType": "2D",
-            "description": "Normal map texture for surface details.",
+            "description": "The normal map",
             "defaultValue": "bump",
-            "usageNotes": "Texture that defines surface detail and bumpiness."
+            "usageNotes": "This texture provides surface detail through normal mapping.\n\nVisual Characteristics:\n- In MK Toon, this creates detailed surface detail with proper lighting\n- In FlatKit, this can be used to enhance the cel shading effect\n- In Toony Colors Pro, this can be used to create stylized surface detail\n- The intensity of the normal map can be controlled by the NormalMapIntensity property"
         },
         {
             "canonicalName": "NormalMapIntensity",
@@ -98,9 +98,9 @@
                 "_BumpScale"
             ],
             "propertyType": "Float",
-            "description": "Controls the intensity of the normal map effect.",
+            "description": "Controls the intensity of the normal map",
             "defaultValue": "1.0",
-            "usageNotes": "Controls how pronounced the surface details appear."
+            "usageNotes": "This value determines how strong the normal map effect appears.\n\nVisual Characteristics:\n- At 0: The normal map has no effect\n- At 1: The normal map has its full effect\n- Values greater than 1 can create exaggerated surface detail\n- This is particularly useful in stylized shaders to enhance the visual effect"
         },
         {
             "canonicalName": "EmissionColor",
@@ -109,9 +109,9 @@
                 "_EmissionColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the emission color of the material.",
+            "description": "The color of emission",
             "defaultValue": "(0,0,0,1)",
-            "usageNotes": "Defines the color of the material's glow effect."
+            "usageNotes": "This color determines the glow effect of the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized glow effect\n- In FlatKit, this can be used to create glowing cel effects\n- The alpha value controls the intensity of the emission\n- When combined with an emission map, it creates detailed glowing areas"
         },
         {
             "canonicalName": "EmissionMap",
@@ -120,9 +120,9 @@
                 "_EmissionMap"
             ],
             "propertyType": "2D",
-            "description": "Emission texture map.",
+            "description": "The emission map",
             "defaultValue": "white",
-            "usageNotes": "Texture that defines where emission appears on the surface."
+            "usageNotes": "This texture controls where emission appears on the surface.\n\nVisual Characteristics:\n- White areas in the texture correspond to full emission intensity\n- Black areas correspond to no emission\n- In Toony Colors Pro, this can be used to create stylized glowing effects\n- In FlatKit, this can be used to create glowing cel effects"
         },
         {
             "canonicalName": "RimColor",
@@ -132,9 +132,9 @@
                 "_RimColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the color of the rim lighting effect.",
+            "description": "The color of the rim light",
             "defaultValue": "(0.8,0.8,0.8,0.5)",
-            "usageNotes": "Defines the color of the edge highlight effect."
+            "usageNotes": "This color determines the appearance of the rim light effect.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized rim light effect\n- In FlatKit, this can be used to create cel-style rim effects\n- The alpha value controls the intensity of the rim light\n- When combined with RimSize, it creates different rim light widths"
         },
         {
             "canonicalName": "RimSize",
@@ -144,9 +144,9 @@
                 "_RimMin"
             ],
             "propertyType": "Float",
-            "description": "Controls the size of the rim lighting effect.",
+            "description": "Controls the size of the rim light",
             "defaultValue": "0.5",
-            "usageNotes": "Controls how wide the edge highlight appears."
+            "usageNotes": "This value determines how wide the rim light effect appears.\n\nVisual Characteristics:\n- At 0: The rim light is very thin\n- At 1: The rim light is very wide\n- In FlatKit, this can be used to create cel-style rim effects\n- In Toony Colors Pro, this can be used to create stylized rim effects"
         },
         {
             "canonicalName": "OutlineColor",
@@ -155,9 +155,9 @@
                 "_OutlineColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the color of the outline.",
+            "description": "The color of the outline",
             "defaultValue": "(0,0,0,1)",
-            "usageNotes": "Defines the color of the object's outline."
+            "usageNotes": "This color determines the appearance of the outline effect.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized outline effect\n- In FlatKit, this can be used to create cel-style outlines\n- The alpha value controls the intensity of the outline\n- When combined with OutlineSize, it creates different outline widths"
         },
         {
             "canonicalName": "OutlineSize",
@@ -166,9 +166,9 @@
                 "_OutlineWidth"
             ],
             "propertyType": "Float",
-            "description": "Controls the thickness of the outline.",
+            "description": "Controls the size of the outline",
             "defaultValue": "1.0",
-            "usageNotes": "Controls how thick the outline appears."
+            "usageNotes": "This value determines how thick the outline appears.\n\nVisual Characteristics:\n- At 0: The outline is very thin\n- At higher values: The outline becomes thicker\n- In FlatKit, this can be used to create cel-style outlines\n- In Toony Colors Pro, this can be used to create stylized outline effects"
         },
         {
             "canonicalName": "CelShadingMode",
@@ -177,9 +177,9 @@
                 "_RampType"
             ],
             "propertyType": "Enum",
-            "description": "Controls the cel shading style.",
+            "description": "The cel shading mode",
             "defaultValue": "0",
-            "usageNotes": "Determines the type of cel shading effect to use."
+            "usageNotes": "This determines the type of cel shading effect.\n\nVisual Characteristics:\n- None: Creates a flat look with no cel shading\n- Single [Cel]: Creates a single cel effect\n- Steps: Creates multiple cel steps\n- Gradient: Creates a gradient cel effect\n- In FlatKit, this can be used to create various cel shading styles\n- In Toony Colors Pro, this can be used to create stylized cel effects"
         },
         {
             "canonicalName": "LightTransmissionColor",
@@ -188,9 +188,9 @@
                 "_LightTransmissionColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the color of light transmission.",
+            "description": "The color of light transmission",
             "defaultValue": "(1,0.65,0,1)",
-            "usageNotes": "Defines the color of light passing through the material."
+            "usageNotes": "This color determines how light passes through the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized light transmission effect\n- The alpha value controls the intensity of the transmission\n- When combined with other properties, it creates different transmission effects"
         },
         {
             "canonicalName": "AlphaCutoff",
@@ -199,7 +199,7 @@
                 "_Cutoff"
             ],
             "propertyType": "Float",
-            "description": "Controls the alpha cutoff threshold for transparency.",
+            "description": "Controls the alpha cutoff threshold for transparency",
             "defaultValue": "0.5",
             "usageNotes": "Determines the threshold at which pixels are considered transparent. 0 means fully transparent, 1 means fully opaque."
         },
@@ -209,44 +209,40 @@
                 "_RampThreshold"
             ],
             "propertyType": "Float",
-            "description": "Controls the threshold for cel shading ramp.",
+            "description": "Controls the threshold for cel shading ramp",
             "defaultValue": "0.75",
             "usageNotes": "Determines where the light-to-dark transition occurs in the cel shading effect."
         },
-        
         {
             "canonicalName": "RampSmoothing",
             "aliases": [
                 "_RampSmoothing"
             ],
             "propertyType": "Float",
-            "description": "Controls the smoothing of cel shading ramp.",
+            "description": "Controls the smoothing of cel shading ramp",
             "defaultValue": "0.1",
             "usageNotes": "Determines how gradual the transition between light and dark areas is in cel shading."
         },
-        
         {
             "canonicalName": "RampBands",
             "aliases": [
                 "_RampBands"
             ],
             "propertyType": "Int",
-            "description": "Controls the number of bands in cel shading.",
+            "description": "Controls the number of bands in cel shading",
             "defaultValue": "4",
             "usageNotes": "Determines how many distinct light levels to show in the cel shading effect."
         },
-        
         {
             "canonicalName": "RampBandsSmoothing",
             "aliases": [
                 "_RampBandsSmoothing"
             ],
             "propertyType": "Float",
-            "description": "Controls the smoothing between bands in cel shading.",
+            "description": "Controls the smoothing between bands in cel shading",
             "defaultValue": "0.1",
             "usageNotes": "Determines how gradual the transitions between bands are in cel shading."
         },
-        
         {
             "canonicalName": "ShadowColor",
             "aliases": [
@@ -254,22 +250,20 @@
                 "_ShadowColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the color of shadows.",
+            "description": "The color of shadows",
             "defaultValue": "(0.2,0.2,0.2,1)",
             "usageNotes": "Defines the color of the material's shadow areas."
         },
-        
         {
             "canonicalName": "ShadowTexture",
             "aliases": [
                 "_ShadowBaseMap"
             ],
             "propertyType": "2D",
-            "description": "Shadow texture map.",
+            "description": "Shadow texture map",
             "defaultValue": "gray",
             "usageNotes": "Texture that defines variations in shadow color across the surface."
         },
-        
         {
             "canonicalName": "SpecularSize",
             "aliases": [
@@ -277,11 +271,10 @@
                 "_FlatSpecularSize"
             ],
             "propertyType": "Float",
-            "description": "Controls the size of specular highlights.",
+            "description": "Controls the size of specular highlights",
             "defaultValue": "0.25",
             "usageNotes": "Determines how large the specular highlights appear on the surface."
         },
-        
         {
             "canonicalName": "SpecularSmoothness",
             "aliases": [
@@ -289,128 +282,117 @@
                 "_FlatSpecularEdgeSmoothness"
             ],
             "propertyType": "Float",
-            "description": "Controls the smoothness of specular highlights.",
+            "description": "Controls the smoothness of specular highlights",
             "defaultValue": "0.05",
             "usageNotes": "Determines how gradual the edges of specular highlights are."
         },
-        
         {
             "canonicalName": "SpecularRoughness",
             "aliases": [
                 "_SpecularRoughness"
             ],
             "propertyType": "Float",
-            "description": "Controls the roughness of specular highlights.",
+            "description": "Controls the roughness of specular highlights",
             "defaultValue": "0.5",
             "usageNotes": "Determines how spread out the specular highlights appear."
         },
-        
         {
             "canonicalName": "RimMax",
             "aliases": [
                 "_RimMax"
             ],
             "propertyType": "Float",
-            "description": "Controls the maximum intensity of rim lighting.",
+            "description": "Controls the maximum intensity of rim lighting",
             "defaultValue": "1",
             "usageNotes": "Determines the brightest possible intensity of the rim lighting effect."
         },
-        
         {
             "canonicalName": "RimLightMask",
             "aliases": [
                 "_UseRimLightMask"
             ],
             "propertyType": "Boolean",
-            "description": "Controls whether to use light-based masking for rim lighting.",
+            "description": "Controls whether to use light-based masking for rim lighting",
             "defaultValue": "1",
             "usageNotes": "When enabled, rim lighting is affected by light direction and intensity."
         },
-        
         {
             "canonicalName": "MatCapColor",
             "aliases": [
                 "_MatCapColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the color of matcap effect.",
+            "description": "The color of matcap effect",
             "defaultValue": "(1,1,1,1)",
             "usageNotes": "Defines the color of the matcap overlay effect."
         },
-        
         {
             "canonicalName": "MatCapTexture",
             "aliases": [
                 "_MatCapTex"
             ],
             "propertyType": "2D",
-            "description": "Matcap texture map.",
+            "description": "Matcap texture map",
             "defaultValue": "black",
             "usageNotes": "Texture that defines the matcap effect across the surface."
         },
-        
         {
             "canonicalName": "MatCapMask",
             "aliases": [
                 "_UseMatCapMask"
             ],
             "propertyType": "Boolean",
-            "description": "Controls whether to use a mask for matcap effect.",
+            "description": "Controls whether to use a mask for matcap effect",
             "defaultValue": "0",
             "usageNotes": "When enabled, matcap effect can be masked using a texture."
         },
-        
         {
             "canonicalName": "MatCapMaskTexture",
             "aliases": [
                 "_MatCapMask"
             ],
             "propertyType": "2D",
-            "description": "Matcap mask texture.",
+            "description": "Matcap mask texture",
             "defaultValue": "black",
             "usageNotes": "Texture that defines where the matcap effect appears on the surface."
         },
-        
         {
             "canonicalName": "ReflectionColor",
             "aliases": [
                 "_ReflectionColor"
             ],
             "propertyType": "Color",
-            "description": "Controls the color of reflections.",
+            "description": "The color of reflections",
             "defaultValue": "(1,1,1,1)",
             "usageNotes": "Defines the color of the material's reflections."
         },
-        
         {
             "canonicalName": "ReflectionSmoothness",
             "aliases": [
                 "_ReflectionSmoothness"
             ],
             "propertyType": "Float",
-            "description": "Controls the smoothness of reflections.",
+            "description": "Controls the smoothness of reflections",
             "defaultValue": "0.5",
             "usageNotes": "Determines how clear or blurred the reflections appear."
         },
-        
         {
             "canonicalName": "FresnelMin",
             "aliases": [
                 "_FresnelMin"
             ],
             "propertyType": "Float",
-            "description": "Controls the minimum value for Fresnel effect.",
+            "description": "Controls the minimum value for Fresnel effect",
             "defaultValue": "0",
             "usageNotes": "Determines the lowest intensity of the Fresnel effect."
         },
-        
         {
             "canonicalName": "FresnelMax",
             "aliases": [
                 "_FresnelMax"
             ],
             "propertyType": "Float",
-            "description": "Controls the maximum value for Fresnel effect.",
+            "description": "Controls the maximum value for Fresnel effect",
             "defaultValue": "1.5",
             "usageNotes": "Determines the highest intensity of the Fresnel effect."
         },
@@ -420,9 +402,9 @@
                 "_OcclusionStrength"
             ],
             "propertyType": "Float",
-            "description": "Controls the strength of ambient occlusion.",
+            "description": "Controls the strength of ambient occlusion",
             "defaultValue": "1.0",
-            "usageNotes": "Determines how strong the ambient occlusion effect is. 0 means no occlusion, 1 means full occlusion."
+            "usageNotes": "Determines how strong the ambient occlusion effect is. 0 means no occlusion, 1 means full occlusion.\n\nVisual Characteristics:\n- At 0: No ambient occlusion effect\n- At 1: Full ambient occlusion effect\n- In Toony Colors Pro, this can be used to create stylized occlusion effects\n- In MK Toon, this interacts with the indirect lighting calculations"
         },
         {
             "canonicalName": "OcclusionMap",
@@ -430,9 +412,9 @@
                 "_OcclusionMap"
             ],
             "propertyType": "2D",
-            "description": "Ambient occlusion texture map.",
+            "description": "Ambient occlusion texture map",
             "defaultValue": "white",
-            "usageNotes": "Texture that defines variations in ambient occlusion across the surface."
+            "usageNotes": "Texture that defines variations in ambient occlusion across the surface.\n\nVisual Characteristics:\n- White areas in the texture correspond to no occlusion\n- Black areas correspond to full occlusion\n- In Toony Colors Pro, this can be used to create stylized occlusion effects\n- In MK Toon, this interacts with the indirect lighting calculations"
         },
         {
             "canonicalName": "OcclusionChannel",
@@ -440,9 +422,9 @@
                 "_OcclusionChannel"
             ],
             "propertyType": "Enum",
-            "description": "Controls which channel of the occlusion map to use.",
+            "description": "Controls which channel of the occlusion map to use",
             "defaultValue": "0",
-            "usageNotes": "Determines which texture channel (R, G, B, A) to use for occlusion."
+            "usageNotes": "Determines which texture channel (R, G, B, A) to use for occlusion.\n\nVisual Characteristics:\n- Red: Uses the red channel\n- Green: Uses the green channel\n- Blue: Uses the blue channel\n- Alpha: Uses the alpha channel\n- In Toony Colors Pro, this can be used to create different occlusion effects"
         },
         {
             "canonicalName": "OutlineTextureType",
@@ -450,9 +432,9 @@
                 "_OutlineTextureType"
             ],
             "propertyType": "Enum",
-            "description": "Controls the type of outline texture to use.",
+            "description": "Controls the type of outline texture to use",
             "defaultValue": "0",
-            "usageNotes": "Determines whether to use vertex shader or pixel shader for outline texture."
+            "usageNotes": "This determines how the outline texture is sampled and applied.\n\nVisual Characteristics:\n- Vertex Shader: Samples the texture at the vertex level, faster but loses precision\n- Pixel Shader: Samples the texture for each pixel, slower but shows more detail\n- In Toony Colors Pro, this can be used to create different outline effects\n- In FlatKit, this can be used to create cel-style outline variations"
         },
         {
             "canonicalName": "OutlineTextureLOD",
@@ -460,9 +442,9 @@
                 "_OutlineTextureLOD"
             ],
             "propertyType": "Float",
-            "description": "Controls the LOD level of outline texture.",
+            "description": "Controls the LOD level of outline texture",
             "defaultValue": "5",
-            "usageNotes": "Determines the level of detail for the outline texture."
+            "usageNotes": "This value determines which mip level of the outline texture to sample.\n\nVisual Characteristics:\n- Lower values: Shows more detail but can be noisy\n- Higher values: Shows less detail but is smoother\n- In Toony Colors Pro, this can be used to create different outline styles\n- In FlatKit, this can be used to create cel-style outline variations"
         },
         {
             "canonicalName": "OutlinePixelSizeType",
@@ -470,9 +452,9 @@
                 "_OutlinePixelSizeType"
             ],
             "propertyType": "Enum",
-            "description": "Controls the type of outline pixel size.",
+            "description": "Controls the type of outline pixel size",
             "defaultValue": "0",
-            "usageNotes": "Determines how outline width is calculated (Constant, Minimum, Min Max)."
+            "usageNotes": "This determines how the outline size behaves in screen space.\n\nVisual Characteristics:\n- Disabled: No pixel size correction\n- Constant: Outline always has defined width in pixels\n- Minimum: Outline has minimum pixel size on screen\n- Min Max: Outline has minimum and maximum pixel size on screen\n- In Toony Colors Pro, this can be used to create consistent outline effects\n- In FlatKit, this can be used to create cel-style outline variations"
         },
         {
             "canonicalName": "OutlineMinWidth",
@@ -480,9 +462,9 @@
                 "_OutlineMinWidth"
             ],
             "propertyType": "Float",
-            "description": "Controls the minimum width of outline in pixels.",
+            "description": "Controls the minimum width of outline in pixels",
             "defaultValue": "1",
-            "usageNotes": "Determines the minimum thickness of the outline in pixels."
+            "usageNotes": "This value determines the thinnest the outline can be.\n\nVisual Characteristics:\n- Lower values: Thinner outlines\n- Higher values: Thicker outlines\n- In Toony Colors Pro, this can be used to create different outline styles\n- In FlatKit, this can be used to create cel-style outline variations"
         },
         {
             "canonicalName": "OutlineMaxWidth",
@@ -490,9 +472,9 @@
                 "_OutlineMaxWidth"
             ],
             "propertyType": "Float",
-            "description": "Controls the maximum width of outline in pixels.",
+            "description": "Controls the maximum width of outline in pixels",
             "defaultValue": "1",
-            "usageNotes": "Determines the maximum thickness of the outline in pixels."
+            "usageNotes": "This value determines the thickest the outline can be.\n\nVisual Characteristics:\n- Lower values: Thinner outlines\n- Higher values: Thicker outlines\n- In Toony Colors Pro, this can be used to create different outline styles\n- In FlatKit, this can be used to create cel-style outline variations"
         },
         {
             "canonicalName": "NormalsSource",
@@ -500,9 +482,9 @@
                 "_NormalsSource"
             ],
             "propertyType": "Enum",
-            "description": "Controls the source of outline normals.",
+            "description": "Controls the source of outline normals",
             "defaultValue": "0",
-            "usageNotes": "Determines where to get the normals for outline effect (Normal, Vertex Colors, Tangents, UV1, UV2, UV3, UV4)."
+            "usageNotes": "This determines where to get the normals for outline effect.\n\nVisual Characteristics:\n- Normal: Uses standard normals\n- Vertex Colors: Uses vertex colors as normals\n- Tangents: Uses tangent space normals\n- UV1-UV4: Uses UV channels as compressed normals\n- In Toony Colors Pro, this can be used to create different outline styles\n- In FlatKit, this can be used to create cel-style outline variations"
         },
         {
             "canonicalName": "NormalsUVType",
@@ -510,9 +492,9 @@
                 "_NormalsUVType"
             ],
             "propertyType": "Enum",
-            "description": "Controls the type of UV data for normals.",
+            "description": "Controls the type of UV data for normals",
             "defaultValue": "0",
-            "usageNotes": "Determines how UV data is stored (Full XYZ, Compressed XY, Compressed ZW)."
+            "usageNotes": "This determines how UV data is stored for normals.\n\nVisual Characteristics:\n- Full XYZ: Stores full normal vector\n- Compressed XY: Stores XY components\n- Compressed ZW: Stores ZW components\n- In Toony Colors Pro, this can be used to create different outline styles\n- In FlatKit, this can be used to create cel-style outline variations"
         },
         {
             "canonicalName": "IndirectIntensity",
@@ -520,9 +502,9 @@
                 "_IndirectIntensity"
             ],
             "propertyType": "Float",
-            "description": "Controls the intensity of indirect lighting.",
+            "description": "Controls the intensity of indirect lighting",
             "defaultValue": "1",
-            "usageNotes": "Determines how strong the indirect lighting effect is. 0 means no indirect lighting, 1 means full intensity."
+            "usageNotes": "This value determines how strong the indirect lighting effect appears.\n\nVisual Characteristics:\n- At 0: No indirect lighting\n- At 1: Full indirect lighting\n- In Toony Colors Pro, this can be used to create different lighting effects\n- In MK Toon, this interacts with the global illumination calculations"
         },
         {
             "canonicalName": "SingleIndirectColor",
@@ -530,29 +512,29 @@
                 "_SingleIndirectColor"
             ],
             "propertyType": "Boolean",
-            "description": "Controls whether to use a single color for indirect lighting.",
+            "description": "Controls whether to use a single color for indirect lighting",
             "defaultValue": "0",
-            "usageNotes": "When enabled, uses a single color for all indirect lighting."
+            "usageNotes": "When enabled, uses a single color for all indirect lighting.\n\nVisual Characteristics:\n- Disabled: Uses full indirect lighting with color variation\n- Enabled: Uses a single color for indirect lighting\n- In Toony Colors Pro, this can be used to create stylized lighting effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
-            "canonicalName": "ReflectionsEnabled",
+            "canonicalName": "UseReflections",
             "aliases": [
                 "_UseReflections"
             ],
             "propertyType": "Boolean",
-            "description": "Controls whether to enable environment reflections.",
+            "description": "Controls whether to enable environment reflections",
             "defaultValue": "0",
-            "usageNotes": "When enabled, the material will show environment reflections."
+            "usageNotes": "When enabled, the material will show environment reflections.\n\nVisual Characteristics:\n- Disabled: No environment reflections\n- Enabled: Shows environment reflections\n- In Toony Colors Pro, this can be used to create stylized reflection effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
-            "canonicalName": "FresnelReflections",
+            "canonicalName": "UseFresnelReflections",
             "aliases": [
                 "_UseFresnelReflections"
             ],
             "propertyType": "Boolean",
-            "description": "Controls whether to enable Fresnel-based reflections.",
+            "description": "Controls whether to enable Fresnel-based reflections",
             "defaultValue": "1",
-            "usageNotes": "When enabled, reflections are stronger at grazing angles."
+            "usageNotes": "When enabled, reflections are stronger at grazing angles.\n\nVisual Characteristics:\n- Disabled: Uniform reflections\n- Enabled: Stronger reflections at grazing angles\n- In Toony Colors Pro, this can be used to create stylized reflection effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
             "canonicalName": "ReflectionMapType",
@@ -560,9 +542,9 @@
                 "_ReflectionMapType"
             ],
             "propertyType": "Enum",
-            "description": "Controls the type of reflection map to use.",
+            "description": "Controls the type of reflection map to use",
             "defaultValue": "0",
-            "usageNotes": "Determines what channel of the reflection map to use (Disabled, Albedo Alpha, Custom R, Custom G, Custom B, Custom A)."
+            "usageNotes": "This determines what channel of the reflection map to use.\n\nVisual Characteristics:\n- Disabled: No reflection map\n- Albedo Alpha: Uses alpha channel of albedo\n- Custom R: Uses red channel\n- Custom G: Uses green channel\n- Custom B: Uses blue channel\n- Custom A: Uses alpha channel\n- In Toony Colors Pro, this can be used to create different reflection effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
             "canonicalName": "ReflectionTex",
@@ -570,9 +552,9 @@
                 "_ReflectionTex"
             ],
             "propertyType": "2D",
-            "description": "Reflection texture map.",
+            "description": "Reflection texture map",
             "defaultValue": "white",
-            "usageNotes": "Texture that defines variations in reflection across the surface."
+            "usageNotes": "Texture that defines variations in reflection across the surface.\n\nVisual Characteristics:\n- White areas: Full reflection\n- Black areas: No reflection\n- In Toony Colors Pro, this can be used to create stylized reflection effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
             "canonicalName": "MatCapType",
@@ -580,9 +562,9 @@
                 "_MatCapType"
             ],
             "propertyType": "Enum",
-            "description": "Controls the type of matcap blending.",
+            "description": "Controls the type of matcap blending",
             "defaultValue": "0",
-            "usageNotes": "Determines how matcap effect is blended (Additive, Replace)."
+            "usageNotes": "This determines how matcap effect is blended.\n\nVisual Characteristics:\n- Additive: Adds matcap color to base color\n- Replace: Replaces base color with matcap color\n- In Toony Colors Pro, this can be used to create different matcap effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
             "canonicalName": "MatCapMaskChannel",
@@ -590,9 +572,9 @@
                 "_MatCapMaskChannel"
             ],
             "propertyType": "Enum",
-            "description": "Controls which channel of the matcap mask to use.",
+            "description": "Controls which channel of the matcap mask to use",
             "defaultValue": "0",
-            "usageNotes": "Determines which texture channel (R, G, B, A) to use for matcap mask."
+            "usageNotes": "This determines which texture channel to use for matcap mask.\n\nVisual Characteristics:\n- Red: Uses the red channel\n- Green: Uses the green channel\n- Blue: Uses the blue channel\n- Alpha: Uses the alpha channel\n- In Toony Colors Pro, this can be used to create different matcap effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
             "canonicalName": "EmissionChannel",
@@ -600,9 +582,9 @@
                 "_EmissionChannel"
             ],
             "propertyType": "Enum",
-            "description": "Controls which channel of the emission map to use.",
+            "description": "Controls which channel of the emission map to use",
             "defaultValue": "4",
-            "usageNotes": "Determines which texture channel (R, G, B, A, RGB) to use for emission."
+            "usageNotes": "This determines which texture channel to use for emission.\n\nVisual Characteristics:\n- Red: Uses the red channel\n- Green: Uses the green channel\n- Blue: Uses the blue channel\n- Alpha: Uses the alpha channel\n- RGB: Uses all color channels\n- In Toony Colors Pro, this can be used to create different emission effects\n- In MK Toon, this affects the global illumination calculations"
         },
         {
             "canonicalName": "SpecularMapType",
@@ -610,9 +592,9 @@
                 "_SpecularMapType"
             ],
             "propertyType": "Enum",
-            "description": "Controls the type of specular map to use.",
+            "description": "Controls the type of specular map to use",
             "defaultValue": "0",
-            "usageNotes": ""
+            "usageNotes": "This determines how the specular map is applied.\n\nVisual Characteristics:\n- In Toony Colors Pro, this can be used to create different specular effects\n- In MK Toon, this affects the global illumination calculations"
         }
     ]
 }
