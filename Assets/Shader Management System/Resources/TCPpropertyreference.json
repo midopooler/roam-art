@@ -1,0 +1,322 @@
+{
+    "properties": [
+        {
+            "alias": "_BaseColor",
+            "propertyType": "Color",
+            "description": "The base color of the material",
+            "usageNotes": "This is the primary color of the material that interacts with lighting and texturing.\n\nVisual Characteristics:\n- In Toony Colors Pro, this controls the base color that interacts with cel shading and lighting\n- The alpha value controls transparency when using alpha blending\n- This color interacts with the base texture (BaseMap) to create the final material appearance"
+        },
+        {
+            "alias": "_BaseMap",
+            "propertyType": "2D",
+            "description": "The base texture map",
+            "usageNotes": "This is the main texture that provides the surface detail for the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this texture can be used with the albedo channel for base color\n- When used with alpha clipping, the alpha channel of this texture determines the transparent areas\n- This texture interacts with the base color to create the final material appearance"
+        },
+        {
+            "alias": "_HColor",
+            "propertyType": "Color",
+            "description": "The highlight color",
+            "usageNotes": "This color controls the highlights in the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this color determines the appearance of highlights\n- The alpha value controls the intensity of the highlights\n- This color interacts with the lighting system to create the final highlight appearance"
+        },
+        {
+            "alias": "_SColor",
+            "propertyType": "Color",
+            "description": "The shadow color",
+            "usageNotes": "This color controls the appearance of shadows in the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this color determines the tint of shadowed areas\n- The alpha value controls the intensity of the shadow color\n- This color interacts with the lighting system to create the final shadow appearance"
+        },
+        {
+            "alias": "_RampType",
+            "propertyType": "Float",
+            "description": "Controls the type of ramp shading",
+            "usageNotes": "This property determines how the ramp shading is calculated.\n\nVisual Characteristics:\n- Default: Two parameters define the ramp shading (Threshold and Smoothing)\n- Crisp: Same as Default but without smoothing\n- Bands: Creates quantized bands with adjustable smoothing\n- Texture: Uses a 1D ramp texture for custom gradients\n- Bands Crisp: Creates anti-aliased bands without smoothing"
+        },
+        {
+            "alias": "_RampThreshold",
+            "propertyType": "Float",
+            "description": "Controls the threshold for ramp shading",
+            "usageNotes": "This value determines where the transition between lit and unlit areas occurs.\n\nVisual Characteristics:\n- At 0: All areas are lit\n- At 1: All areas are unlit\n- In Toony Colors Pro, this interacts with the lighting system to create stylized shading effects"
+        },
+        {
+            "alias": "_RampSmoothing",
+            "propertyType": "Float",
+            "description": "Controls the smoothing of the ramp shading",
+            "usageNotes": "This value determines how smooth the transition between lit and unlit areas is.\n\nVisual Characteristics:\n- At 0: Hard, crisp transition\n- At 1: Very smooth transition\n- In Toony Colors Pro, this creates different levels of stylized shading"
+        },
+        {
+            "alias": "_SpecularColor",
+            "propertyType": "Color",
+            "description": "The color of specular highlights",
+            "usageNotes": "This color determines the appearance of specular highlights on the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates stylized specular effects\n- The alpha value controls the intensity of the specular highlight\n- When combined with smoothness, it creates different highlight sizes and intensities"
+        },
+        {
+            "alias": "_SpecularToonSize",
+            "propertyType": "Float",
+            "description": "Controls the size of stylized specular highlights",
+            "usageNotes": "This value determines how large the specular highlights appear.\n\nVisual Characteristics:\n- At 0: Very small highlights\n- At 1: Very large highlights\n- In Toony Colors Pro, this creates different levels of stylized specular effects"
+        },
+        {
+            "alias": "_EmissionColor",
+            "propertyType": "Color",
+            "description": "The color of emission",
+            "usageNotes": "This color determines the glow effect of the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized glow effect\n- The alpha value controls the intensity of the emission\n- When combined with an emission map, it creates detailed glowing areas"
+        },
+        {
+            "alias": "_RimColor",
+            "propertyType": "Color",
+            "description": "The color of the rim light",
+            "usageNotes": "This color determines the appearance of the rim light effect.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized rim light effect\n- The alpha value controls the intensity of the rim light\n- When combined with RimSize, it creates different rim light widths"
+        },
+        {
+            "alias": "_MatCapColor",
+            "propertyType": "Color",
+            "description": "The color of the matcap effect",
+            "usageNotes": "This color determines the appearance of the matcap effect.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized matcap effect\n- The color interacts with the matcap texture to create the final appearance\n- This can be used to create various stylized lighting effects"
+        },
+        {
+            "alias": "_ReflectionColor",
+            "propertyType": "Color",
+            "description": "The color of environment reflections",
+            "usageNotes": "This color determines the appearance of environment reflections.\n\nVisual Characteristics:\n- In Toony Colors Pro, this controls the color of indirect specular reflections\n- The color interacts with the reflection map to create the final appearance\n- This can be used to create stylized reflection effects"
+        },
+        {
+            "alias": "_OutlineColor",
+            "propertyType": "Color",
+            "description": "The color of the outline",
+            "usageNotes": "This color determines the appearance of the outline.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates a stylized outline effect\n- The alpha value controls the intensity of the outline\n- This can be used to create various outline styles"
+        },
+        {
+            "alias": "_ShadowBaseMap",
+            "propertyType": "2D",
+            "description": "The shadow albedo texture",
+            "usageNotes": "This texture provides an alternative albedo for shadowed areas.\n\nVisual Characteristics:\n- In Toony Colors Pro, this allows for different colors in shadowed areas\n- The texture interacts with the shadow color to create the final shadow appearance"
+        },
+        {
+            "alias": "_BumpMap",
+            "propertyType": "2D",
+            "description": "The normal map",
+            "usageNotes": "This texture provides surface detail through normal mapping.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates detailed surface detail with proper lighting\n- The intensity of the normal map can be controlled by the NormalMapIntensity property"
+        },
+        {
+            "alias": "_SpecGlossMap",
+            "propertyType": "2D",
+            "description": "The specular map",
+            "usageNotes": "This texture controls the distribution of specular highlights across the surface.\n\nVisual Characteristics:\n- White areas in the texture correspond to full specular intensity\n- Black areas correspond to no specular reflection\n- In Toony Colors Pro, this can be used to create detailed specular patterns"
+        },
+        {
+            "alias": "_EmissionMap",
+            "propertyType": "2D",
+            "description": "The emission map",
+            "usageNotes": "This texture controls where emission appears on the surface.\n\nVisual Characteristics:\n- White areas in the texture correspond to full emission intensity\n- Black areas correspond to no emission\n- In Toony Colors Pro, this can be used to create detailed glowing effects"
+        },
+        {
+            "alias": "_MatCapTex",
+            "propertyType": "2D",
+            "description": "The matcap texture",
+            "usageNotes": "This texture provides a matcap effect for the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates stylized lighting effects\n- The texture interacts with the matcap color to create the final appearance"
+        },
+        {
+            "alias": "_ReflectionTex",
+            "propertyType": "2D",
+            "description": "The reflection texture",
+            "usageNotes": "This texture provides environment reflections for the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates stylized reflection effects\n- The texture interacts with the reflection color to create the final appearance"
+        },
+        {
+            "alias": "_OcclusionMap",
+            "propertyType": "2D",
+            "description": "The occlusion map",
+            "usageNotes": "This texture provides ambient occlusion for the material.\n\nVisual Characteristics:\n- In Toony Colors Pro, this creates stylized ambient occlusion effects\n- The texture interacts with the occlusion strength to create the final appearance"
+        },
+        {
+            "alias": "_OutlineTextureType",
+            "propertyType": "Float",
+            "description": "Controls the type of outline texture",
+            "usageNotes": "This property determines how the outline texture is applied.\n\nVisual Characteristics:\n- Disabled: No texture\n- Vertex Shader: Texture applied in vertex shader\n- Pixel Shader: Texture applied in pixel shader\n- This affects the performance and visual quality of the outline"
+        },
+        {
+            "alias": "_OutlineTextureLOD",
+            "propertyType": "Float",
+            "description": "Controls the LOD (Level of Detail) for outline texture",
+            "usageNotes": "This value determines the level of detail for the outline texture.\n\nVisual Characteristics:\n- At 0: Highest detail\n- At 8: Lowest detail\n- Higher values reduce texture quality but improve performance"
+        },
+        {
+            "alias": "_OutlinePixelSizeType",
+            "propertyType": "Float",
+            "description": "Controls how outline pixel size is determined",
+            "usageNotes": "This property determines how the outline width is calculated in screen space.\n\nVisual Characteristics:\n- Disabled: No pixel size control\n- Constant: Fixed pixel size\n- Minimum: Minimum pixel size\n- Min Max: Both minimum and maximum pixel size\n- This affects how the outline appears at different distances"
+        },
+        {
+            "alias": "_OutlineMinWidth",
+            "propertyType": "Float",
+            "description": "Minimum outline width in pixels",
+            "usageNotes": "This value sets the minimum width of the outline in pixels.\n\nVisual Characteristics:\n- Controls the minimum visible width of the outline\n- Prevents outlines from becoming too thin at certain distances\n- Works with OutlinePixelSizeType"
+        },
+        {
+            "alias": "_OutlineMaxWidth",
+            "propertyType": "Float",
+            "description": "Maximum outline width in pixels",
+            "usageNotes": "This value sets the maximum width of the outline in pixels.\n\nVisual Characteristics:\n- Controls the maximum visible width of the outline\n- Prevents outlines from becoming too thick at certain distances\n- Works with OutlinePixelSizeType"
+        },
+        {
+            "alias": "_NormalsSource",
+            "propertyType": "Float",
+            "description": "Source for outline normals",
+            "usageNotes": "This property determines where the outline normals come from.\n\nVisual Characteristics:\n- Normal: Uses standard normals\n- Vertex Colors: Uses vertex colors as normals\n- Tangents: Uses tangents\n- UV1-UV4: Uses UV channels\n- This affects how the outline follows the mesh geometry"
+        },
+        {
+            "alias": "_NormalsUVType",
+            "propertyType": "Float",
+            "description": "Type of UV data for outline normals",
+            "usageNotes": "This property determines how UV data is interpreted for outline normals.\n\nVisual Characteristics:\n- Full XYZ: Uses full 3D coordinates\n- Compressed XY: Uses compressed XY coordinates\n- Compressed ZW: Uses compressed ZW coordinates\n- This affects how the outline follows the mesh geometry"
+        },
+        {
+            "alias": "_ZSmooth",
+            "propertyType": "Float",
+            "description": "Z correction for outline",
+            "usageNotes": "This value adjusts the Z-buffer correction for the outline.\n\nVisual Characteristics:\n- At -3: Maximum negative correction\n- At 3: Maximum positive correction\n- Helps prevent z-fighting between the outline and the base mesh"
+        },
+        {
+            "alias": "_Offset1",
+            "propertyType": "Float",
+            "description": "First Z offset for outline",
+            "usageNotes": "This value sets the first Z offset for the outline.\n\nVisual Characteristics:\n- Controls how far the outline is pushed back in depth\n- Works with Offset2 to create multi-layer outlines"
+        },
+        {
+            "alias": "_Offset2",
+            "propertyType": "Float",
+            "description": "Second Z offset for outline",
+            "usageNotes": "This value sets the second Z offset for the outline.\n\nVisual Characteristics:\n- Controls how far the outline is pushed back in depth\n- Works with Offset1 to create multi-layer outlines"
+        },
+        {
+            "alias": "_SrcBlendOutline",
+            "propertyType": "Float",
+            "description": "Source blending factor for outline",
+            "usageNotes": "This value controls the source blending factor when rendering the outline.\n\nVisual Characteristics:\n- Affects how the outline blends with the background\n- Works with DstBlendOutline to control the overall blending behavior"
+        },
+        {
+            "alias": "_DstBlendOutline",
+            "propertyType": "Float",
+            "description": "Destination blending factor for outline",
+            "usageNotes": "This value controls the destination blending factor when rendering the outline.\n\nVisual Characteristics:\n- Affects how the outline blends with the background\n- Works with SrcBlendOutline to control the overall blending behavior"
+        },
+        {
+            "alias": "_Metallic",
+            "propertyType": "Float",
+            "description": "Metallic value for PBS materials",
+            "usageNotes": "This controls the metallic appearance of the material.\n\nVisual Characteristics:\n- At 0: Non-metallic material\n- At 1: Fully metallic material\n- Affects how light interacts with the surface\n- Works with MetallicGlossMap for texture-based metallic control"
+        },
+        {
+            "alias": "_MetallicGlossMap",
+            "propertyType": "2D",
+            "description": "Metallic and smoothness texture",
+            "usageNotes": "This texture provides metallic and smoothness values for PBS materials.\n\nVisual Characteristics:\n- RGB channels store metallic value\n- Alpha channel stores smoothness value\n- Works with Metallic property for texture-based metallic control"
+        },
+        {
+            "alias": "_SpecularHighlights",
+            "propertyType": "Float",
+            "description": "Controls specular highlights",
+            "usageNotes": "This toggles the visibility of specular highlights.\n\nVisual Characteristics:\n- 0: Specular highlights are disabled\n- 1: Specular highlights are enabled\n- Affects how light reflects off the surface"
+        },
+        {
+            "alias": "_GlossyReflections",
+            "propertyType": "Float",
+            "description": "Controls glossy reflections",
+            "usageNotes": "This toggles the visibility of glossy reflections.\n\nVisual Characteristics:\n- 0: Glossy reflections are disabled\n- 1: Glossy reflections are enabled\n- Affects how the material reflects its environment"
+        },
+        {
+            "alias": "_Parallax",
+            "propertyType": "Float",
+            "description": "Height scale for parallax mapping",
+            "usageNotes": "This controls the strength of parallax mapping.\n\nVisual Characteristics:\n- At 0.005: Minimal height effect\n- At 0.08: Maximum height effect\n- Creates depth illusion on the surface"
+        },
+        {
+            "alias": "_ParallaxMap",
+            "propertyType": "2D",
+            "description": "Height map for parallax mapping",
+            "usageNotes": "This texture provides height information for parallax mapping.\n\nVisual Characteristics:\n- Black areas: No height offset\n- White areas: Maximum height offset\n- Creates depth illusion on the surface"
+        },
+        {
+            "alias": "_DetailMask",
+            "propertyType": "2D",
+            "description": "Mask for detail textures",
+            "usageNotes": "This texture controls where detail textures are applied.\n\nVisual Characteristics:\n- Black areas: Detail textures are fully masked\n- White areas: Detail textures are fully visible\n- Controls the visibility of detail textures"
+        },
+        {
+            "alias": "_DetailAlbedoMap",
+            "propertyType": "2D",
+            "description": "Detail albedo texture",
+            "usageNotes": "This texture provides additional albedo detail.\n\nVisual Characteristics:\n- Multiplied with base albedo\n- Creates additional surface detail\n- Works with DetailNormalMap for complete detail control"
+        },
+        {
+            "alias": "_DetailNormalMapScale",
+            "propertyType": "Float",
+            "description": "Scale for detail normal map",
+            "usageNotes": "This controls the strength of the detail normal map.\n\nVisual Characteristics:\n- Controls how strong the detail normal map affects the surface\n- Works with DetailNormalMap to create additional surface detail"
+        },
+        {
+            "alias": "_DetailNormalMap",
+            "propertyType": "2D",
+            "description": "Detail normal map",
+            "usageNotes": "This texture provides additional normal detail.\n\nVisual Characteristics:\n- Creates additional surface detail\n- Works with DetailAlbedoMap for complete detail control"
+        },
+        {
+            "alias": "_UVSec",
+            "propertyType": "Float",
+            "description": "UV set for secondary textures",
+            "usageNotes": "This controls which UV set is used for secondary textures.\n\nVisual Characteristics:\n- 0: Uses UV0\n- 1: Uses UV1\n- Affects how secondary textures are mapped"
+        },
+        {
+            "alias": "_TCP2_DISABLE_WRAPPED_LIGHT",
+            "propertyType": "Float",
+            "description": "Disables wrapped lighting",
+            "usageNotes": "This toggles wrapped lighting behavior.\n\nVisual Characteristics:\n- 0: Wrapped lighting is enabled\n- 1: Wrapped lighting is disabled\n- Affects how light wraps around the surface"
+        },
+        {
+            "alias": "_TCP2_RAMPTEXT",
+            "propertyType": "Float",
+            "description": "Enables ramp texture",
+            "usageNotes": "This toggles the use of ramp texture for shading.\n\nVisual Characteristics:\n- 0: Uses standard shading\n- 1: Uses ramp texture for stylized shading\n- Affects the overall shading style"
+        },
+        {
+            "alias": "_TCP2_SPEC_TOON",
+            "propertyType": "Float",
+            "description": "Enables stylized specular",
+            "usageNotes": "This toggles stylized specular behavior.\n\nVisual Characteristics:\n- 0: Uses standard specular\n- 1: Uses stylized specular\n- Affects the appearance of specular highlights"
+        },
+        {
+            "alias": "_TCP2_STYLIZED_FRESNEL",
+            "propertyType": "Float",
+            "description": "Enables stylized fresnel",
+            "usageNotes": "This toggles stylized fresnel behavior.\n\nVisual Characteristics:\n- 0: Uses standard fresnel\n- 1: Uses stylized fresnel\n- Affects the appearance of rim lighting"
+        },
+        {
+            "alias": "_SpecSmooth",
+            "propertyType": "Float",
+            "description": "Controls stylized specular smoothing",
+            "usageNotes": "This controls the smoothing of stylized specular highlights.\n\nVisual Characteristics:\n- At 0: No smoothing\n- At 1: Maximum smoothing\n- Affects the appearance of stylized specular highlights"
+        },
+        {
+            "alias": "_SpecBlend",
+            "propertyType": "Float",
+            "description": "Controls stylized specular blending",
+            "usageNotes": "This controls how stylized specular blends with the base material.\n\nVisual Characteristics:\n- At 0: No blending\n- At 1: Maximum blending\n- Affects the appearance of stylized specular highlights"
+        },
+        {
+            "alias": "_RimStrength",
+            "propertyType": "Float",
+            "description": "Controls fresnel strength",
+            "usageNotes": "This controls the strength of the fresnel effect.\n\nVisual Characteristics:\n- At 0: No fresnel effect\n- At 2: Maximum fresnel effect\n- Affects the intensity of rim lighting"
+        },
+        {
+            "alias": "_RimMin",
+            "propertyType": "Float",
+            "description": "Controls fresnel ramp minimum",
+            "usageNotes": "This controls the minimum point of the fresnel ramp.\n\nVisual Characteristics:\n- At 0: Minimum fresnel effect\n- At 1: Maximum fresnel effect\n- Affects when the fresnel effect starts"
+        },
+        {
+            "alias": "_RimMax",
+            "propertyType": "Float",
+            "description": "Controls fresnel ramp maximum",
+            "usageNotes": "This controls the maximum point of the fresnel ramp.\n\nVisual Characteristics:\n- At 0: Minimum fresnel effect\n- At 1: Maximum fresnel effect\n- Affects when the fresnel effect ends"
+        }
+    ]
+}
