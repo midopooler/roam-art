@@ -6,7 +6,8 @@ public enum PresetShaderPropertyType
     Float,
     Color,
     Vector,
-    Texture
+    Texture,
+    Bool
 }
 
 [System.Serializable]
@@ -18,6 +19,7 @@ public class ShaderPropertyEntry
     public Color colorValue;
     public Vector4 vectorValue;
     public Texture textureValue;
+    public bool boolValue; 
 }
 
 [CreateAssetMenu(menuName = "Shader Preset", fileName = "NewShaderPreset")]

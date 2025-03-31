@@ -457,6 +457,20 @@ public class ShaderManagerEditor : Editor
                 SetProjectPreserveFlag(manager, currentShader, propName, newPreserve);
             EditorGUILayout.EndHorizontal();
         }
+
+        // ---- Additional Material Options (GPU Instancing) ----
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Additional Material Options", EditorStyles.boldLabel);
+        bool gpuInstancing = sample.enableInstancing;
+        bool newGpuInstancing = EditorGUILayout.Toggle("Enable GPU Instancing", gpuInstancing);
+        if(newGpuInstancing != gpuInstancing)
+        {
+            foreach(Material mat in materialsByShader[currentShader])
+            {
+                mat.enableInstancing = newGpuInstancing;
+                EditorUtility.SetDirty(mat);
+            }
+        }
         
         // ---- Draw Built-in Material Inspector ----
         EditorGUILayout.Space();
@@ -523,6 +537,14 @@ public class ShaderManagerEditor : Editor
             }
             preset.propertyEntries.Add(entry);
         }
+
+        // Add GPU Instancing as a Bool entry.
+        ShaderPropertyEntry instancingEntry = new ShaderPropertyEntry();
+        instancingEntry.propertyName = "EnableGPUInstancing"; // Special name.
+        instancingEntry.type = PresetShaderPropertyType.Bool;
+        instancingEntry.boolValue = sample.enableInstancing;
+        preset.propertyEntries.Add(instancingEntry);
+
         string path = EditorUtility.SaveFilePanelInProject("Save Shader Preset", preset.presetName, "asset", "Enter file name to save the preset to");
         if (!string.IsNullOrEmpty(path))
         {
@@ -562,11 +584,22 @@ public class ShaderManagerEditor : Editor
         {
             foreach (ShaderPropertyEntry entry in preset.propertyEntries)
             {
+                // Handle GPU Instancing separately (process this block before any preserve checks).
+                if (entry.type == PresetShaderPropertyType.Bool && entry.propertyName == "EnableGPUInstancing")
+                {
+                    mat.enableInstancing = entry.boolValue;
+                    EditorUtility.SetDirty(mat);
+                    continue;
+                }
+                
                 // Skip if the property is marked to be preserved.
                 if (GetProjectPreserveFlag((ShaderManager)target, currentShader, entry.propertyName))
                     continue;
+                
+                // For normal shader properties, first ensure the material has the property.
                 if (!mat.HasProperty(entry.propertyName))
                     continue;
+
                 switch (entry.type)
                 {
                     case PresetShaderPropertyType.Float:
