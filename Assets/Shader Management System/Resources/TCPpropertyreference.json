@@ -202,7 +202,7 @@
             "alias": "_Metallic",
             "propertyType": "Float",
             "description": "Metallic value for PBS materials",
-            "usageNotes": "This controls the metallic appearance of the material.\n\nVisual Characteristics:\n- At 0: Non-metallic material\n- At 1: Fully metallic material\n- Affects how light interacts with the surface\n- Works with MetallicGlossMap for texture-based metallic control"
+            "usageNotes": "This controls the metallic appearance of the material.\n\nValue Ranges:\n- At 0: Non-metallic material (matte surface)\n- At 1: Fully metallic material (mirror-like reflection)\n- In between: Semi-metallic materials with varying reflectivity\n\nVisual Characteristics:\n- 0: Surface appears completely non-metallic\n- 0.5: Surface has a moderate metallic sheen\n- 1: Surface appears completely metallic with strong reflections\n- Works with MetallicGlossMap for texture-based metallic control"
         },
         {
             "alias": "_MetallicGlossMap",
@@ -226,7 +226,7 @@
             "alias": "_Parallax",
             "propertyType": "Float",
             "description": "Height scale for parallax mapping",
-            "usageNotes": "This controls the strength of parallax mapping.\n\nVisual Characteristics:\n- At 0.005: Minimal height effect\n- At 0.08: Maximum height effect\n- Creates depth illusion on the surface"
+            "usageNotes": "This controls the strength of parallax mapping.\n\nValue Ranges:\n- At 0.005: Minimal height effect (barely noticeable)\n- At 0.08: Maximum height effect (pronounced depth)\n- In between: Gradually increasing depth perception\n\nVisual Characteristics:\n- 0.005: Surface appears mostly flat with slight depth\n- 0.04: Surface shows moderate depth with noticeable height differences\n- 0.08: Surface appears deeply carved with strong height variations\n- Creates depth illusion on the surface"
         },
         {
             "alias": "_ParallaxMap",
@@ -292,31 +292,31 @@
             "alias": "_SpecSmooth",
             "propertyType": "Float",
             "description": "Controls stylized specular smoothing",
-            "usageNotes": "This controls the smoothing of stylized specular highlights.\n\nVisual Characteristics:\n- At 0: No smoothing\n- At 1: Maximum smoothing\n- Affects the appearance of stylized specular highlights"
+            "usageNotes": "This controls the smoothing of stylized specular highlights.\n\nValue Ranges:\n- At 0: No smoothing (sharp highlights)\n- At 1: Maximum smoothing (soft, diffused highlights)\n- In between: Gradually increasing smoothness\n\nVisual Characteristics:\n- 0: Specular highlights are sharp and focused\n- 0.5: Specular highlights are moderately smoothed\n- 1: Specular highlights are very soft and diffused\n- Affects the appearance of stylized specular highlights"
         },
         {
             "alias": "_SpecBlend",
             "propertyType": "Float",
             "description": "Controls stylized specular blending",
-            "usageNotes": "This controls how stylized specular blends with the base material.\n\nVisual Characteristics:\n- At 0: No blending\n- At 1: Maximum blending\n- Affects the appearance of stylized specular highlights"
+            "usageNotes": "This controls how stylized specular blends with the base material.\n\nValue Ranges:\n- At 0: No blending (specular appears as a separate layer)\n- At 1: Maximum blending (specular integrates fully with base color)\n- In between: Gradually increasing blending\n\nVisual Characteristics:\n- 0: Specular appears as a distinct highlight layer\n- 0.5: Specular partially blends with base color\n- 1: Specular fully integrates with base color\n- Affects the appearance of stylized specular highlights"
         },
         {
             "alias": "_RimStrength",
             "propertyType": "Float",
             "description": "Controls fresnel strength",
-            "usageNotes": "This controls the strength of the fresnel effect.\n\nVisual Characteristics:\n- At 0: No fresnel effect\n- At 2: Maximum fresnel effect\n- Affects the intensity of rim lighting"
+            "usageNotes": "This controls the strength of the fresnel effect.\n\nValue Ranges:\n- At 0: No fresnel effect (no rim lighting)\n- At 2: Maximum fresnel effect (very strong rim lighting)\n- In between: Gradually increasing rim lighting intensity\n\nVisual Characteristics:\n- 0: No visible rim lighting\n- 1: Moderate rim lighting with natural intensity\n- 2: Very strong rim lighting with pronounced glow\n- Affects the intensity of rim lighting"
         },
         {
             "alias": "_RimMin",
             "propertyType": "Float",
             "description": "Controls fresnel ramp minimum",
-            "usageNotes": "This controls the minimum point of the fresnel ramp.\n\nVisual Characteristics:\n- At 0: Minimum fresnel effect\n- At 1: Maximum fresnel effect\n- Affects when the fresnel effect starts"
+            "usageNotes": "This controls the minimum point of the fresnel ramp.\n\nValue Ranges:\n- At 0: Minimum fresnel effect starts at edge\n- At 1: Maximum fresnel effect starts at center\n- In between: Gradually increasing start point\n\nVisual Characteristics:\n- 0: Rim lighting starts right at the edge\n- 0.5: Rim lighting starts mid-way from edge\n- 1: Rim lighting starts at the center\n- Affects when the fresnel effect starts"
         },
         {
             "alias": "_RimMax",
             "propertyType": "Float",
             "description": "Controls fresnel ramp maximum",
-            "usageNotes": "This controls the maximum point of the fresnel ramp.\n\nVisual Characteristics:\n- At 0: Minimum fresnel effect\n- At 1: Maximum fresnel effect\n- Affects when the fresnel effect ends"
+            "usageNotes": "This controls the maximum point of the fresnel ramp.\n\nValue Ranges:\n- At 0: Minimum fresnel effect ends at center\n- At 1: Maximum fresnel effect ends at edge\n- In between: Gradually increasing end point\n\nVisual Characteristics:\n- 0: Rim lighting ends at the center\n- 0.5: Rim lighting ends mid-way from edge\n- 1: Rim lighting extends to the edge\n- Affects when the fresnel effect ends"
         }
     ]
 }
