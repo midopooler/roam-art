@@ -1,0 +1,304 @@
+{
+    "properties": [
+        {
+            "alias": "_BaseColor",
+            "propertyType": "Color",
+            "description": "The base color of the material",
+            "usageNotes": "This is the primary color of the material that interacts with lighting and texturing.\n\nVisual Characteristics:\n- In Toony Colors Pro, this controls the base color that interacts with cel shading and lighting\n- The alpha value controls transparency when using alpha blending\n- This color interacts with the base texture (BaseMap) to create the final material appearance"
+        },
+        {
+            "alias": "_ColorDim",
+            "propertyType": "Float",
+            "description": "Controls the shaded color in Cel Shading mode",
+            "usageNotes": "This parameter controls the shaded color in Cel Shading mode.\n\nValue Ranges:\n- At 0: No shading effect\n- At 1: Full shading effect\n- In between: Gradually increasing shading intensity\n\nVisual Characteristics:\n- 0: Material appears completely flat\n- 0.5: Moderate shading with visible cel effect\n- 1: Strong shading with pronounced cel boundaries\n- Works with Cel Shading mode to create stylized lighting effects"
+        },
+        {
+            "alias": "_BubbleSize",
+            "propertyType": "Float",
+            "description": "Controls the size of bubbles",
+            "usageNotes": "This parameter controls the size of bubbles in the Bubble shader.\n\nValue Ranges:\n- At 0: No bubbles\n- At 1: Maximum bubble size\n- In between: Gradually increasing size\n\nVisual Characteristics:\n- 0: No bubbles visible\n- 0.5: Moderate bubble size\n- 1: Maximum bubble size\n- Affects how large the bubbles appear"
+        },
+        {
+            "alias": "_BubbleSpeed",
+            "propertyType": "Float",
+            "description": "Controls the speed of bubble animation",
+            "usageNotes": "This parameter controls how fast the bubbles move in the Bubble shader.\n\nValue Ranges:\n- At 0: No movement\n- At 1: Maximum speed\n- In between: Gradually increasing speed\n\nVisual Characteristics:\n- 0: Bubbles are stationary\n- 0.5: Moderate movement speed\n- 1: Maximum movement speed\n- Affects how fast the bubbles animate"
+        },
+        {
+            "alias": "_CloudDensity",
+            "propertyType": "Float",
+            "description": "Controls the density of clouds",
+            "usageNotes": "This parameter controls how dense the clouds appear in the Cloud shader.\n\nValue Ranges:\n- At 0: No clouds\n- At 1: Maximum cloud density\n- In between: Gradually increasing density\n\nVisual Characteristics:\n- 0: Sky is completely clear\n- 0.5: Moderate cloud coverage\n- 1: Maximum cloud density\n- Affects how much sky is obscured by clouds"
+        },
+        {
+            "alias": "_CloudSpeed",
+            "propertyType": "Float",
+            "description": "Controls the speed of cloud movement",
+            "usageNotes": "This parameter controls how fast the clouds move in the Cloud shader.\n\nValue Ranges:\n- At 0: No movement\n- At 1: Maximum speed\n- In between: Gradually increasing speed\n\nVisual Characteristics:\n- 0: Clouds are stationary\n- 0.5: Moderate movement speed\n- 1: Maximum movement speed\n- Affects how fast the clouds animate"
+        },
+        {
+            "alias": "_DesertFogDensity",
+            "propertyType": "Float",
+            "description": "Controls the density of desert fog",
+            "usageNotes": "This parameter controls how dense the desert fog appears in the Desert Fog shader.\n\nValue Ranges:\n- At 0: No fog\n- At 1: Maximum fog density\n- In between: Gradually increasing density\n\nVisual Characteristics:\n- 0: Desert is completely clear\n- 0.5: Moderate fog\n- 1: Maximum fog density\n- Affects how much the desert is obscured by fog"
+        },
+        {
+            "alias": "_DesertFogHeight",
+            "propertyType": "Float",
+            "description": "Controls the height of desert fog",
+            "usageNotes": "This parameter controls how high the desert fog appears in the Desert Fog shader.\n\nValue Ranges:\n- At 0: Fog at ground level\n- At 1: Fog at maximum height\n- In between: Gradually increasing height\n\nVisual Characteristics:\n- 0: Fog is at ground level\n- 0.5: Fog is at mid-height\n- 1: Fog is at maximum height\n- Affects where the fog appears in the desert scene"
+        },
+        {
+            "alias": "_DesertGroundCracks",
+            "propertyType": "Float",
+            "description": "Controls the intensity of ground cracks",
+            "usageNotes": "This parameter controls how intense the ground cracks appear in the Desert Ground shader.\n\nValue Ranges:\n- At 0: No cracks\n- At 1: Maximum crack intensity\n- In between: Gradually increasing intensity\n\nVisual Characteristics:\n- 0: Ground appears smooth\n- 0.5: Moderate crack intensity\n- 1: Maximum crack intensity\n- Affects how visible the ground cracks are"
+        },
+        {
+            "alias": "_DesertGroundDust",
+            "propertyType": "Float",
+            "description": "Controls the amount of dust on the ground",
+            "usageNotes": "This parameter controls how much dust appears on the ground in the Desert Ground shader.\n\nValue Ranges:\n- At 0: No dust\n- At 1: Maximum dust\n- In between: Gradually increasing amount\n\nVisual Characteristics:\n- 0: Ground is clean\n- 0.5: Moderate dust coverage\n- 1: Maximum dust coverage\n- Affects how much dust appears on the ground"
+        },
+        {
+            "alias": "_DesertPillarHeight",
+            "propertyType": "Float",
+            "description": "Controls the height of desert pillars",
+            "usageNotes": "This parameter controls how tall the desert pillars appear in the Desert Pillar shader.\n\nValue Ranges:\n- At 0: No height\n- At 1: Maximum height\n- In between: Gradually increasing height\n\nVisual Characteristics:\n- 0: Pillars are flat\n- 0.5: Moderate height\n- 1: Maximum height\n- Affects how tall the desert pillars appear"
+        },
+        {
+            "alias": "_DesertPillarWidth",
+            "propertyType": "Float",
+            "description": "Controls the width of desert pillars",
+            "usageNotes": "This parameter controls how wide the desert pillars appear in the Desert Pillar shader.\n\nValue Ranges:\n- At 0: No width\n- At 1: Maximum width\n- In between: Gradually increasing width\n\nVisual Characteristics:\n- 0: Pillars are invisible\n- 0.5: Moderate width\n- 1: Maximum width\n- Affects how wide the desert pillars appear"
+        },
+        {
+            "alias": "_OutlineWidth",
+            "propertyType": "Float",
+            "description": "Controls the width of the outline",
+            "usageNotes": "This parameter controls the width of the outline in the Stylized Surface Outline shader.\n\nValue Ranges:\n- At 0: No outline\n- At 1: Maximum outline width\n- In between: Gradually increasing width\n\nVisual Characteristics:\n- 0: No outline visible\n- 0.5: Moderate outline width\n- 1: Maximum outline width\n- Affects how thick the outline appears"
+        },
+        {
+            "alias": "_OutlineColor",
+            "propertyType": "Color",
+            "description": "Controls the color of the outline",
+            "usageNotes": "This parameter controls the color of the outline in the Stylized Surface Outline shader.\n\nVisual Characteristics:\n- Affects the color of the outline around objects\n- The alpha value controls the transparency of the outline\n- Can be used to create different visual effects with the outline"
+        },
+        {
+            "alias": "_WaterDepth",
+            "propertyType": "Float",
+            "description": "Controls the depth of water",
+            "usageNotes": "This parameter controls how deep the water appears in the Water shader.\n\nValue Ranges:\n- At 0: No depth\n- At 1: Maximum depth\n- In between: Gradually increasing depth\n\nVisual Characteristics:\n- 0: Water appears flat\n- 0.5: Moderate depth\n- 1: Maximum depth\n- Affects how deep the water appears"
+        },
+        {
+            "alias": "_WaterWaves",
+            "propertyType": "Float",
+            "description": "Controls the intensity of water waves",
+            "usageNotes": "This parameter controls how intense the water waves appear in the Water shader.\n\nValue Ranges:\n- At 0: No waves\n- At 1: Maximum wave intensity\n- In between: Gradually increasing intensity\n\nVisual Characteristics:\n- 0: Water is completely still\n- 0.5: Moderate wave intensity\n- 1: Maximum wave intensity\n- Affects how choppy the water surface appears"
+        },
+        {
+            "alias": "_SelfShadingSize",
+            "propertyType": "Float",
+            "description": "Controls the size of self shading in Cel Shading mode",
+            "usageNotes": "This parameter controls the size of self shading in Cel Shading mode.\n\nValue Ranges:\n- At 0: No self shading\n- At 1: Maximum self shading\n- In between: Gradually increasing self shading size\n\nVisual Characteristics:\n- 0: Material appears completely flat with no self shading\n- 0.5: Moderate self shading with natural depth\n- 1: Strong self shading with pronounced depth\n- Affects how the material responds to lighting"
+        },
+        {
+            "alias": "_ShadowEdgeSize",
+            "propertyType": "Float",
+            "description": "Controls the size of shadow edges in Cel Shading mode",
+            "usageNotes": "This parameter controls the size of shadow edges in Cel Shading mode.\n\nValue Ranges:\n- At 0: No shadow edges\n- At 0.5: Maximum shadow edge size\n- In between: Gradually increasing shadow edge size\n\nVisual Characteristics:\n- 0: Hard shadow edges\n- 0.05: Soft shadow edges with natural transition\n- 0.5: Very soft shadow edges with gradual transition\n- Affects the sharpness of shadow transitions"
+        },
+        {
+            "alias": "_Flatness",
+            "propertyType": "Float",
+            "description": "Controls the localized shading effect",
+            "usageNotes": "This parameter controls the localized shading effect.\n\nValue Ranges:\n- At 0: No localized shading\n- At 1: Maximum localized shading\n- In between: Gradually increasing localized shading\n\nVisual Characteristics:\n- 0: Material appears completely flat\n- 0.5: Moderate localized shading with natural depth\n- 1: Strong localized shading with pronounced depth\n- Affects how the material responds to lighting"
+        },
+        {
+            "alias": "_TerrainHeight",
+            "propertyType": "Float",
+            "description": "Controls the height of the terrain",
+            "usageNotes": "This parameter controls the height of the terrain in the Terrain shader.\n\nValue Ranges:\n- At 0: No height variation\n- At 1: Maximum height variation\n- In between: Gradually increasing height variation\n\nVisual Characteristics:\n- 0: Flat terrain\n- 0.5: Moderate height variation\n- 1: Maximum height variation\n- Affects how the terrain elevation appears"
+        },
+        {
+            "alias": "_TerrainDetail",
+            "propertyType": "Float",
+            "description": "Controls the detail level of the terrain",
+            "usageNotes": "This parameter controls the detail level of the terrain in the Terrain shader.\n\nValue Ranges:\n- At 0: No detail\n- At 1: Maximum detail\n- In between: Gradually increasing detail\n\nVisual Characteristics:\n- 0: Very low detail\n- 0.5: Moderate detail\n- 1: Maximum detail\n- Affects how detailed the terrain appears"
+        },
+        {
+            "alias": "_TerrainSlope",
+            "propertyType": "Float",
+            "description": "Controls the slope angle of the terrain",
+            "usageNotes": "This parameter controls the slope angle of the terrain in the Terrain shader.\n\nValue Ranges:\n- At 0: No slope\n- At 1: Maximum slope\n- In between: Gradually increasing slope\n\nVisual Characteristics:\n- 0: Flat terrain\n- 0.5: Moderate slope\n- 1: Maximum slope\n- Affects how steep the terrain appears"
+        },
+        {
+            "alias": "_TerrainBlend",
+            "propertyType": "Float",
+            "description": "Controls the blending between terrain layers",
+            "usageNotes": "This parameter controls how smoothly different terrain layers blend together.\n\nValue Ranges:\n- At 0: No blending\n- At 1: Maximum blending\n- In between: Gradually increasing blending\n\nVisual Characteristics:\n- 0: Hard transitions between layers\n- 0.5: Moderate blending\n- 1: Very smooth transitions\n- Affects how different terrain textures mix together"
+        },
+        {
+            "alias": "_SkyGradientStart",
+            "propertyType": "Float",
+            "description": "Controls the starting point of the sky gradient",
+            "usageNotes": "This parameter controls where the sky gradient begins in the GradientSkybox shader.\n\nValue Ranges:\n- At 0: Gradient starts at horizon\n- At 1: Gradient starts at zenith\n- In between: Gradually changing start point\n\nVisual Characteristics:\n- 0: Gradient starts at horizon\n- 0.5: Gradient starts mid-sky\n- 1: Gradient starts at zenith\n- Affects where the sky color transition begins"
+        },
+        {
+            "alias": "_SkyGradientEnd",
+            "propertyType": "Float",
+            "description": "Controls the ending point of the sky gradient",
+            "usageNotes": "This parameter controls where the sky gradient ends in the GradientSkybox shader.\n\nValue Ranges:\n- At 0: Gradient ends at horizon\n- At 1: Gradient ends at zenith\n- In between: Gradually changing end point\n\nVisual Characteristics:\n- 0: Gradient ends at horizon\n- 0.5: Gradient ends mid-sky\n- 1: Gradient ends at zenith\n- Affects where the sky color transition ends"
+        },
+        {
+            "alias": "_LightPlaneIntensity",
+            "propertyType": "Float",
+            "description": "Controls the intensity of the light plane",
+            "usageNotes": "This parameter controls how bright the light plane appears in the LightPlane shader.\n\nValue Ranges:\n- At 0: No light\n- At 1: Maximum brightness\n- In between: Gradually increasing brightness\n\nVisual Characteristics:\n- 0: Light plane is invisible\n- 0.5: Moderate brightness\n- 1: Maximum brightness\n- Affects how visible the light plane is"
+        },
+        {
+            "alias": "_LightPlaneSize",
+            "propertyType": "Float",
+            "description": "Controls the size of the light plane",
+            "usageNotes": "This parameter controls how large the light plane appears in the LightPlane shader.\n\nValue Ranges:\n- At 0: No size\n- At 1: Maximum size\n- In between: Gradually increasing size\n\nVisual Characteristics:\n- 0: Light plane is invisible\n- 0.5: Moderate size\n- 1: Maximum size\n- Affects how large the light plane appears"
+        },
+        {
+            "alias": "_FogDensity",
+            "propertyType": "Float",
+            "description": "Controls the density of the fog",
+            "usageNotes": "This parameter controls how dense the fog appears in the FlatKitFog shader.\n\nValue Ranges:\n- At 0: No fog\n- At 1: Maximum fog density\n- In between: Gradually increasing density\n\nVisual Characteristics:\n- 0: Scene is completely clear\n- 0.5: Moderate fog\n- 1: Maximum fog density\n- Affects how much the scene is obscured by fog"
+        },
+        {
+            "alias": "_FogHeight",
+            "propertyType": "Float",
+            "description": "Controls the height of the fog",
+            "usageNotes": "This parameter controls how high the fog appears in the FlatKitFog shader.\n\nValue Ranges:\n- At 0: Fog at ground level\n- At 1: Fog at maximum height\n- In between: Gradually increasing height\n\nVisual Characteristics:\n- 0: Fog is at ground level\n- 0.5: Fog is at mid-height\n- 1: Fog is at maximum height\n- Affects where the fog appears in the scene"
+        },
+        {
+            "alias": "_OutlineStrength",
+            "propertyType": "Float",
+            "description": "Controls the strength of the outline",
+            "usageNotes": "This parameter controls how strong the outline appears in the FlatKitOutline shader.\n\nValue Ranges:\n- At 0: No outline\n- At 1: Maximum outline strength\n- In between: Gradually increasing strength\n\nVisual Characteristics:\n- 0: No outline visible\n- 0.5: Moderate outline strength\n- 1: Maximum outline strength\n- Affects how visible the outline is"
+        },
+        {
+            "alias": "_OutlineColor",
+            "propertyType": "Color",
+            "description": "Controls the color of the outline",
+            "usageNotes": "This parameter controls the color of the outline in the FlatKitOutline shader.\n\nVisual Characteristics:\n- Affects the color of the outline around objects\n- The alpha value controls the transparency of the outline\n- Can be used to create different visual effects with the outline"
+        },
+        {
+            "alias": "_DecalSize",
+            "propertyType": "Float",
+            "description": "Controls the size of the decal",
+            "usageNotes": "This parameter controls how large the decal appears in the CircleDecal shader.\n\nValue Ranges:\n- At 0: No decal\n- At 1: Maximum decal size\n- In between: Gradually increasing size\n\nVisual Characteristics:\n- 0: Decal is invisible\n- 0.5: Moderate decal size\n- 1: Maximum decal size\n- Affects how large the decal appears on the surface"
+        },
+        {
+            "alias": "_DecalIntensity",
+            "propertyType": "Float",
+            "description": "Controls the intensity of the decal",
+            "usageNotes": "This parameter controls how intense the decal appears in the CircleDecal shader.\n\nValue Ranges:\n- At 0: No decal\n- At 1: Maximum decal intensity\n- In between: Gradually increasing intensity\n\nVisual Characteristics:\n- 0: Decal is invisible\n- 0.5: Moderate decal intensity\n- 1: Maximum decal intensity\n- Affects how visible the decal is"
+        },
+        {
+            "alias": "_FlatSpecularSize",
+            "propertyType": "Float",
+            "description": "Controls the size of specular highlights",
+            "usageNotes": "This parameter controls the size of specular highlights.\n\nValue Ranges:\n- At 0: No specular highlights\n- At 1: Maximum specular highlight size\n- In between: Gradually increasing specular size\n\nVisual Characteristics:\n- 0: No visible specular highlights\n- 0.1: Small specular highlights\n- 1: Very large specular highlights\n- Affects the size and intensity of specular reflections"
+        },
+        {
+            "alias": "_FlatSpecularEdgeSmoothness",
+            "propertyType": "Float",
+            "description": "Controls the smoothness of specular edges",
+            "usageNotes": "This parameter controls the smoothness of specular edges.\n\nValue Ranges:\n- At 0: Very sharp specular edges\n- At 1: Very smooth specular edges\n- In between: Gradually increasing smoothness\n\nVisual Characteristics:\n- 0: Specular edges are very sharp and crisp\n- 0.5: Specular edges have moderate smoothness\n- 1: Specular edges are very soft and blurry\n- Affects the sharpness of specular highlight edges"
+        },
+        {
+            "alias": "_FlatRimLightAlign",
+            "propertyType": "Float",
+            "description": "Controls the alignment of rim lighting with the light source",
+            "usageNotes": "This parameter controls the alignment of rim lighting with the light source.\n\nValue Ranges:\n- At 0: Rim lighting is perpendicular to the light source\n- At 1: Rim lighting is parallel to the light source\n- In between: Gradually increasing alignment\n\nVisual Characteristics:\n- 0: Rim lighting appears at the edges\n- 0.5: Rim lighting is moderately aligned with the light source\n- 1: Rim lighting is fully aligned with the light source\n- Affects the direction of rim lighting"
+        },
+        {
+            "alias": "_FlatRimSize",
+            "propertyType": "Float",
+            "description": "Controls the size of the rim effect",
+            "usageNotes": "This parameter controls the size of the rim effect.\n\nValue Ranges:\n- At 0: No rim effect\n- At 1: Maximum rim effect\n- In between: Gradually increasing rim size\n\nVisual Characteristics:\n- 0: Rim lighting is not visible\n- 0.5: Moderate rim size with natural width\n- 1: Very wide rim lighting that extends far from the edges\n- Affects how wide the rim lighting appears around the object"
+        },
+        {
+            "alias": "_FlatRimEdgeSmoothness",
+            "propertyType": "Float",
+            "description": "Controls the smoothness of the rim edge",
+            "usageNotes": "This parameter controls the smoothness of the rim edge.\n\nValue Ranges:\n- At 0: Very sharp rim edge\n- At 1: Very smooth rim edge\n- In between: Gradually increasing smoothness\n\nVisual Characteristics:\n- 0: Rim edge is very sharp and crisp\n- 0.5: Rim edge has moderate smoothness\n- 1: Rim edge is very soft and blurry\n- Affects the sharpness or blur of the rim lighting edge"
+        },
+        {
+            "alias": "_GradientSize",
+            "propertyType": "Float",
+            "description": "Controls the size of the height gradient",
+            "usageNotes": "This parameter controls the size of the height gradient.\n\nValue Ranges:\n- At 0: No gradient effect\n- At 10: Maximum gradient size\n- In between: Gradually increasing gradient size\n\nVisual Characteristics:\n- 0: No visible gradient\n- 5: Moderate gradient size\n- 10: Very wide gradient that covers large areas\n- Affects the scale of the height-based color gradient"
+        },
+        {
+            "alias": "_GradientAngle",
+            "propertyType": "Float",
+            "description": "Controls the angle of the height gradient",
+            "usageNotes": "This parameter controls the angle of the height gradient.\n\nValue Ranges:\n- At 0: Gradient aligned with world X axis\n- At 360: Full rotation\n- In between: Gradually rotating gradient\n\nVisual Characteristics:\n- 0: Gradient aligned horizontally\n- 90: Gradient aligned vertically\n- 180: Gradient aligned horizontally in opposite direction\n- Affects the orientation of the height-based color gradient"
+        },
+        {
+            "alias": "_OutlineWidth",
+            "propertyType": "Float",
+            "description": "Controls the width of the outline",
+            "usageNotes": "This parameter controls the width of the outline.\n\nValue Ranges:\n- At 0: No outline\n- At 1: Maximum outline width\n- In between: Gradually increasing outline width\n\nVisual Characteristics:\n- 0: No visible outline\n- 0.5: Moderate outline width\n- 1: Very thick outline\n- Affects the thickness of the object's outline"
+        },
+        {
+            "alias": "_OutlineScale",
+            "propertyType": "Float",
+            "description": "Controls the scale of the outline",
+            "usageNotes": "This parameter controls the scale of the outline.\n\nValue Ranges:\n- At 0: No scaling\n- At 1: Maximum scaling\n- In between: Gradually increasing scaling\n\nVisual Characteristics:\n- 0: Outline is not scaled\n- 0.5: Moderate outline scaling\n- 1: Maximum outline scaling\n- Affects the overall size of the outline"
+        },
+        {
+            "alias": "_OutlineDepthOffset",
+            "propertyType": "Float",
+            "description": "Controls the depth offset of the outline",
+            "usageNotes": "This parameter controls the depth offset of the outline.\n\nValue Ranges:\n- At 0: No depth offset\n- At 1: Maximum depth offset\n- In between: Gradually increasing depth offset\n\nVisual Characteristics:\n- 0: Outline appears at the same depth as the object\n- 0.5: Outline appears slightly behind the object\n- 1: Outline appears significantly behind the object\n- Affects how the outline interacts with other objects in depth"
+        },
+        {
+            "alias": "_LightContribution",
+            "propertyType": "Float",
+            "description": "Controls how much the light color affects the material",
+            "usageNotes": "This parameter controls how much the light color affects the material.\n\nValue Ranges:\n- At 0: Light has no color effect\n- At 1: Full color contribution from light\n- In between: Gradually increasing color contribution\n\nVisual Characteristics:\n- 0: Material color remains unchanged regardless of light color\n- 0.5: Material color is moderately affected by light color\n- 1: Material color is fully tinted by light color\n- Affects how much the directional light's color influences the material"
+        },
+        {
+            "alias": "_LightFalloffSize",
+            "propertyType": "Float",
+            "description": "Controls the size of point/spot light falloff",
+            "usageNotes": "This parameter controls the size of point/spot light falloff.\n\nValue Ranges:\n- At 0: No falloff\n- At 1: Maximum falloff\n- In between: Gradually increasing falloff size\n\nVisual Characteristics:\n- 0: Light has no falloff\n- 0.5: Moderate falloff with natural transition\n- 1: Strong falloff with pronounced transition\n- Affects how point and spot lights transition from full brightness to darkness"
+        },
+        {
+            "alias": "_UnityShadowSharpness",
+            "propertyType": "Float",
+            "description": "Controls the sharpness of Unity built-in shadows",
+            "usageNotes": "This parameter controls the sharpness of Unity built-in shadows.\n\nValue Ranges:\n- At 1: Minimum sharpness\n- At 10: Maximum sharpness\n- In between: Gradually increasing sharpness\n\nVisual Characteristics:\n- 1: Soft shadows with gradual transition\n- 5: Moderate shadows with balanced transition\n- 10: Hard shadows with sharp transition\n- Affects how sharp or soft the shadows appear"
+        },
+        {
+            "alias": "_TextureImpact",
+            "propertyType": "Float",
+            "description": "Controls the impact of the base texture",
+            "usageNotes": "This parameter controls the impact of the base texture.\n\nValue Ranges:\n- At 0: No texture impact\n- At 1: Maximum texture impact\n- In between: Gradually increasing texture impact\n\nVisual Characteristics:\n- 0: Texture has no effect on the material\n- 0.5: Moderate texture impact with balanced contribution\n- 1: Maximum texture impact with full contribution\n- Affects how strongly the base texture influences the material appearance"
+        },
+        {
+            "alias": "_DetailMapImpact",
+            "propertyType": "Float",
+            "description": "Controls the impact of the detail map",
+            "usageNotes": "This parameter controls the impact of the detail map.\n\nValue Ranges:\n- At 0: No detail map effect\n- At 1: Maximum detail map effect\n- In between: Gradually increasing detail map impact\n\nVisual Characteristics:\n- 0: Detail map has no effect\n- 0.5: Moderate detail map contribution\n- 1: Maximum detail map contribution\n- Affects how strongly the detail map influences the material appearance"
+        },
+        {
+            "alias": "_Cutoff",
+            "propertyType": "Float",
+            "description": "Controls the alpha cutoff threshold",
+            "usageNotes": "This parameter controls the alpha cutoff threshold.\n\nValue Ranges:\n- At 0: No cutoff (fully transparent)\n- At 1: No transparency (fully opaque)\n- In between: Gradually increasing transparency threshold\n\nVisual Characteristics:\n- 0: Material is fully transparent\n- 0.5: Material has moderate transparency with a clear threshold\n- 1: Material is fully opaque\n- Affects how the material handles transparency through alpha cutoff"
+        },
+        {
+            "alias": "_QueueOffset",
+            "propertyType": "Float",
+            "description": "Controls the render queue offset",
+            "usageNotes": "This parameter controls the render queue offset.\n\nValue Ranges:\n- At 0: No offset\n- In between: Gradually increasing offset\n\nVisual Characteristics:\n- 0: Material renders at its default queue\n- Positive values: Material renders later in the queue\n- Negative values: Material renders earlier in the queue\n- Affects the rendering order of the material"
+        }
+    ]
+}
