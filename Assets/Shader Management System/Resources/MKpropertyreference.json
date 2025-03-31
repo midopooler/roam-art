@@ -1,0 +1,202 @@
+{
+    "properties": [
+        {
+            "alias": "_Workflow",
+            "propertyType": "Enum",
+            "description": "Controls the physically based workflow",
+            "usageNotes": "This parameter controls the physically based workflow for the material.\n\nValue Options:\n- Metallic: Uses Metallic + Smoothness workflow\n- Specular: Uses Specular + Smoothness workflow\n- Roughness: Uses Metallic + Roughness workflow\n\nVisual Characteristics:\n- Metallic: Best for metallic materials like metal, glass\n- Specular: Best for non-metallic materials with custom specular\n- Roughness: Best for materials where roughness is more important than metallic properties"
+        },
+        {
+            "alias": "_RenderFace",
+            "propertyType": "Enum",
+            "description": "Controls culling/visibility of faces",
+            "usageNotes": "This parameter controls how faces are rendered and culled.\n\nValue Options:\n- Front: Back faces are culled\n- Back: Front faces are culled\n- Double Sided: Both front and back faces are rendered\n\nVisual Characteristics:\n- Front: Only shows front faces, good for most objects\n- Back: Only shows back faces, useful for special effects\n- Double Sided: Renders both sides, good for thin objects or special effects"
+        },
+        {
+            "alias": "_Surface",
+            "propertyType": "Enum",
+            "description": "Controls surface rendering mode",
+            "usageNotes": "This parameter controls the surface rendering mode.\n\nValue Options:\n- Opaque: Surface is rendered opaque\n- Transparent: Surface is rendered transparent\n\nVisual Characteristics:\n- Opaque: No transparency, good for solid objects\n- Transparent: Allows transparency effects, good for glass, water, etc."
+        },
+        {
+            "alias": "_ZWrite",
+            "propertyType": "Bool",
+            "description": "Controls depth buffer writing",
+            "usageNotes": "This parameter controls if the material writes into the depth buffer.\n\nValue Options:\n- True: Material writes to depth buffer\n- False: Material does not write to depth buffer\n\nVisual Characteristics:\n- True: Objects will properly occlude other objects\n- False: Objects may appear in front of other objects regardless of distance"
+        },
+        {
+            "alias": "_Blend",
+            "propertyType": "Enum",
+            "description": "Controls surface blending mode",
+            "usageNotes": "This parameter controls how the surface color blends with the background.\n\nValue Options:\n- Alpha/Default: Uses raw albedo alpha\n- Premultiply: Preserves reflections and highlights\n- Additive: Adds as an extra layer\n- Multiply: Multiplies background into surface color\n- Custom: Allows custom blend factor control\n\nVisual Characteristics:\n- Alpha/Default: Basic transparency\n- Premultiply: Better for materials with reflections\n- Additive: Good for light effects\n- Multiply: Creates darkening effects\n- Custom: Full control over blending"
+        },
+        {
+            "alias": "_ZTest",
+            "propertyType": "Enum",
+            "description": "Controls depth testing",
+            "usageNotes": "This parameter controls how depth testing is performed.\n\nValue Options:\n- Less: Pixel is drawn if it's closer\n- Greater: Pixel is drawn if it's further\n- LEqual: Pixel is drawn if it's closer or equal\n- GEqual: Pixel is drawn if it's further or equal\n- Equal: Pixel is drawn if it's at same depth\n- NotEqual: Pixel is drawn if it's at different depth\n- Always: Pixel is always drawn\n- Never: Pixel is never drawn\n\nVisual Characteristics:\n- Less: Standard depth testing\n- Greater: Reverse depth testing\n- LEqual: Standard with equal depth\n- GEqual: Reverse with equal depth\n- Equal: Only draws at exact depth\n- NotEqual: Draws at different depths\n- Always: Always draws\n- Never: Never draws"
+        },
+        {
+            "alias": "_SrcFactorRGB",
+            "propertyType": "Enum",
+            "description": "Controls RGB source blend factor",
+            "usageNotes": "This parameter controls how the generated color is multiplied by the source factor.\n\nValue Options:\n- Zero: No contribution\n- One: Full contribution\n- SrcColor: Multiplied by source color\n- InvSrcColor: Multiplied by inverse source color\n- SrcAlpha: Multiplied by source alpha\n- InvSrcAlpha: Multiplied by inverse source alpha\n\nVisual Characteristics:\n- Zero: Color is completely transparent\n- One: Color is fully opaque\n- SrcColor: Color is modulated by source\n- InvSrcColor: Color is modulated by inverse source\n- SrcAlpha: Color is modulated by alpha\n- InvSrcAlpha: Color is modulated by inverse alpha"
+        },
+        {
+            "alias": "_DstFactorRGB",
+            "propertyType": "Enum",
+            "description": "Controls RGB destination blend factor",
+            "usageNotes": "This parameter controls how the color already on the screen is multiplied by the destination factor.\n\nValue Options:\n- Zero: No contribution\n- One: Full contribution\n- DstColor: Multiplied by destination color\n- InvDstColor: Multiplied by inverse destination color\n- DstAlpha: Multiplied by destination alpha\n- InvDstAlpha: Multiplied by inverse destination alpha\n\nVisual Characteristics:\n- Zero: Background is completely transparent\n- One: Background is fully opaque\n- DstColor: Background is modulated by destination\n- InvDstColor: Background is modulated by inverse destination\n- DstAlpha: Background is modulated by alpha\n- InvDstAlpha: Background is modulated by inverse alpha"
+        },
+        {
+            "alias": "_SrcFactorAlpha",
+            "propertyType": "Enum",
+            "description": "Controls Alpha source blend factor",
+            "usageNotes": "This parameter controls how the generated alpha is multiplied by the source factor.\n\nValue Options:\n- Zero: No contribution\n- One: Full contribution\n- SrcAlpha: Multiplied by source alpha\n- InvSrcAlpha: Multiplied by inverse source alpha\n\nVisual Characteristics:\n- Zero: Alpha is completely transparent\n- One: Alpha is fully opaque\n- SrcAlpha: Alpha is modulated by source\n- InvSrcAlpha: Alpha is modulated by inverse source"
+        },
+        {
+            "alias": "_DstFactorAlpha",
+            "propertyType": "Enum",
+            "description": "Controls Alpha destination blend factor",
+            "usageNotes": "This parameter controls how the alpha already on the screen is multiplied by the destination factor.\n\nValue Options:\n- Zero: No contribution\n- One: Full contribution\n- DstAlpha: Multiplied by destination alpha\n- InvDstAlpha: Multiplied by inverse destination alpha\n\nVisual Characteristics:\n- Zero: Background alpha is completely transparent\n- One: Background alpha is fully opaque\n- DstAlpha: Background alpha is modulated by destination\n- InvDstAlpha: Background alpha is modulated by inverse destination"
+        },
+        {
+            "alias": "_AlbedoColor",
+            "propertyType": "Color",
+            "description": "Controls the base color of the material",
+            "usageNotes": "This parameter controls the base color of the material.\n\nVisual Characteristics:\n- RGB values control the color\n- Alpha value controls transparency\n- Interacts with lighting and other effects"
+        },
+        {
+            "alias": "_AlphaCutoff",
+            "propertyType": "Float",
+            "description": "Controls alpha clipping threshold",
+            "usageNotes": "This parameter controls the alpha cutoff threshold for the material.\n\nValue Ranges:\n- At 0: No cutoff\n- At 1: Maximum cutoff\n- In between: Gradually increasing cutoff\n\nVisual Characteristics:\n- 0: Material is fully transparent\n- 0.5: Material has moderate transparency with a clear threshold\n- 1: Material is fully opaque\n- Affects how the material handles transparency through alpha clipping"
+        },
+        {
+            "alias": "_AlbedoMap",
+            "propertyType": "Texture",
+            "description": "Controls the albedo texture",
+            "usageNotes": "This parameter controls the albedo texture for the material.\n\nVisual Characteristics:\n- RGB channels control the base color\n- Alpha channel controls transparency\n- Interacts with lighting and other effects"
+        },
+        {
+            "alias": "_SpecularColor",
+            "propertyType": "Color",
+            "description": "Controls the specular color",
+            "usageNotes": "This parameter controls the specular color for the material.\n\nVisual Characteristics:\n- RGB values control the specular color\n- Alpha value controls specular intensity\n- Interacts with lighting and reflections"
+        },
+        {
+            "alias": "_Smoothness",
+            "propertyType": "Float",
+            "description": "Controls surface smoothness",
+            "usageNotes": "This parameter controls the surface smoothness.\n\nValue Ranges:\n- At 0: Rough surface\n- At 1: Smooth surface\n- In between: Gradually increasing smoothness\n\nVisual Characteristics:\n- 0: Rough highlight, rough surface\n- 0.5: Moderate highlight, moderate surface\n- 1: Sharp highlight, smooth surface\n- Affects how the surface spreads highlights"
+        },
+        {
+            "alias": "_SpecularMap",
+            "propertyType": "Texture",
+            "description": "Controls the specular texture",
+            "usageNotes": "This parameter controls the specular texture for the material.\n\nVisual Characteristics:\n- RGB channels control the specular color\n- Alpha channel controls surface smoothness\n- Interacts with lighting and reflections"
+        },
+        {
+            "alias": "_RoughnessMap",
+            "propertyType": "Texture",
+            "description": "Controls the roughness texture",
+            "usageNotes": "This parameter controls the roughness texture for the material.\n\nVisual Characteristics:\n- R channel controls surface roughness\n- 0/black: Sharp highlight, smooth surface\n- 1/white: Rough highlight, rough surface\n- Interacts with lighting and reflections"
+        },
+        {
+            "alias": "_MetallicMap",
+            "propertyType": "Texture",
+            "description": "Controls the metallic texture",
+            "usageNotes": "This parameter controls the metallic texture for the material.\n\nVisual Characteristics:\n- R channel controls metallic value\n- 0/black: Fully dielectric\n- 1/white: Fully metallic\n- A channel controls surface smoothness\n- Interacts with lighting and reflections"
+        },
+        {
+            "alias": "_NormalMapIntensity",
+            "propertyType": "Float",
+            "description": "Controls normal map intensity",
+            "usageNotes": "This parameter controls the intensity of the normal map.\n\nValue Ranges:\n- At 0: No normal mapping\n- At 1: Maximum normal mapping\n- In between: Gradually increasing intensity\n\nVisual Characteristics:\n- 0: Surface appears completely flat\n- 0.5: Moderate normal mapping\n- 1: Maximum normal mapping\n- Affects how pronounced the surface details appear"
+        },
+        {
+            "alias": "_NormalMap",
+            "propertyType": "Texture",
+            "description": "Controls the normal map",
+            "usageNotes": "This parameter controls the tangent space normal map for the material.\n\nVisual Characteristics:\n- RGB channels control surface normals\n- Affects surface lighting and details\n- Interacts with lighting and reflections"
+        },
+        {
+            "alias": "_HeightMapScale",
+            "propertyType": "Float",
+            "description": "Controls height map scale",
+            "usageNotes": "This parameter controls the scale of the height map.\n\nValue Ranges:\n- At 0: No height mapping\n- At 1: Maximum height mapping\n- In between: Gradually increasing scale\n\nVisual Characteristics:\n- 0: Surface appears completely flat\n- 0.5: Moderate height mapping\n- 1: Maximum height mapping\n- Affects how pronounced the surface height appears"
+        },
+        {
+            "alias": "_HeightMap",
+            "propertyType": "Texture",
+            "description": "Controls the height map",
+            "usageNotes": "This parameter controls the height map for the material.\n\nVisual Characteristics:\n- R channel controls height/distortion\n- Used for parallax mapping and scaling\n- Interacts with lighting and surface details"
+        },
+        {
+            "alias": "_LightTransmission",
+            "propertyType": "Float",
+            "description": "Controls light transmission",
+            "usageNotes": "This parameter controls how light passes through the material.\n\nValue Ranges:\n- At 0: No light transmission\n- At 1: Maximum light transmission\n- In between: Gradually increasing transmission\n\nVisual Characteristics:\n- 0: Material is completely opaque\n- 0.5: Moderate light transmission\n- 1: Maximum light transmission\n- Affects how light passes through the material"
+        },
+        {
+            "alias": "_LightTransmissionDistortion",
+            "propertyType": "Float",
+            "description": "Controls light transmission distortion",
+            "usageNotes": "This parameter controls how much the transmitted light is distorted.\n\nValue Ranges:\n- At 0: No distortion\n- At 1: Maximum distortion\n- In between: Gradually increasing distortion\n\nVisual Characteristics:\n- 0: Light passes straight through\n- 0.5: Moderate distortion\n- 1: Maximum distortion\n- Affects how light is bent as it passes through"
+        },
+        {
+            "alias": "_LightTransmissionColor",
+            "propertyType": "Color",
+            "description": "Controls light transmission color",
+            "usageNotes": "This parameter controls the color of transmitted light.\n\nVisual Characteristics:\n- RGB values control the transmitted light color\n- Alpha value controls intensity\n- Affects the tint of transmitted light"
+        },
+        {
+            "alias": "_ThicknessMap",
+            "propertyType": "Texture",
+            "description": "Controls the thickness map",
+            "usageNotes": "This parameter controls the thickness map for the material.\n\nVisual Characteristics:\n- R channel controls thickness\n- 0/black: Thick, zero light transmission\n- 1/white: Thin, full light transmission\n- Controls how light spreads based on normals\n- Interacts with lighting and transparency effects"
+        },
+        {
+            "alias": "_OcclusionMapScale",
+            "propertyType": "Float",
+            "description": "Controls occlusion map scale",
+            "usageNotes": "This parameter controls the scale of the occlusion map.\n\nValue Ranges:\n- At 0: No occlusion\n- At 1: Maximum occlusion\n- In between: Gradually increasing scale\n\nVisual Characteristics:\n- 0: No ambient occlusion\n- 0.5: Moderate ambient occlusion\n- 1: Maximum ambient occlusion\n- Affects how dark crevices and corners appear"
+        },
+        {
+            "alias": "_OcclusionMap",
+            "propertyType": "Texture",
+            "description": "Controls the occlusion map",
+            "usageNotes": "This parameter controls the occlusion map for the material.\n\nVisual Characteristics:\n- RGB channels control ambient occlusion\n- Affects how dark crevices and corners appear\n- Interacts with lighting effects"
+        },
+        {
+            "alias": "_OutlineWidth",
+            "propertyType": "Float",
+            "description": "Controls the width of the outline",
+            "usageNotes": "This parameter controls the width of the outline in the StandardPBSOutline shader.\n\nValue Ranges:\n- At 0: No outline\n- At 1: Maximum outline width\n- In between: Gradually increasing width\n\nVisual Characteristics:\n- 0: No outline visible\n- 0.5: Moderate outline width\n- 1: Maximum outline width\n- Affects how thick the outline appears"
+        },
+        {
+            "alias": "_OutlineColor",
+            "propertyType": "Color",
+            "description": "Controls the color of the outline",
+            "usageNotes": "This parameter controls the color of the outline in the StandardPBSOutline shader.\n\nVisual Characteristics:\n- Affects the color of the outline around objects\n- The alpha value controls the transparency of the outline\n- Can be used to create different visual effects with the outline"
+        },
+        {
+            "alias": "_GradientStart",
+            "propertyType": "Float",
+            "description": "Controls the starting point of the sky gradient",
+            "usageNotes": "This parameter controls where the sky gradient begins in the GradientSkybox shader.\n\nValue Ranges:\n- At 0: Gradient starts at horizon\n- At 1: Gradient starts at zenith\n- In between: Gradually changing start point\n\nVisual Characteristics:\n- 0: Gradient starts at horizon\n- 0.5: Gradient starts mid-sky\n- 1: Gradient starts at zenith\n- Affects where the sky color transition begins"
+        },
+        {
+            "alias": "_GradientEnd",
+            "propertyType": "Float",
+            "description": "Controls the ending point of the sky gradient",
+            "usageNotes": "This parameter controls where the sky gradient ends in the GradientSkybox shader.\n\nValue Ranges:\n- At 0: Gradient ends at horizon\n- At 1: Gradient ends at zenith\n- In between: Gradually changing end point\n\nVisual Characteristics:\n- 0: Gradient ends at horizon\n- 0.5: Gradient ends mid-sky\n- 1: Gradient ends at zenith\n- Affects where the sky color transition ends"
+        },
+        {
+            "alias": "_BaseColor",
+            "propertyType": "Color",
+            "description": "The base color of the material",
+            "usageNotes": "This is the primary color of the material that interacts with lighting and texturing.\n\nVisual Characteristics:\n- In Toony Colors Pro, this controls the base color that interacts with cel shading and lighting\n- The alpha value controls transparency when using alpha blending\n- This color interacts with the base texture (BaseMap) to create the final material appearance"
+        }
+    ]
+}
