@@ -308,10 +308,12 @@ public class ShaderManagerEditor : Editor
                         // Create a temporary material with the new shader.
                         Material temp = new Material(selectedShader);
                         // Transfer properties using mapping.
-                        TransferProperties(mat, temp, manager);
+                        //TransferProperties(mat, temp, manager);
+                        temp.CopyPropertiesFromMaterial(mat);
                         // Now assign the new shader and transfer back.
                         mat.shader = selectedShader;
-                        TransferProperties(temp, mat, manager);
+                        mat.CopyPropertiesFromMaterial(temp);
+                        //TransferProperties(temp, mat, manager);
                         EditorUtility.SetDirty(mat);
                     }
                     UpdateShaderList();
@@ -328,9 +330,12 @@ public class ShaderManagerEditor : Editor
                 foreach (Material m in materialsByShader[currentShader])
                 {
                     Material temp = new Material(newShader);
-                    TransferProperties(m, temp, manager);
+                    temp.CopyPropertiesFromMaterial(m);
                     m.shader = newShader;
-                    TransferProperties(temp, m, manager);
+                    m.CopyPropertiesFromMaterial(temp);
+                    /*TransferProperties(m, temp, manager);
+                    m.shader = newShader;
+                    TransferProperties(temp, m, manager);*/
                     EditorUtility.SetDirty(m);
                 }
                 UpdateShaderList();
@@ -359,15 +364,19 @@ public class ShaderManagerEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Shader Properties (Bulk Changes Skip Preserved)", EditorStyles.boldLabel);
         int propCount = ShaderUtil.GetPropertyCount(currentShader);
+        // Use the first material as sample
+        Material sample = materialsByShader[currentShader][0];
         for (int i = 0; i < propCount; i++)
         {
             if (ShaderUtil.IsShaderPropertyHidden(currentShader, i))
                 continue;
             string propName = ShaderUtil.GetPropertyName(currentShader, i);
+            // NEW: Check if the sample material actually has this property. If not, skip it.
+            if (!sample.HasProperty(propName))
+                continue;
             ShaderUtil.ShaderPropertyType propType = ShaderUtil.GetPropertyType(currentShader, i);
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.LabelField(propName, GUILayout.MaxWidth(150));
-            Material sample = materialsByShader[currentShader][0];
             bool preserve = GetProjectPreserveFlag(manager, currentShader, propName);
             EditorGUI.BeginDisabledGroup(preserve);
             switch (propType)
@@ -380,8 +389,11 @@ public class ShaderManagerEditor : Editor
                     {
                         foreach (Material mat in materialsByShader[currentShader])
                         {
-                            mat.SetColor(propName, newColor);
-                            EditorUtility.SetDirty(mat);
+                            if(mat.HasProperty(propName))
+                            {
+                                mat.SetColor(propName, newColor);
+                                EditorUtility.SetDirty(mat);
+                            }
                         }
                     }
                     break;
@@ -395,8 +407,11 @@ public class ShaderManagerEditor : Editor
                     {
                         foreach (Material mat in materialsByShader[currentShader])
                         {
-                            mat.SetFloat(propName, newFloat);
-                            EditorUtility.SetDirty(mat);
+                            if(mat.HasProperty(propName))
+                            {
+                                mat.SetFloat(propName, newFloat);
+                                EditorUtility.SetDirty(mat);
+                            }
                         }
                     }
                     break;
@@ -409,8 +424,11 @@ public class ShaderManagerEditor : Editor
                     {
                         foreach (Material mat in materialsByShader[currentShader])
                         {
-                            mat.SetVector(propName, newVector);
-                            EditorUtility.SetDirty(mat);
+                            if(mat.HasProperty(propName))
+                            {
+                                mat.SetVector(propName, newVector);
+                                EditorUtility.SetDirty(mat);
+                            }
                         }
                     }
                     break;
@@ -423,8 +441,11 @@ public class ShaderManagerEditor : Editor
                     {
                         foreach (Material mat in materialsByShader[currentShader])
                         {
-                            mat.SetTexture(propName, newTex);
-                            EditorUtility.SetDirty(mat);
+                            if(mat.HasProperty(propName))
+                            {
+                                mat.SetTexture(propName, newTex);
+                                EditorUtility.SetDirty(mat);
+                            }
                         }
                     }
                     break;
@@ -521,9 +542,12 @@ public class ShaderManagerEditor : Editor
             foreach (Material mat in mats)
             {
                 Material temp = new Material(preset.shader);
-                TransferProperties(mat, temp, (ShaderManager)target);
+                temp.CopyPropertiesFromMaterial(mat);
                 mat.shader = preset.shader;
-                TransferProperties(temp, mat, (ShaderManager)target);
+                mat.CopyPropertiesFromMaterial(temp);
+                /*TransferProperties(mat, temp, (ShaderManager)target);
+                mat.shader = preset.shader;
+                TransferProperties(temp, mat, (ShaderManager)target);*/
                 EditorUtility.SetDirty(mat);
             }
             UpdateShaderList();
