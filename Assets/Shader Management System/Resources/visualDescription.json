@@ -1,0 +1,69 @@
+{
+    "images": [
+      {
+        "presetName": "desert",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524048/Screenshot_2025-04-01_at_9.08.00_PM_jmlxm6.png",
+        "description": "This screenshot depicts a user interface, likely from a mobile application. It shows a list of items with images, titles, and prices. The layout is clean, with rounded rectangular containers for each item. The images are varied, showing products like watches, clothing, and accessories. The titles are in a clear, sans-serif font, and the prices are displayed with a currency symbol. The overall design is modern and user-friendly, aimed at showcasing products for online shopping."
+      },
+      {
+        "presetName": "car-set2",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524048/Screenshot_2025-04-01_at_9.06.17_PM_wmmajz.png",
+        "description": "This screenshot shows a mobile app interface with a grid layout displaying various product images. The images are of different sizes and orientations, creating a dynamic collage effect. Each image is accompanied by a brief title and a price. The app's design is minimalist, with a white background and simple text, allowing the product images to be the primary focus. The interface is likely for an e-commerce platform or a visual discovery application."
+      },
+      {
+        "presetName": "car-set1",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524048/Screenshot_2025-04-01_at_9.05.10_PM_mkiokk.png",
+        "description": "This screenshot displays a mobile app interface with a list of items. Each item is presented in a rectangular container with an image on the left and text on the right. The text includes a title, a description, and a price. The interface is clean and organized, with a white background and a consistent layout. The images are varied, showing different products or services. The design is likely for an e-commerce or service-based application."
+      },
+      {
+        "presetName": "car-set3",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524048/Screenshot_2025-04-01_at_9.04.38_PM_fykwsh.png",
+        "description": "This screenshot shows a mobile app interface with a grid layout of product images. Each image is accompanied by a title and a price. The interface is simple and clean, with a white background and a minimalist design. The images are the primary focus, showcasing various products. The layout is organized and easy to navigate, likely for an e-commerce or shopping-related app."
+      },
+      {
+        "presetName": "sheep5-manga",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524047/Screenshot_2025-04-01_at_8.36.23_PM_td3b4w.png",
+        "description": "This screenshot shows a mobile app interface with a list of items. Each item is displayed in a rectangular container with an image and text. The text includes a title and a brief description. The interface is clean and organized, with a white background and a consistent layout. The images are varied, showing different products or services. The design is likely for an e-commerce or listing-based application."
+      },
+      {
+        "presetName": "sheep6",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524048/Screenshot_2025-04-01_at_8.37.13_PM_fmzzqg.png",
+        "description": "This screenshot displays a mobile app interface with a grid of product images. Each image is accompanied by a title and a price. The interface is simple and clean, with a white background and a minimalist design. The images are the primary focus, showcasing various products. The layout is organized and easy to navigate, likely for an e-commerce or shopping-related app."
+      },
+      {
+        "presetName": "car-set5",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524047/Screenshot_2025-04-01_at_9.07.26_PM_lw683s.png",
+        "description": "This screenshot shows a mobile app interface with a list of items. Each item is displayed in a rectangular container with an image and text. The text includes a title and a brief description. The interface is clean and organized, with a white background and a consistent layout. The images are varied, showing different products or services. The design is likely for an e-commerce or listing-based application."
+      },
+      {
+        "presetName": "sheep4",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524047/Screenshot_2025-04-01_at_8.35.57_PM_lbesc8.png",
+        "description": "This screenshot displays a mobile app interface with a grid of product images. Each image is accompanied by a title and a price. The interface is simple and clean, with a white background and a minimalist design. The images are the primary focus, showcasing various products. The layout is organized and easy to navigate, likely for an e-commerce or shopping-related app."
+      },
+      {
+        "presetName": "car-set3",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524046/Screenshot_2025-04-01_at_9.06.38_PM_hvgojv.png",
+        "description": "This screenshot shows a mobile app interface with a list of items. Each item is displayed in a rectangular container with an image and text. The text includes a title and a brief description. The interface is clean and organized, with a white background and a consistent layout. The images are varied, showing different products or services. The design is likely for an e-commerce or listing-based application."
+      },
+      {
+        "presetName": "sheep3",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524047/Screenshot_2025-04-01_at_8.35.17_PM_pg7bw7.png",
+        "description": "This screenshot displays a mobile app interface with a grid of product images. Each image is accompanied by a title and a price. The interface is simple and clean, with a white background and a minimalist design. The images are the primary focus, showcasing various products. The layout is organized and easy to navigate, likely for an e-commerce or shopping-related app."
+      },
+      {
+        "presetName": "sheep2",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524046/Screenshot_2025-04-01_at_8.17.47_PM_px1bkj.png",
+        "description": "This screenshot shows a mobile app interface with a list of items. Each item is displayed in a rectangular container with an image and text. The text includes a title and a brief description. The interface is clean and organized, with a white background and a consistent layout. The images are varied, showing different products or services. The design is likely for an e-commerce or listing-based application."
+      },
+      {
+        "presetName": "sheep1",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524046/Screenshot_2025-04-01_at_8.13.28_PM_pymnst.png",
+        "description": "This screenshot displays a mobile app interface with a grid of product images. Each image is accompanied by a title and a price. The interface is simple and clean, with a white background and a minimalist design. The images are the primary focus, showcasing various products. The layout is organized and easy to navigate, likely for an e-commerce or shopping-related app."
+      },
+      {
+        "presetName": "car-set4",
+        "url": "https://res.cloudinary.com/dc9j5o2m7/image/upload/v1743524046/Screenshot_2025-04-01_at_9.07.00_PM_uukagh.png",
+        "description": "This screenshot shows a mobile app interface with a list of items. Each item is displayed in a rectangular container with an image and text. The text includes a title and a brief description. The interface is clean and organized, with a white background and a consistent layout. The images are varied, showing different products or services. The design is likely for an e-commerce or listing-based application."
+      }
+    ]
+  }
