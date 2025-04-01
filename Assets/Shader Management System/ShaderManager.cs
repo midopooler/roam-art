@@ -487,6 +487,140 @@ public class ShaderManager : MonoBehaviour
 
     #endregion
 
+    #region JSON Preset Functionality
+
+    /// <summary>
+    /// Saves the current preset data as a JSON file.
+    /// </summary>
+    public void SavePresetAsJson(ShaderPreset preset)
+    {
+    #if UNITY_EDITOR
+        // Populate preset data similar to the existing SavePreset method.
+        CollectChildMaterials();
+        Material sample = null;
+        Renderer selfRenderer = GetComponent<Renderer>();
+        if (selfRenderer != null)
+        {
+            foreach (Material mat in selfRenderer.sharedMaterials)
+            {
+                if (mat != null && mat.shader == preset.shader)
+                {
+                    sample = mat;
+                    break;
+                }
+            }
+        }
+        if (sample == null)
+        {
+            foreach (Material mat in childMaterials)
+            {
+                if (mat != null && mat.shader == preset.shader)
+                {
+                    sample = mat;
+                    break;
+                }
+            }
+        }
+        if (sample == null)
+        {
+            Debug.LogWarning("No material found using the selected shader (" + preset.shader.name + ").");
+            return;
+        }
+        
+        int propertyCount = ShaderUtil.GetPropertyCount(sample.shader);
+        preset.propertyEntries = new List<ShaderPropertyEntry>();
+        for (int i = 0; i < propertyCount; i++)
+        {
+            if (ShaderUtil.IsShaderPropertyHidden(sample.shader, i))
+                continue;
+                
+            string propName = ShaderUtil.GetPropertyName(sample.shader, i);
+            if (!sample.HasProperty(propName))
+                continue;
+                
+            ShaderUtil.ShaderPropertyType propType = ShaderUtil.GetPropertyType(sample.shader, i);
+            ShaderPropertyEntry entry = new ShaderPropertyEntry();
+            entry.propertyName = propName;
+            
+            switch (propType)
+            {
+                case ShaderUtil.ShaderPropertyType.Float:
+                case ShaderUtil.ShaderPropertyType.Range:
+                    entry.type = PresetShaderPropertyType.Float;
+                    entry.floatValue = sample.GetFloat(propName);
+                    break;
+                case ShaderUtil.ShaderPropertyType.Color:
+                    entry.type = PresetShaderPropertyType.Color;
+                    entry.colorValue = sample.GetColor(propName);
+                    break;
+                case ShaderUtil.ShaderPropertyType.Vector:
+                    entry.type = PresetShaderPropertyType.Vector;
+                    entry.vectorValue = sample.GetVector(propName);
+                    break;
+                case ShaderUtil.ShaderPropertyType.TexEnv:
+                    entry.type = PresetShaderPropertyType.Texture;
+                    entry.textureValue = sample.GetTexture(propName);
+                    break;
+            }
+            preset.propertyEntries.Add(entry);
+        }
+        
+        // Add GPU Instancing as a Bool entry.
+        ShaderPropertyEntry instancingEntry = new ShaderPropertyEntry();
+        instancingEntry.propertyName = "EnableGPUInstancing"; // Special name.
+        instancingEntry.type = PresetShaderPropertyType.Bool;
+        instancingEntry.boolValue = sample.enableInstancing;
+        preset.propertyEntries.Add(instancingEntry);
+
+        // Serialize the preset to JSON.
+        string json = JsonUtility.ToJson(preset, true);
+        string fileName = gameObject.name + "_preset.json";
+        string path = EditorUtility.SaveFilePanel("Save JSON Preset", "Assets/Shader Management System/presets/", fileName, "json");
+        if (!string.IsNullOrEmpty(path))
+        {
+            System.IO.File.WriteAllText(path, json);
+            Debug.Log("JSON Preset saved at " + path);
+        }
+    #else
+        Debug.Log("SavePresetAsJson called at runtime. JSON file saving is not supported in runtime builds.");
+    #endif
+    }
+
+    /// <summary>
+    /// Loads a preset from a JSON TextAsset and applies it.
+    /// If parsing fails or the preset is invalid, logs an error.
+    /// </summary>
+    public void ApplyPresetFromJsonAsset(TextAsset jsonAsset)
+    {
+    #if UNITY_EDITOR
+        if (jsonAsset == null)
+        {
+            Debug.LogError("No JSON asset provided.");
+            return;
+        }
+        try
+        {
+            ShaderPreset preset = ScriptableObject.CreateInstance<ShaderPreset>();
+            JsonUtility.FromJsonOverwrite(jsonAsset.text, preset);
+            if (preset.shader == null)
+            {
+                Debug.LogError("Error parsing JSON: preset shader is null. The JSON may be invalid or missing required data.");
+                return;
+            }
+            ApplyPreset(preset);
+            Debug.Log("Applied JSON preset from asset: " + jsonAsset.name);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Error parsing JSON preset: " + ex.Message);
+        }
+    #else
+        Debug.Log("ApplyPresetFromJsonAsset called at runtime. JSON file loading is not supported in runtime builds.");
+    #endif
+    }
+
+    #endregion
+
 
     #region Preserve Flag Management
 

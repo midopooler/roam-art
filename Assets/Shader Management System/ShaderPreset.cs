@@ -22,6 +22,7 @@ public class ShaderPropertyEntry
     public bool boolValue; 
 }
 
+[System.Serializable]
 [CreateAssetMenu(menuName = "Shader Preset", fileName = "NewShaderPreset")]
 public class ShaderPreset : ScriptableObject
 {

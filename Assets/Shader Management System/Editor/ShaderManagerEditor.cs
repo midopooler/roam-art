@@ -72,19 +72,13 @@ public class ShaderManagerEditor : Editor
         }
 
         EditorGUILayout.Space();
-        // --- Preset Options ---
+        #region Preset Options
+
         EditorGUILayout.LabelField("Preset Options", EditorStyles.boldLabel);
-        selectedPreset = EditorGUILayout.ObjectField("Preset to Apply", selectedPreset, typeof(ShaderPreset), false) as ShaderPreset;
-        if (selectedPreset != null)
-        {
-            if (GUILayout.Button("Apply Preset", GUILayout.Height(25)))
-            {
-                shaderManager.ApplyPreset(selectedPreset);
-            }
-        }
+
+        // Button to save a preset as a ShaderPreset asset.
         if (GUILayout.Button("Save Preset", GUILayout.Height(25)))
         {
-            // Create a new preset instance and let ShaderManager save it.
             ShaderPreset preset = ScriptableObject.CreateInstance<ShaderPreset>();
             if (shaderManager.childMaterials.Count > 0)
             {
@@ -97,6 +91,49 @@ public class ShaderManagerEditor : Editor
             }
             shaderManager.SavePreset(preset);
         }
+
+        // Button to save a preset as JSON.
+        if (GUILayout.Button("Save JSON Preset", GUILayout.Height(25)))
+        {
+            ShaderPreset preset = ScriptableObject.CreateInstance<ShaderPreset>();
+            if (shaderManager.childMaterials.Count > 0)
+            {
+                preset.shader = shaderManager.childMaterials[0].shader;
+                preset.presetName = preset.shader.name + " Preset";
+            }
+            else
+            {
+                preset.presetName = "New Preset";
+            }
+            shaderManager.SavePresetAsJson(preset);
+        }
+
+        // ObjectField to select a preset asset or a JSON TextAsset.
+        UnityEngine.Object selectedPresetObj = EditorGUILayout.ObjectField("Preset to Apply (ShaderPreset or JSON)", null, typeof(UnityEngine.Object), false);
+        if (selectedPresetObj != null)
+        {
+            if (selectedPresetObj is ShaderPreset preset)
+            {
+                if (GUILayout.Button("Apply Preset", GUILayout.Height(25)))
+                {
+                    shaderManager.ApplyPreset(preset);
+                }
+            }
+            else if (selectedPresetObj is TextAsset textAsset)
+            {
+                if (GUILayout.Button("Apply JSON Preset", GUILayout.Height(25)))
+                {
+                    shaderManager.ApplyPresetFromJsonAsset(textAsset);
+                }
+            }
+            else
+            {
+                EditorGUILayout.HelpBox("Selected asset is not a valid ShaderPreset or JSON TextAsset.", MessageType.Warning);
+            }
+        }
+
+        #endregion
+
         
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
