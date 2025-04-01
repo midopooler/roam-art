@@ -1,0 +1,1816 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26834109a64e7d48a238885e46d40c7, type: 3}
+  m_Name: TTS Yellow
+  m_EditorClassIdentifier: 
+  presetName: TheToonShader/URP/Unity6/TheToonShader_WithOutline Preset
+  shader: {fileID: 4800000, guid: 5b7d18bf8a091cc48a3a9075eca72ff9, type: 3}
+  propertyEntries:
+  - propertyName: _TheToonShaderIdentifier
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LightFunction
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _UseAlphaOnlyFromBaseMap
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableToonShading
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingFunction
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientTex
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 2800000, guid: c1baff8b1609fcd49b607d7e36eb2ea0, type: 3}
+    boolValue: 0
+  - propertyName: _GradientMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientBlending
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientBlendFactor
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _NumberOfCells
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CellTransitionSmoothness
+    type: 0
+    floatValue: 0.353
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableShadows
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CoreShadowColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _TerminatorWidth
+    type: 0
+    floatValue: 0.205
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _TerminatorSmoothness
+    type: 0
+    floatValue: 0.176
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FormShadowColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.31372544, g: 0.36470583, b: 0.57647055, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingAffectedByNormalMap
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableCastShadows
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsStrength
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsSmoothness
+    type: 0
+    floatValue: 0.9
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowColorMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 1, g: 0.57254905, b: 0, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableSpecular
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularBlending
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 1, g: 1, b: 1, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularSize
+    type: 0
+    floatValue: 0.338
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularSmoothness
+    type: 0
+    floatValue: 0.134
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularOpacity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularAffectedByNormalMap
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableRim
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimBlending
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 1, g: 0, b: 0, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimSize
+    type: 0
+    floatValue: 0.026
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimSmoothness
+    type: 0
+    floatValue: 0.443
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimOpacity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimAffectedArea
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimAffectedByNormalMap
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableStyling
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableStylingDistanceFade
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingDFStartingDistance
+    type: 0
+    floatValue: 2.46
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingDFFalloff
+    type: 0
+    floatValue: 1.58
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingAdjustDistanceFadeValue
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingDistanceFadeValue
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _HatchingAffectedByNormalMap
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableAntiAliasing
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableShadingStyling
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingSyncWithOtherStyling
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0, g: 0.070927344, b: 0.09433956, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingStyle
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SyncWithLightPartitioning
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _NumberOfCellsHatching
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingOvermodelingFactor
+    type: 0
+    floatValue: 0.338
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingBlending
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingIsInverted
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DrawSpace
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SSCameraDistanceScaled
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _AnchorSSToObjectsOrigin
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CoordinateSystem
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _PolarCenterMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _PolarCenter
+    type: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingDensity
+    type: 0
+    floatValue: 3.22
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingInitialDirection
+    type: 0
+    floatValue: 90
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingRotationBetweenCells
+    type: 0
+    floatValue: 47
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingHalftonesOffset
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingThicknessControl
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingThickness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingOpacity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingOpacityFalloff
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingThicknessFalloff
+    type: 0
+    floatValue: 0.514
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingHardness
+    type: 0
+    floatValue: 0.889
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingHalftonesRoundness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingShadingHalftonesRoundnessFalloff
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableShadingRandomizer
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingNoise1Size
+    type: 0
+    floatValue: 0.01
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingNoise1Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingNoise2Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _NoiseIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpacingRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpacingRandomIntensity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OpacityRandomMode
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OpacityRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _HardnessRandomMode
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _HardnessRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LengthRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LengthRandomIntensity
+    type: 0
+    floatValue: 0.585
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ThicknessRandomMode
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ThicknesshRandomIntensity
+    type: 0
+    floatValue: 0.996
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableCastShadowsStyling
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsSyncWithOtherStyling
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0, g: 0.07450978, b: 0.09803916, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsStyle
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsNumberOfCellsHatching
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsSmoothness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsBlending
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsIsInverted
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsDrawSpace
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsSSCameraDistanceScaled
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsAnchorSSToObjectsOrigin
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsCoordinateSystem
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsPolarCenterMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsPolarCenter
+    type: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsDensity
+    type: 0
+    floatValue: 3.22
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsInitialDirection
+    type: 0
+    floatValue: 90
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsRotationBetweenCells
+    type: 0
+    floatValue: 47
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsHalftonesOffset
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsOpacity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsOpacityFalloff
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsThicknessControl
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsThickness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsThicknessFalloff
+    type: 0
+    floatValue: 0.514
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsHardness
+    type: 0
+    floatValue: 0.889
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsHalftonesRoundness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingCastShadowsHalftonesRoundnessFalloff
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableCastShadowsRandomizer
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsNoise1Size
+    type: 0
+    floatValue: 0.01
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsNoise1Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsNoise2Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsNoiseIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsSpacingRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsSpacingRandomIntensity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsOpacityRandomMode
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsOpacityRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsHardnessRandomMode
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsHardnessRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsLengthRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsLengthRandomIntensity
+    type: 0
+    floatValue: 0.585
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsThicknessRandomMode
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CastShadowsThicknesshRandomIntensity
+    type: 0
+    floatValue: 0.996
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableSpecularStyling
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularSyncWithOtherStyling
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SyncWithSpecular
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularSize
+    type: 0
+    floatValue: 0.8
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularSmoothness
+    type: 0
+    floatValue: 0.7
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.99056596, g: 0.8811385, b: 0.64012986, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularStyle
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularBlending
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularIsInverted
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularDrawSpace
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularSSCameraDistanceScaled
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularAnchorSSToObjectsOrigin
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularCoordinateSystem
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularPolarCenterMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularPolarCenter
+    type: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 1}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularDensity
+    type: 0
+    floatValue: 117.5
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularRotation
+    type: 0
+    floatValue: 45
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularHalftonesOffset
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularOpacity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularOpacityFalloff
+    type: 0
+    floatValue: 0.63
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularThicknessControl
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularThickness
+    type: 0
+    floatValue: 0.611
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularThicknessFalloff
+    type: 0
+    floatValue: 0.436
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularHardness
+    type: 0
+    floatValue: 0.981
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularHalftonesRoundness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingSpecularHalftonesRoundnessFalloff
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableSpecularRandomizer
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularNoise1Size
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularNoise1Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularNoise2Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularNoiseIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularSpacingRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularSpacingRandomIntensity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularOpacityRandomMode
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularOpacityRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularHardnessRandomMode
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularHardnessRandomIntensity
+    type: 0
+    floatValue: 0.704
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularLengthRandomMode
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularLengthRandomIntensity
+    type: 0
+    floatValue: 0.667
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularThicknessRandomMode
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularThicknesshRandomIntensity
+    type: 0
+    floatValue: 0.278
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableRimStyling
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimSyncWithOtherStyling
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SyncWithRim
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimSize
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimSmoothness
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimAffectedArea
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 1, g: 1, b: 1, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimStyle
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimBlending
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimIsInverted
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimDrawSpace
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimSSCameraDistanceScaled
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimAnchorSSToObjectsOrigin
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimCoordinateSystem
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimPolarCenterMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimPolarCenter
+    type: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 1}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimDensity
+    type: 0
+    floatValue: 4.3
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimRotation
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimHalftonesOffset
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimThicknessControl
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimThickness
+    type: 0
+    floatValue: 0.8
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimThicknessFalloff
+    type: 0
+    floatValue: 0.1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimOpacity
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimOpacityFalloff
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimHardness
+    type: 0
+    floatValue: 0.9
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimHalftonesRoundness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _StylingRimHalftonesRoundnessFalloff
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableRimRandomizer
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimNoise1Size
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimNoise1Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimNoise2Seed
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimNoiseIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimSpacingRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimSpacingRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimOpacityRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimOpacityRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimHardnessRandomMode
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimHardnessRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimLengthRandomMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimLengthRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimThicknessRandomMode
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimThicknesshRandomIntensity
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _NoiseMap1
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 2800000, guid: 0528154608ff38a4c845b6622c088ea0, type: 3}
+    boolValue: 0
+  - propertyName: _NoiseMap2
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 2800000, guid: f40d12a41bafa6749a1465879341fff5, type: 3}
+    boolValue: 0
+  - propertyName: _NoiseTextureQuality
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _HatchingCameraDistanceFade
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _HalftonePatternCameraDistanceFade
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EnableOutline
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineWidth
+    type: 0
+    floatValue: 1.6
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineDepthOffset
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineCameraDistanceImpact
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadingMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LightFunction
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BaseMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BaseColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.6740388, g: 0.764151, b: 0.746913, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _UseAlphaOnlyFromBaseMap
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Cutoff
+    type: 0
+    floatValue: 0.5
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BumpScale
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BumpMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 2800000, guid: f3dfef9566ddd31499cc7d0f0a8bcc0b, type: 3}
+    boolValue: 0
+  - propertyName: _EmissionColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EmissionMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Surface
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Blend
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Cull
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _AlphaClip
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ReceiveShadows
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularHighlights
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.1999999, g: 0.1999999, b: 0.1999999, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecGlossMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Smoothness
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SmoothnessSource
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _WorkflowMode
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SmoothnessTextureChannel
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Metallic
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _MetallicGlossMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 2800000, guid: 4b2bf92ed53f0d649b4afb5587982d2c, type: 3}
+    boolValue: 0
+  - propertyName: _EnvironmentReflections
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Parallax
+    type: 0
+    floatValue: 0.005
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ParallaxMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OcclusionStrength
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OcclusionMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailMask
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailAlbedoMapScale
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailAlbedoMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailNormalMapScale
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailNormalMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: EnableGPUInstancing
+    type: 4
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0

@@ -366,26 +366,127 @@ public class ShaderManager : MonoBehaviour
 
     /// <summary>
     /// Saves the given preset.
-    /// In the Editor, it shows a file dialog.
-    /// At runtime, this is a placeholder for server upload.
+    /// In the Editor, it automatically saves the preset asset in the folder
+    /// "Assets/Shader Management System/presets" using the GameObject's name.
+    /// At runtime, it uploads the preset to a server (placeholder).
     /// </summary>
     public void SavePreset(ShaderPreset preset)
     {
-#if UNITY_EDITOR
-        string path = EditorUtility.SaveFilePanelInProject("Save Shader Preset", preset.presetName, "asset", "Enter file name to save the preset to");
-        if (!string.IsNullOrEmpty(path))
+    #if UNITY_EDITOR
+        // Ensure we have collected child materials.
+        CollectChildMaterials();
+        Material sample = null;
+        // Try to get a sample from the current GameObject's Renderer first.
+        Renderer selfRenderer = GetComponent<Renderer>();
+        if (selfRenderer != null)
         {
-            AssetDatabase.CreateAsset(preset, path);
-            AssetDatabase.SaveAssets();
-            Debug.Log("Preset saved at " + path);
+            foreach (Material mat in selfRenderer.sharedMaterials)
+            {
+                if (mat != null && mat.shader == preset.shader)
+                {
+                    sample = mat;
+                    break;
+                }
+            }
         }
-#else
-        // At runtime, implement your own save logic (e.g. upload to a server).
+        // If not found, use a child material.
+        if (sample == null)
+        {
+            foreach (Material mat in childMaterials)
+            {
+                if (mat != null && mat.shader == preset.shader)
+                {
+                    sample = mat;
+                    break;
+                }
+            }
+        }
+        if (sample == null)
+        {
+            Debug.LogWarning("No material found using the selected shader (" + preset.shader.name + ").");
+            return;
+        }
+        
+        int propertyCount = ShaderUtil.GetPropertyCount(sample.shader);
+        preset.propertyEntries = new List<ShaderPropertyEntry>();
+        for (int i = 0; i < propertyCount; i++)
+        {
+            if (ShaderUtil.IsShaderPropertyHidden(sample.shader, i))
+                continue;
+            
+            string propName = ShaderUtil.GetPropertyName(sample.shader, i);
+            if (!sample.HasProperty(propName))
+                continue;
+            
+            ShaderUtil.ShaderPropertyType propType = ShaderUtil.GetPropertyType(sample.shader, i);
+            ShaderPropertyEntry entry = new ShaderPropertyEntry();
+            entry.propertyName = propName;
+            
+            switch (propType)
+            {
+                case ShaderUtil.ShaderPropertyType.Float:
+                case ShaderUtil.ShaderPropertyType.Range:
+                    entry.type = PresetShaderPropertyType.Float;
+                    entry.floatValue = sample.GetFloat(propName);
+                    break;
+                case ShaderUtil.ShaderPropertyType.Color:
+                    entry.type = PresetShaderPropertyType.Color;
+                    entry.colorValue = sample.GetColor(propName);
+                    break;
+                case ShaderUtil.ShaderPropertyType.Vector:
+                    entry.type = PresetShaderPropertyType.Vector;
+                    entry.vectorValue = sample.GetVector(propName);
+                    break;
+                case ShaderUtil.ShaderPropertyType.TexEnv:
+                    entry.type = PresetShaderPropertyType.Texture;
+                    entry.textureValue = sample.GetTexture(propName);
+                    break;
+            }
+            preset.propertyEntries.Add(entry);
+        }
+        
+        // Add GPU Instancing as a Bool entry.
+        ShaderPropertyEntry instancingEntry = new ShaderPropertyEntry();
+        instancingEntry.propertyName = "EnableGPUInstancing"; // Special name.
+        instancingEntry.type = PresetShaderPropertyType.Bool;
+        instancingEntry.boolValue = sample.enableInstancing;
+        preset.propertyEntries.Add(instancingEntry);
+
+        // Define the folder path.
+        string folderPath = "Assets/Shader Management System/presets/";
+        // Ensure the folder exists.
+        if (!AssetDatabase.IsValidFolder(folderPath))
+        {
+            AssetDatabase.CreateFolder("Assets/Shader Management System", "presets");
+        }
+        // Build a filename using the GameObject's name and the preset name.
+        string fileName = gameObject.name + RandomString() + ".asset";
+        string path = folderPath + fileName;
+        
+        AssetDatabase.CreateAsset(preset, path);
+        AssetDatabase.SaveAssets();
+        Debug.Log("Preset saved at " + path);
+    #else
+        // At runtime: Implement your server upload logic here.
         Debug.Log("SavePreset called at runtime. Implement server upload logic here.");
-#endif
+    #endif
     }
 
+    public string RandomString(int length = 4)
+    {
+        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        char[] stringChars = new char[length];
+        for (int i = 0; i < length; i++)
+        {
+            stringChars[i] = chars[Random.Range(0, chars.Length)];
+        }
+        return new string(stringChars);
+    }
+        
+
+
     #endregion
+
 
     #region Preserve Flag Management
 
