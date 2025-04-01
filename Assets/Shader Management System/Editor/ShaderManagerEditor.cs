@@ -14,6 +14,7 @@ public class ShaderManagerEditor : Editor
 
     // For applying a preset.
     private ShaderPreset selectedPreset;
+    private TextAsset selectedJsonPreset;
 
     // Tab index for current shader.
     private int selectedTab = 0;
@@ -109,27 +110,19 @@ public class ShaderManagerEditor : Editor
         }
 
         // ObjectField to select a preset asset or a JSON TextAsset.
-        UnityEngine.Object selectedPresetObj = EditorGUILayout.ObjectField("Preset to Apply (ShaderPreset or JSON)", null, typeof(UnityEngine.Object), false);
-        if (selectedPresetObj != null)
+        selectedPreset = EditorGUILayout.ObjectField("Preset to Apply", selectedPreset, typeof(ShaderPreset), false) as ShaderPreset;
+        // Apply button for ShaderPreset
+        if (selectedPreset != null && GUILayout.Button("Apply Preset", GUILayout.Height(25)))
         {
-            if (selectedPresetObj is ShaderPreset preset)
-            {
-                if (GUILayout.Button("Apply Preset", GUILayout.Height(25)))
-                {
-                    shaderManager.ApplyPreset(preset);
-                }
-            }
-            else if (selectedPresetObj is TextAsset textAsset)
-            {
-                if (GUILayout.Button("Apply JSON Preset", GUILayout.Height(25)))
-                {
-                    shaderManager.ApplyPresetFromJsonAsset(textAsset);
-                }
-            }
-            else
-            {
-                EditorGUILayout.HelpBox("Selected asset is not a valid ShaderPreset or JSON TextAsset.", MessageType.Warning);
-            }
+            shaderManager.ApplyPreset(selectedPreset);
+        }
+
+        
+        selectedJsonPreset = EditorGUILayout.ObjectField("Preset to Apply (JSON)", selectedJsonPreset, typeof(TextAsset), false) as TextAsset;
+        // Apply button for JSON preset
+        if (selectedJsonPreset != null && GUILayout.Button("Apply JSON Preset", GUILayout.Height(25)))
+        {
+            shaderManager.ApplyPresetFromJsonAsset(selectedJsonPreset);
         }
 
         #endregion

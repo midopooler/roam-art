@@ -1,0 +1,2780 @@
+{
+    "presetName": "MK/Toon/URP/Standard/Physically Based Preset",
+    "shader": {
+        "instanceID": 538
+    },
+    "propertyEntries": [
+        {
+            "propertyName": "_Workflow",
+            "type": 0,
+            "floatValue": 2.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Surface",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Blend",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_AlphaClipping",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RenderFace",
+            "type": 0,
+            "floatValue": 2.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_AlbedoColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.801886796951294,
+                "g": 0.7943494915962219,
+                "b": 0.6921947002410889,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DetailUVSet",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_AlphaCutoff",
+            "type": 0,
+            "floatValue": 0.5,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_AlbedoMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_AlbedoMapIntensity",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SpecularColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.15094336867332459,
+                "g": 0.15094336867332459,
+                "b": 0.15094336867332459,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SpecularMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Metallic",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_MetallicMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RoughnessMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Smoothness",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Roughness",
+            "type": 0,
+            "floatValue": 0.5,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_NormalMapIntensity",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_NormalMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Parallax",
+            "type": 0,
+            "floatValue": 0.004999999888241291,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_HeightMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightTransmission",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightTransmissionDistortion",
+            "type": 0,
+            "floatValue": 0.25,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightTransmissionColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 1.0,
+                "g": 0.6499999761581421,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ThicknessMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OcclusionMapIntensity",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OcclusionMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_EmissionColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_EmissionMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DetailBlend",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DetailColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DetailMix",
+            "type": 0,
+            "floatValue": 0.5,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DetailMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DetailNormalMapIntensity",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DetailNormalMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Light",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DiffuseRamp",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DiffuseSmoothness",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DiffuseThresholdOffset",
+            "type": 0,
+            "floatValue": 0.25,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SpecularRamp",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SpecularSmoothness",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SpecularThresholdOffset",
+            "type": 0,
+            "floatValue": 0.25,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RimRamp",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RimSmoothness",
+            "type": 0,
+            "floatValue": 0.5,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RimThresholdOffset",
+            "type": 0,
+            "floatValue": 0.25,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightTransmissionRamp",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightTransmissionSmoothness",
+            "type": 0,
+            "floatValue": 0.5,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightTransmissionThresholdOffset",
+            "type": 0,
+            "floatValue": 0.25,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightBands",
+            "type": 0,
+            "floatValue": 3.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightBandsScale",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightThreshold",
+            "type": 0,
+            "floatValue": 0.46799999475479128,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ThresholdMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ThresholdMapScale",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_GoochRampIntensity",
+            "type": 0,
+            "floatValue": 0.5,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_GoochRamp",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_GoochBrightColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_GoochBrightMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_GoochDarkColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_GoochDarkMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Contrast",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Hue",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Saturation",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Brightness",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Iridescence",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_IridescenceRamp",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_IridescenceSize",
+            "type": 0,
+            "floatValue": 5.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_IridescenceColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_IridescenceSmoothness",
+            "type": 0,
+            "floatValue": 0.5,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_IridescenceThresholdOffset",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Rim",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RimSize",
+            "type": 0,
+            "floatValue": 5.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RimColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.3679244816303253,
+                "g": 0.3679244816303253,
+                "b": 0.3679244816303253,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RimBrightColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RimDarkColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ColorGrading",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_VertexAnimationStutter",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_VertexAnimation",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_VertexAnimationIntensity",
+            "type": 0,
+            "floatValue": 0.05000000074505806,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_VertexAnimationMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_NoiseMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 1134
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_VertexAnimationFrequency",
+            "type": 2,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 2.5,
+                "y": 2.5,
+                "z": 2.5,
+                "w": 1.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Dissolve",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DissolveMapScale",
+            "type": 0,
+            "floatValue": 10.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DissolveMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 52054
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DissolveAmount",
+            "type": 0,
+            "floatValue": 0.09799999743700028,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DissolveBorderSize",
+            "type": 0,
+            "floatValue": 0.25,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DissolveBorderRamp",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DissolveBorderColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Artistic",
+            "type": 0,
+            "floatValue": 3.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ArtisticProjection",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ArtisticFrequency",
+            "type": 0,
+            "floatValue": 7.480000019073486,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DrawnMapScale",
+            "type": 0,
+            "floatValue": 10.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DrawnMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 52056
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DrawnClampMin",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_DrawnClampMax",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_HatchingMapScale",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_HatchingBrightMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_HatchingDarkMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SketchMapScale",
+            "type": 0,
+            "floatValue": 0.09000000357627869,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SketchMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 52058
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ArtisticShadowFilter",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Outline",
+            "type": 0,
+            "floatValue": 3.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineData",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineFadeMin",
+            "type": 0,
+            "floatValue": 0.25,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineFadeMax",
+            "type": 0,
+            "floatValue": 2.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineMap",
+            "type": 3,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineClipOffset",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineSize",
+            "type": 0,
+            "floatValue": 5.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineColor",
+            "type": 1,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_OutlineNoise",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ZWrite",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ZTest",
+            "type": 0,
+            "floatValue": 4.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Diffuse",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_WrappedLighting",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_IndirectFade",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_ReceiveShadows",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Specular",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_SpecularIntensity",
+            "type": 0,
+            "floatValue": 2.3299999237060549,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Anisotropy",
+            "type": 0,
+            "floatValue": 0.2199999988079071,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_LightTransmissionIntensity",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_EnvironmentReflections",
+            "type": 0,
+            "floatValue": 2.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_FresnelHighlights",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_RenderPriority",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_Stencil",
+            "type": 0,
+            "floatValue": 1.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_StencilRef",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_StencilReadMask",
+            "type": 0,
+            "floatValue": 255.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_StencilWriteMask",
+            "type": 0,
+            "floatValue": 255.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_StencilComp",
+            "type": 0,
+            "floatValue": 8.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_StencilPass",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_StencilFail",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "_StencilZFail",
+            "type": 0,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": false
+        },
+        {
+            "propertyName": "EnableGPUInstancing",
+            "type": 4,
+            "floatValue": 0.0,
+            "colorValue": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "vectorValue": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "textureValue": {
+                "instanceID": 0
+            },
+            "boolValue": true
+        }
+    ]
+}
