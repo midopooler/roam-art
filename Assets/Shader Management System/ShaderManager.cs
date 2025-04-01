@@ -104,16 +104,37 @@ public class ShaderManager : MonoBehaviour
         foreach (Material mat in childMaterials)
         {
             if (mat == null) continue;
-            // Create a temporary material using the new shader.
+            // Create a new material with the new shader.
             Material temp = new Material(newShader);
-            // Transfer properties from the current material to temp using JSON mapping.
+            // Transfer properties from the current material to the temporary material using JSON mapping.
             TransferProperties(mat, temp);
             // Change the shader on the original material.
             mat.shader = newShader;
-            // Transfer the properties from temp back to the material.
+            // Transfer the properties back from the temporary material.
             TransferProperties(temp, mat);
         }
+        
+        // Force renderers to refresh by reassigning their material arrays with a new array instance.
+        Renderer[] renderers = GetComponentsInChildren<Renderer>(true);
+        foreach (Renderer rend in renderers)
+        {
+            Material[] mats = rend.sharedMaterials;
+            Material[] newMats = new Material[mats.Length];
+            for (int i = 0; i < mats.Length; i++)
+            {
+                newMats[i] = mats[i];
+            }
+            rend.sharedMaterials = newMats;
+        }
+        
+        // Optional: If needed, you can also toggle the renderer to force a reinitialization.
+        foreach (Renderer rend in renderers)
+        {
+            rend.enabled = false;
+            rend.enabled = true;
+        }
     }
+
 
     /// <summary>
     /// Transfers property values from source material to target material using JSON mapping.
@@ -307,16 +328,11 @@ public class ShaderManager : MonoBehaviour
                 if (entry.type == PresetShaderPropertyType.Bool && entry.propertyName == "EnableGPUInstancing")
                 {
                     mat.enableInstancing = entry.boolValue;
-                    EditorUtility.SetDirty(mat);
                     continue;
                 }
                 
-                // Skip if this property is marked as preserved.
-                if (GetPreserveFlag(mat.shader, entry.propertyName))
-                    continue;
-                
-                // **New:** If this property is one of the "retain" mappings, skip applying its preset value.
-                if (IsRetainMapping(entry.propertyName))
+                // Skip if this property is marked as preserved or as a retain mapping.
+                if (GetPreserveFlag(mat.shader, entry.propertyName) || IsRetainMapping(entry.propertyName))
                     continue;
                 
                 // If the material doesn’t have the property, skip.
@@ -338,10 +354,30 @@ public class ShaderManager : MonoBehaviour
                         mat.SetTexture(entry.propertyName, entry.textureValue);
                         break;
                 }
-                EditorUtility.SetDirty(mat);
             }
         }
+        
+        // Workaround 1: Reassign materials using a new array instance
+        Renderer[] renderers = GetComponentsInChildren<Renderer>(true);
+        foreach (Renderer rend in renderers)
+        {
+            Material[] mats = rend.sharedMaterials;
+            Material[] newMats = new Material[mats.Length];
+            for (int i = 0; i < mats.Length; i++)
+            {
+                newMats[i] = mats[i];
+            }
+            rend.sharedMaterials = newMats;
+        }
+        
+        //Optional Workaround 2: Toggle the renderer component (if needed)
+        foreach (Renderer rend in renderers)
+        {
+            rend.enabled = false;
+            rend.enabled = true;
+        }
     }
+
 
     /// <summary>
     /// Checks if the given property name matches one of the known aliases for BaseColor or BaseMap,
