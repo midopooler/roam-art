@@ -1,0 +1,458 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26834109a64e7d48a238885e46d40c7, type: 3}
+  m_Name: ScenerytrLo
+  m_EditorClassIdentifier: 
+  presetName: FlatKit/Stylized Surface Preset
+  shader: {fileID: 4800000, guid: bee44b4a58655ee4cbff107302a3e131, type: 3}
+  propertyEntries:
+  - propertyName: _BaseColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.51372534, g: 0.5058824, b: 0.5058824, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CelPrimaryMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ColorDim
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.85, g: 0.85, b: 0.85, a: 0.85}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ColorDimSteps
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.85, g: 0.85, b: 0.85, a: 0.85}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ColorDimCurve
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.85, g: 0.85, b: 0.85, a: 0.85}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SelfShadingSize
+    type: 0
+    floatValue: -0.93
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadowEdgeSize
+    type: 0
+    floatValue: 0.05
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Flatness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CelNumSteps
+    type: 0
+    floatValue: 3
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CelStepTexture
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CelCurveTexture
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CelExtraEnabled
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ColorDimExtra
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.40566036, g: 0.2698024, b: 0.2698024, a: 0.85}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SelfShadingSizeExtra
+    type: 0
+    floatValue: 0.755
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadowEdgeSizeExtra
+    type: 0
+    floatValue: 0.187
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatnessExtra
+    type: 0
+    floatValue: 0.775
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _SpecularEnabled
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatSpecularColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 1, g: 0.90740365, b: 0.3915094, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatSpecularSize
+    type: 0
+    floatValue: 0.1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatSpecularEdgeSmoothness
+    type: 0
+    floatValue: 0.897
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _RimEnabled
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatRimColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.7830189, g: 0.71021837, b: 0.38781595, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatRimLightAlign
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatRimSize
+    type: 0
+    floatValue: 0.174
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _FlatRimEdgeSmoothness
+    type: 0
+    floatValue: 0.279
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientEnabled
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ColorGradient
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientSpace
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientCenterX
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientCenterY
+    type: 0
+    floatValue: 1.49
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientSize
+    type: 0
+    floatValue: 8.75
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _GradientAngle
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineEnabled
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineWidth
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 1, g: 1, b: 1, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineScale
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _VertexExtrusionSmoothNormals
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineDepthOffset
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OutlineSpace
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _CameraDistanceImpact
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _VertexColorsEnabled
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LightContribution
+    type: 0
+    floatValue: 0.192
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LightFalloffSize
+    type: 0
+    floatValue: 0.0001
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _OverrideLightmapDir
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LightmapDirectionPitch
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _LightmapDirectionYaw
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _UnityShadowMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _UnityShadowPower
+    type: 0
+    floatValue: 0.2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _UnityShadowColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.5377357, g: 0.5377357, b: 0.5377357, a: 0.2}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _UnityShadowSharpness
+    type: 0
+    floatValue: 10
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _UnityShadowOcclusion
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BaseMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BaseMapPremultiply
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _TextureBlendingMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _TextureImpact
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailMapColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 1, g: 1, b: 1, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailMapBlendingMode
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _DetailMapImpact
+    type: 0
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BumpMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EmissionMap
+    type: 3
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _EmissionColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 4.9245777, g: 0, b: 0, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: EnableGPUInstancing
+    type: 4
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0

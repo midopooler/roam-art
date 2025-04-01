@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26834109a64e7d48a238885e46d40c7, type: 3}
+  m_Name: ScenewKnX
+  m_EditorClassIdentifier: 
+  presetName: FlatKit/Demos/Desert Pillar Preset
+  shader: {fileID: -6465566751694194690, guid: 4f03e090f823e194a8710fe149803097, type: 3}
+  propertyEntries:
+  - propertyName: _Color1
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.7830188, g: 0.48890233, b: 0.24746346, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Color2
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.9433962, g: 0.8428671, b: 0.6274475, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Color3
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.5943396, g: 0.31575373, b: 0.16540581, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _TopSize
+    type: 0
+    floatValue: 0.6
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ColorTop
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.7803922, g: 0.49019605, b: 0.24705881, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _TYPE
+    type: 0
+    floatValue: 2
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _NoiseScale1
+    type: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 1, y: -54.15, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _NoiseScale2
+    type: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0.41, y: -0.5, z: 0.015, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ScaleFactor
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Distribution
+    type: 2
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: -0.16, y: 0.15, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadowTint
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.05096797, g: 0.10717768, b: 0.18399996, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadowSize
+    type: 0
+    floatValue: 0.416
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadowStrength
+    type: 0
+    floatValue: 0.87
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _ShadowSharpness
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _HEIGHT_ENABLED
+    type: 0
+    floatValue: 1
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _HeightColor
+    type: 1
+    floatValue: 0
+    colorValue: {r: 0.9811321, g: 0.9024564, b: 0.9024564, a: 1}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _Transition_Width
+    type: 0
+    floatValue: 0.229
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _MaxHeight
+    type: 0
+    floatValue: 0.817
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: _BLEND_MODE
+    type: 0
+    floatValue: 4
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
+  - propertyName: EnableGPUInstancing
+    type: 4
+    floatValue: 0
+    colorValue: {r: 0, g: 0, b: 0, a: 0}
+    vectorValue: {x: 0, y: 0, z: 0, w: 0}
+    textureValue: {fileID: 0}
+    boolValue: 0
