@@ -168,3 +168,4 @@ Material:
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _UnityShadowColor: {r: 0.32453722, g: 0.4811321, b: 0.40129125, a: 1}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

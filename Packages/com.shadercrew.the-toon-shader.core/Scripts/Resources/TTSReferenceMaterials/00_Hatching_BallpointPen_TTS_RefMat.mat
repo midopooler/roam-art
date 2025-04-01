@@ -21,16 +21,21 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 00_Hatching_BallpointPen_TTS_RefMat
-  m_Shader: {fileID: 4800000, guid: 5b7d18bf8a091cc48a3a9075eca72ff9, type: 3}
+  m_Shader: {fileID: 4800000, guid: df695d70c539c3d4c87b79de307ab7bb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _SHADING_COLOR
+  - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
+  - _MK_ARTISTIC_SKETCH
+  - _MK_ENVIRONMENT_REFLECTIONS_AMBIENT
+  - _MK_RECEIVE_SHADOWS
+  - _MK_RIM_DEFAULT
+  - _MK_WORKFLOW_ROUGHNESS
   m_InvalidKeywords:
-  - TCP2_MATCAP
+  - DR_CEL_EXTRA_ON
   - TCP2_OUTLINE_MIN_SIZE
   - TCP2_REFLECTIONS
-  - TCP2_RIM_LIGHTING
+  - TCP2_REFLECTIONS_FRESNEL
   - TCP2_RIM_LIGHTING_LIGHTMASK
   - TCP2_SHADOW_LIGHT_COLOR
   - TCP2_SPECULAR
@@ -53,29 +58,25 @@ Material:
   - _FRESNELHIGHLIGHTS_ON
   - _GRADIENTSPACE_WORLD
   - _MK_ARTISTIC_ANIMATION_STUTTER
-  - _MK_ARTISTIC_PROJECTION_SCREEN_SPACE
-  - _MK_ARTISTIC_SKETCH
   - _MK_DETAIL_BLEND_MIX
-  - _MK_ENVIRONMENT_REFLECTIONS_AMBIENT
   - _MK_FRESNEL_HIGHLIGHTS
-  - _MK_RECEIVE_SHADOWS
-  - _MK_RIM_DEFAULT
-  - _MK_WORKFLOW_ROUGHNESS
   - _OUTLINESPACE_SCREEN
   - _RECEIVESHADOWS_ON
   - _RIMANCHORSSTOOBJECTSORIGIN_ON
   - _SHADINGAFFECTEDBYNORMALMAP_ON
+  - _SHADING_COLOR
   - _SPECULARANCHORSSTOOBJECTSORIGIN_ON
   - _SSCAMERADISTANCESCALED_ON
   - _STYLINGADJUSTDISTANCEFADEVALUE_ON
   - _TEXTUREBLENDINGMODE_MULTIPLY
-  - _UNITYSHADOWMODE_NONE
+  - _UNITYSHADOWMODE_COLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     IGNOREPROJECTOR: False
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -182,11 +183,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCapMask:
-        m_Texture: {fileID: 2800000, guid: 37b8c632e5bb8424dbd260bd0b2aa4fb, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCapTex:
-        m_Texture: {fileID: 2800000, guid: 05cb8fab23c8ef9429ebaf3150311a31, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -343,7 +344,7 @@ Material:
     - _CategoryStyling: 0
     - _CategorySurfaceOptionsAndInputs: 0
     - _CategoryToonShading: 0
-    - _CelExtraEnabled: 0
+    - _CelExtraEnabled: 1
     - _CelNumSteps: 3
     - _CelPrimaryMode: 1
     - _CellTransitionSmoothness: 0.353
@@ -376,6 +377,7 @@ Material:
     - _DrawnClampMin: 0
     - _DrawnMapScale: 10
     - _DstBlend: 0
+    - _DstBlendOutline: 0
     - _EmissionChannel: 4
     - _EnableAntiAliasing: 0
     - _EnableCastShadows: 0
@@ -394,13 +396,13 @@ Material:
     - _EnableStyling: 1
     - _EnableStylingDistanceFade: 0
     - _EnableToonShading: 1
-    - _EnvironmentReflections: 1
+    - _EnvironmentReflections: 2
     - _FlatRimEdgeSmoothness: 0.5
     - _FlatRimLightAlign: 0
     - _FlatRimSize: 0.5
     - _FlatSpecularEdgeSmoothness: 0
     - _FlatSpecularSize: 0.1
-    - _Flatness: 1
+    - _Flatness: 0.321
     - _FlatnessExtra: 1
     - _FresnelHighlights: 1
     - _FresnelMax: 1.5
@@ -443,7 +445,7 @@ Material:
     - _LightBandsScale: 0
     - _LightColorContribution: 0
     - _LightContribution: 0
-    - _LightFalloffSize: 0
+    - _LightFalloffSize: 0.0001
     - _LightFunction: 1
     - _LightFunctionLerpValue: 0.5
     - _LightThreshold: 0.468
@@ -454,8 +456,8 @@ Material:
     - _LightTransmissionThresholdOffset: 0.25
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
-    - _MatCapMaskChannel: 0
-    - _MatCapType: 1
+    - _MatCapMaskChannel: 4
+    - _MatCapType: 0
     - _Metallic: 0
     - _Mode: 0
     - _NoiseIntensity: 0
@@ -468,6 +470,8 @@ Material:
     - _OcclusionChannel: 0
     - _OcclusionMapIntensity: 1
     - _OcclusionStrength: 1
+    - _Offset1: 0
+    - _Offset2: 0
     - _OpacityRandomIntensity: 0
     - _OpacityRandomMode: 2
     - _OptionsTab: 1
@@ -484,10 +488,11 @@ Material:
     - _OutlineMaxWidth: 1
     - _OutlineMinWidth: 1
     - _OutlineNoise: 0
-    - _OutlinePixelSizeType: 1
+    - _OutlinePixelSizeType: 2
     - _OutlineScale: 1
     - _OutlineSize: 5
     - _OutlineSpace: 0
+    - _OutlineTab: 0
     - _OutlineTextureLOD: 5
     - _OutlineTextureType: 0
     - _OutlineWidth: 1.6
@@ -501,12 +506,12 @@ Material:
     - _RampBandsSmoothing: 0.1
     - _RampOffset: 0
     - _RampScale: 1
-    - _RampSmoothing: 0.05
+    - _RampSmoothing: 0.1
     - _RampThreshold: 0.75
     - _RampType: 0
     - _ReceiveShadows: 1
     - _ReceiveShadowsOff: 1
-    - _ReflectionMapType: 2
+    - _ReflectionMapType: 0
     - _ReflectionSmoothness: 1
     - _RenderFace: 2
     - _RenderPriority: 0
@@ -524,7 +529,7 @@ Material:
     - _RimLengthRandomIntensity: 0
     - _RimLengthRandomMode: 0
     - _RimMax: 1
-    - _RimMin: 0.4
+    - _RimMin: 0.5
     - _RimNoise1Seed: 1
     - _RimNoise1Size: 1
     - _RimNoise2Seed: 1
@@ -536,8 +541,8 @@ Material:
     - _RimPerlinNoiseSize: 1
     - _RimPolarCenterMode: 0
     - _RimSSCameraDistanceScaled: 0
-    - _RimSize: 0.026
-    - _RimSmoothness: 0.443
+    - _RimSize: 5
+    - _RimSmoothness: 0.5
     - _RimSpacingRandomIntensity: 0
     - _RimSpacingRandomMode: 0
     - _RimStyle: 0
@@ -548,7 +553,7 @@ Material:
     - _Roughness: 0.5
     - _SSCameraDistanceScaled: 1
     - _Saturation: 1
-    - _SelfShadingSize: 0.5
+    - _SelfShadingSize: 0.759
     - _SelfShadingSizeExtra: 0.6
     - _ShadingAffectByNormalMap: 1
     - _ShadingAffectedByNormalMap: 1
@@ -560,13 +565,13 @@ Material:
     - _ShadingNoise2Seed: 1
     - _ShadingStyle: 0
     - _ShadowColorLightAtten: 1
-    - _ShadowEdgeSize: 0.05
-    - _ShadowEdgeSizeExtra: 0.05
+    - _ShadowEdgeSize: 0.285
+    - _ShadowEdgeSizeExtra: 0.218
     - _ShadowMode: 0
     - _ShadowsAffectByNormalMap: 1
     - _SingleIndirectColor: 0
     - _SketchMapScale: 0.09
-    - _Smoothness: 0
+    - _Smoothness: 1
     - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpacingRandomIntensity: 1
@@ -595,21 +600,22 @@ Material:
     - _SpecularPerlinNoiseSeed: 1
     - _SpecularPerlinNoiseSize: 1
     - _SpecularPolarCenterMode: 0
-    - _SpecularRoughness: 0.352
+    - _SpecularRoughness: 0.165
     - _SpecularSSCameraDistanceScaled: 0
     - _SpecularSize: 0.338
-    - _SpecularSmoothness: 0.134
+    - _SpecularSmoothness: 0
     - _SpecularSpacingRandomIntensity: 1
     - _SpecularSpacingRandomMode: 0
     - _SpecularStyle: 0
     - _SpecularThicknessRandomMode: 1
     - _SpecularThicknesshRandomIntensity: 0.278
     - _SpecularThresholdOffset: 0.25
-    - _SpecularToonSize: 0.005
+    - _SpecularToonSize: 0.08
     - _SpecularToonSmoothness: 0.024
     - _SpecularType: 0
     - _SpecularWhiteNoiseSeed: 1
     - _SrcBlend: 1
+    - _SrcBlendOutline: 0
     - _Stencil: 1
     - _StencilComp: 8
     - _StencilFail: 0
@@ -697,6 +703,7 @@ Material:
     - _SyncWithSpecular: 0
     - _TerminatorSmoothness: 0.176
     - _TerminatorWidth: 0.205
+    - _TexLod: 5
     - _TextureBlendingMode: 0
     - _TextureImpact: 1
     - _TheToonShaderIdentifier: 1
@@ -704,7 +711,7 @@ Material:
     - _ThicknesshRandomIntensity: 0.996
     - _ThresholdMapScale: 1
     - _UVSec: 0
-    - _UnityShadowMode: 0
+    - _UnityShadowMode: 2
     - _UnityShadowOcclusion: 0
     - _UnityShadowPower: 0.2
     - _UnityShadowSharpness: 1
@@ -712,16 +719,16 @@ Material:
     - _UseAlphaTest: 0
     - _UseCurve: 1
     - _UseEmission: 0
-    - _UseFresnelReflections: 0
-    - _UseMatCap: 1
-    - _UseMatCapMask: 1
+    - _UseFresnelReflections: 1
+    - _UseMatCap: 0
+    - _UseMatCapMask: 0
     - _UseMobileMode: 0
     - _UseNormalMap: 0
     - _UseOcclusion: 0
-    - _UseOutline: 1
+    - _UseOutline: 0
     - _UsePBRLighting: 0
-    - _UseReflections: 0
-    - _UseRim: 1
+    - _UseReflections: 1
+    - _UseRim: 0
     - _UseRimLightMask: 1
     - _UseShadowTexture: 0
     - _UseSpecular: 1
@@ -733,17 +740,18 @@ Material:
     - _Workflow: 2
     - _WorkflowMode: 1
     - _WrappedLighting: 0
+    - _ZSmooth: -0.5
     - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
-    - _BaseColor: {r: 0.85, g: 0.85, b: 0.85, a: 1}
+    - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _CastShadowColor: {r: 1, g: 0.57254905, b: 0, a: 1}
     - _CastShadowsPolarCenter: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.85, g: 0.85, b: 0.85, a: 1}
-    - _ColorDim: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorDim: {r: 0.44482017, g: 0.57314116, b: 0.7924528, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
-    - _ColorDimExtra: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _ColorDimExtra: {r: 0.4300462, g: 0.44398737, b: 0.6037736, a: 1}
     - _ColorDimSteps: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
     - _ColorGradient: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
     - _CoreShadowColor: {r: 0, g: 0, b: 0, a: 1}
@@ -752,7 +760,7 @@ Material:
     - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlatRimColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
-    - _FlatSpecularColor: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
+    - _FlatSpecularColor: {r: 0.9433962, g: 0.8232467, b: 0.8232467, a: 1}
     - _FormShadowColor: {r: 0.31372544, g: 0.36470583, b: 0.57647055, a: 1}
     - _GoochBrightColor: {r: 1, g: 1, b: 1, a: 1}
     - _GoochDarkColor: {r: 0, g: 0, b: 0, a: 1}
@@ -763,21 +771,21 @@ Material:
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _PolarCenter: {r: 0, g: 0, b: 0, a: 0}
-    - _ReflectionColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _ReflectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimBrightColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 0, b: 0, a: 1}
+    - _RimColor: {r: 0.36792448, g: 0.36792448, b: 0.36792448, a: 1}
     - _RimDarkColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimPolarCenter: {r: 0, g: 0, b: 0, a: 1}
     - _SColor: {r: 0.004524946, g: 0, b: 0.5, a: 1}
     - _SpecColor: {r: 0.1999999, g: 0.1999999, b: 0.1999999, a: 1}
     - _Specular: {r: 0, g: 0, b: 0, a: 0}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 0.15094337, g: 0.15094337, b: 0.15094337, a: 1}
     - _SpecularPolarCenter: {r: 0, g: 0, b: 0, a: 1}
     - _StylingCastShadowsColor: {r: 0, g: 0.07450978, b: 0.09803916, a: 1}
     - _StylingColor: {r: 0, g: 0.070927344, b: 0.09433956, a: 1}
     - _StylingRimColor: {r: 1, g: 1, b: 1, a: 1}
     - _StylingSpecularColor: {r: 0.99056596, g: 0.8811385, b: 0.64012986, a: 1}
-    - _UnityShadowColor: {r: 0.85023, g: 0.85034, b: 0.8504499, a: 0.85056}
+    - _UnityShadowColor: {r: 0, g: 0.27326155, b: 0.468, a: 0.30588236}
     - _VertexAnimationFrequency: {r: 2.5, g: 2.5, b: 2.5, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
