@@ -252,22 +252,16 @@ public class ShaderManager : MonoBehaviour
                         allNames.Add(alias);
                 }
             }
-#if UNITY_EDITOR
+
             foreach (string name in allNames)
             {
                 if (ShaderHasProperty(targetShader, name))
                     return name;
             }
+            
             return null;
-#else
-            return ShaderHasProperty(targetShader, sourcePropName) ? sourcePropName : null;
-#endif
         }
-#if UNITY_EDITOR
         return ShaderHasProperty(targetShader, sourcePropName) ? sourcePropName : null;
-#else
-        return ShaderHasProperty(targetShader, sourcePropName) ? sourcePropName : null;
-#endif
     }
 
     /// <summary>
@@ -276,7 +270,7 @@ public class ShaderManager : MonoBehaviour
     /// </summary>
     public bool ShaderHasProperty(Shader shader, string propName)
     {
-#if UNITY_EDITOR
+/*#if UNITY_EDITOR
         int count = ShaderUtil.GetPropertyCount(shader);
         for (int i = 0; i < count; i++)
         {
@@ -284,12 +278,12 @@ public class ShaderManager : MonoBehaviour
                 return true;
         }
         return false;
-#else
+#else*/
         Material temp = new Material(shader);
         bool hasProp = temp.HasProperty(propName);
         Destroy(temp);
         return hasProp;
-#endif
+//#endif
     }
 
     #endregion
@@ -628,7 +622,6 @@ public class ShaderManager : MonoBehaviour
     /// </summary>
     public void ApplyPresetFromJsonAsset(TextAsset jsonAsset)
     {
-    #if UNITY_EDITOR
         if (jsonAsset == null)
         {
             Debug.LogError("No JSON asset provided.");
@@ -650,9 +643,6 @@ public class ShaderManager : MonoBehaviour
         {
             Debug.LogError("Error parsing JSON preset: " + ex.Message);
         }
-    #else
-        Debug.Log("ApplyPresetFromJsonAsset called at runtime. JSON file loading is not supported in runtime builds.");
-    #endif
     }
 
     #endregion
